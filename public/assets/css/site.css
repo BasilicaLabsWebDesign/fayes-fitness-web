@@ -130,6 +130,7 @@ a { color: inherit; }
 .footer-cols ul { list-style: none; padding: 0; display: grid; gap: 6px; }
 .footer-cols a { text-decoration: none; }
 .footer-cols a:hover { text-decoration: underline; }
+.footer-cols .handle { color: var(--on-black-muted); font-size: var(--text-sm); }
 .legal { grid-column: 1 / -1; font-size: var(--text-xs); color: var(--on-black-muted); border-top: 1px solid rgba(253, 253, 253, .14); padding-top: 20px; }
 
 /* Short full-height message pages: 404, offline */

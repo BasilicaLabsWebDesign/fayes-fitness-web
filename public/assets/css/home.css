@@ -33,3 +33,30 @@
   .hero-photo { justify-self: end; }
   .doors { grid-template-columns: repeat(3, 1fr); }
 }
+
+/* The F.I.T ecosystem — the three family brands, with their logos (from Faye's deck) */
+.eco-lede { margin: 0 auto 40px; text-align: center; max-width: 52ch; }
+.eco { display: grid; gap: 18px; }
+.eco-item {
+  text-align: center; padding: 30px 24px 32px;
+  border: 1px solid rgba(253, 253, 253, .22); border-radius: var(--radius);
+}
+.eco-logo { height: 110px; display: grid; place-items: center; margin-bottom: 18px; }
+.eco-logo img { max-height: 110px; width: auto; max-width: 220px; }
+.eco-item h3 { font-size: 1.25rem; margin-bottom: 6px; }
+.eco-item p { color: var(--on-black-muted); }
+
+/* The F.I.T concepts — the guide's concept logos on the light page */
+.concepts-lede { margin: 0 auto 36px; text-align: center; max-width: 50ch; }
+.concept-grid {
+  list-style: none; padding: 0; margin: 0;
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px 20px; align-items: center;
+}
+.concept-grid img { width: 100%; max-width: 210px; margin: 0 auto; }
+.concept-grid li { text-align: center; }
+.concept-name { display: block; margin-top: 10px; font-weight: var(--w-heading); font-size: var(--text-sm); }
+
+@media (min-width: 900px) {
+  .eco { grid-template-columns: repeat(3, 1fr); }
+  .concept-grid { grid-template-columns: repeat(6, 1fr); gap: 24px; }
+}
