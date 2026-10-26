@@ -1,0 +1,14 @@
+ok, we are going to rebuild this to be something else
+
+it is a website that is web friendly. and it need app features such as customer purchases, customer accounts, and notifications to customers and Faye, the owner. here is the existing website. you will rebuild this with her branding
+
+i will provide a branding guide
+
+
+disregard the old website
+
+make a plan for the creation of this new website
+
+when you start, you will use all the git skill i gave you
+
+Go on, phase 0 it
