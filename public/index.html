@@ -1,522 +1,153 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-GB">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="color-scheme" content="only light">
-<meta name="supported-color-schemes" content="light">
-<title>Faye Edwards — F.I.T · Faye's Intentional Training · brand v6</title>
-<meta name="description" content="Faye Edwards — international fitness presenter and wellness coach. F.I.T Camp, Mind Fit Retreats, the F.I.T App and more.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wdth,wght@62..125,100..900&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Caveat:wght@600;700&family=Poppins:wght@300;400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/fit.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>F.I.T — Faye's Intentional Training</title>
+<meta name="description" content="Classes, retreats, coaching and events with Faye Edwards — award-winning international fitness presenter. Do what brings you joy, and focus on the feeling.">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="preload" href="/assets/fonts/montserrat-900.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/tokens.css">
+<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="stylesheet" href="/assets/css/home.css">
+<script src="/assets/js/app.js" defer></script>
 </head>
-<body data-theme="fit">
+<body>
+<a class="skip" href="#main">Skip to content</a>
 
-<header class="topbar" id="topbar">
-  <a class="brand" href="#top" aria-label="Faye Edwards — back to top">
-    <span class="fe">FE</span>
-    <span class="mono">faye's intentional training</span>
-  </a>
-  <a class="whylink" href="/why">Why</a>
-  <a class="book" href="https://bookwhen.com/fayesintentionaltraining" target="_blank" rel="noopener">Book</a>
-</header>
-
-<div class="versions" role="tablist" aria-label="Site design versions">
-  <span class="v-label mono">Style</span>
-  <button type="button" role="tab" aria-selected="true" data-theme="fit">01 F.I.T</button>
-  <button type="button" role="tab" aria-selected="false" data-theme="heat">02 Heat</button>
-  <button type="button" role="tab" aria-selected="false" data-theme="edit">03 Editorial</button>
-  <button type="button" role="tab" aria-selected="false" data-theme="neon">04 Neon</button>
-  <button type="button" role="tab" aria-selected="false" data-theme="soft">05 Soft</button>
-</div>
-
-<!-- ================= HERO ================= -->
-<section class="hero" id="top">
-  <div class="hero-inner">
-    <p class="mono eyebrow">London → worldwide</p>
-    <h1 class="display hero-name">
-      <span class="w1">Faye</span>
-      <span class="portrait" id="portrait">
-        <img src="https://ugc.production.linktr.ee/1BXAEyRqQX2LIlK1KJeB_IMG_2258.JPG"
-             alt="Faye Edwards" loading="eager" referrerpolicy="no-referrer"
-             onerror="this.closest('.portrait').classList.add('no-photo');this.remove()">
-        <span class="fallback display" aria-hidden="true">FE</span>
-      </span>
-      <span class="w2">Edwards</span>
-    </h1>
-    <p class="hero-role">International fitness presenter &amp; wellness coach — founder of Faye's Intentional Training and Mind Fit Retreats.</p>
-    <div class="hero-chips" aria-label="Faye's brands">
-      <span class="chip mono">F.I.T</span>
-      <span class="chip mono">Mind Fit Retreats</span>
-      <span class="chip mono">F.I.T Jam</span>
-    </div>
-  </div>
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee-track" id="marquee">
-      <span>Tune in</span>✦<span>Focus on the feeling</span>✦<span>Fitness · Fun · MotiFAYEtion</span>✦<span>F.I.T</span>✦
-    </div>
-  </div>
-</section>
-
-<!-- ============ 1 · F.I.T CAMP ============ -->
-<section class="section" aria-labelledby="camp-h">
-  <div class="section-inner reveal">
-    <p class="mono eyebrow" style="color:var(--flame)">Next up</p>
-    <div class="card camp-card">
-      <h3 class="display" id="camp-h">F.I.T Camp</h3>
-      <p class="sub">The 6-week programme. Group energy, intentional training, real results — led by Faye.</p>
-      <div class="ticket">
-        <div class="slot">
-          <span class="mono">Starts</span>
-          <b>Thu 6 August</b>
-        </div>
-        <div class="slot">
-          <span class="mono" id="count-label">Doors in</span>
-          <div class="count" id="countdown" role="timer" aria-live="off">
-            <div class="unit"><div class="num" id="c-d">–</div><div class="lbl">days</div></div>
-            <div class="unit"><div class="num" id="c-h">–</div><div class="lbl">hrs</div></div>
-            <div class="unit"><div class="num" id="c-m">–</div><div class="lbl">min</div></div>
-            <div class="unit"><div class="num" id="c-s">–</div><div class="lbl">sec</div></div>
-          </div>
-        </div>
-      </div>
-      <a class="btn hot wide" href="/fit-camp">Book your spot</a>
-    </div>
-
-    <!-- ============ 2 · WEBINAR ============ -->
-    <a class="webinar reveal" href="/webinar">
-      <span class="play" aria-hidden="true">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-      </span>
-      <div>
-        <h3 class="display">From instructor to fitness empire</h3>
-        <p>Faye's webinar on building a career out of the studio — watch it now.</p>
-      </div>
+<!-- partial:header -->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="F.I.T — Faye's Intentional Training, home">
+      <svg viewBox="0 0 1147 583" aria-hidden="true" focusable="false"><path fill="currentColor" fill-rule="evenodd" d="M350.5 582.0C345.1 580.3 345.0 579.8 345.0 551.8L345.0 525.9L347.5 523.5L349.9 521.0L380.0 521.0L410.1 521.0L412.5 523.5L415.0 525.9L415.0 551.8L415.0 577.7L412.4 580.1L409.8 582.5L381.7 582.7C366.2 582.8 352.2 582.5 350.5 582.0ZM720.3 581.9C714.4 580.2 714.0 578.0 714.0 551.0L714.0 526.8L717.0 523.9L719.9 520.9L749.9 521.2C779.6 521.5 780.0 521.5 782.2 523.8C784.4 526.0 784.5 526.6 784.8 550.3C785.1 577.2 784.9 578.3 779.0 581.2C775.9 582.8 772.4 583.0 749.5 582.9C735.2 582.9 722.0 582.4 720.3 581.9ZM61.4 576.6L58.0 573.2L58.2 289.6L58.5 6.0L61.3 3.3L64.0 0.5L169.4 0.2L274.7 -0.0L278.1 2.3L281.5 4.6L281.8 41.1L282.0 77.6L279.4 80.1L276.8 82.5L213.2 83.0C178.2 83.3 148.7 83.9 147.8 84.3C142.9 86.7 143.0 85.9 143.0 148.5L143.0 207.0L210.0 207.0L277.1 207.0L279.5 209.5L282.0 211.9L282.0 248.8C282.0 284.5 281.9 285.7 280.0 287.8L277.9 290.0L210.5 290.0L143.0 290.0L143.0 431.6C143.0 526.7 142.7 573.8 142.0 575.1C139.5 579.8 137.4 580.0 99.9 580.0L64.8 580.0L61.4 576.6ZM529.4 579.0C528.2 578.5 526.5 577.1 525.6 575.8C524.1 573.8 524.0 548.8 524.0 290.2C524.0 97.8 524.3 6.3 525.0 4.9C527.5 0.3 529.7 0.0 566.3 0.0C600.5 0.0 600.7 0.0 604.1 2.3L607.5 4.6L607.8 289.7L608.0 574.8L604.9 577.4L601.8 580.0L566.7 579.9C547.3 579.9 530.5 579.5 529.4 579.0ZM943.1 578.6C937.8 575.7 938.1 586.4 938.0 386.8L938.0 201.2L934.9 198.6L931.8 196.0L895.4 196.0C856.6 196.0 853.5 195.7 851.1 191.2C850.4 189.8 850.0 177.3 850.0 154.0L850.0 118.8L852.9 115.9L855.8 113.0L980.3 113.0L1104.8 113.0L1107.9 115.6L1111.0 118.2L1111.0 153.7C1111.0 177.2 1110.6 189.8 1109.9 191.2C1107.5 195.7 1104.4 196.0 1065.5 196.0L1028.8 196.0L1025.9 198.9L1023.0 201.8L1023.0 387.5C1023.0 512.9 1022.7 573.8 1022.0 575.1C1019.5 579.8 1017.3 580.0 980.3 580.0C953.3 579.9 945.0 579.6 943.1 578.6ZM855.4 82.0C850.1 79.9 850.0 79.3 850.0 41.7C850.0 19.7 850.4 6.2 851.0 4.9C853.8 -0.2 848.5 -0.0 980.5 0.0C1112.8 0.0 1107.2 -0.2 1110.0 5.0C1110.7 6.4 1111.1 18.9 1111.0 42.3L1111.0 77.5L1108.5 80.0L1106.0 82.5L981.7 82.7C913.0 82.8 856.5 82.5 855.4 82.0Z"/></svg>
     </a>
-  </div>
-</section>
-
-<!-- ========= 3 & 4 · RETREATS ========= -->
-<section class="section sand" aria-labelledby="escape-h">
-  <div class="section-inner">
-    <p class="mono eyebrow" style="color:var(--lagoon)">Escape</p>
-    <h2 class="display" id="escape-h">Train somewhere beautiful</h2>
-    <p class="lede">Mind Fit Retreats and F.I.T Trips — movement, rest and good company, far from the everyday.</p>
-    <div class="trips-host" id="trips">
-      <div class="set set-poster">
-      <a class="poster poster-znz reveal" href="/retreats/zanzibar">
-        <span class="frame" aria-hidden="true"></span>
-        <div class="scene"><svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sunset over the Indian Ocean, Zanzibar">
-<defs>
-<linearGradient id="zsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFB65C"/><stop offset=".55" stop-color="#FF7A3D"/><stop offset="1" stop-color="#FF4B24"/></linearGradient>
-<linearGradient id="zsea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1AA290"/><stop offset="1" stop-color="#0C5B52"/></linearGradient>
-</defs>
-<rect width="400" height="300" fill="url(#zsky)"/>
-<circle cx="285" cy="118" r="66" fill="#FFE3B3" opacity=".25"/>
-<circle cx="285" cy="118" r="46" fill="#FFE3B3"/>
-<rect y="170" width="400" height="130" fill="url(#zsea)"/>
-<rect y="170" width="400" height="3" fill="#FFE3B3" opacity=".55"/>
-<rect x="262" y="173" width="46" height="127" fill="#FFD9A0" opacity=".2"/>
-<path d="M0 196 Q50 190 100 196 T200 196 T300 196 T400 196 V204 Q350 210 300 204 T200 204 T100 204 T0 204 Z" fill="#FFFDF2" opacity=".14"/>
-<path d="M0 236 Q60 229 120 236 T240 236 T360 236 L400 234 V244 H0 Z" fill="#FFFDF2" opacity=".1"/>
-<path d="M116 172 L146 126 L151 172 Z" fill="#241630"/>
-<path d="M104 172 h58 l-9 11 h-40 Z" fill="#241630"/>
-<path d="M60 84 q6 -7 12 0 q6 -7 12 0" fill="none" stroke="#241630" stroke-width="3" stroke-linecap="round"/>
-<path d="M96 62 q5 -6 10 0 q5 -6 10 0" fill="none" stroke="#241630" stroke-width="2.5" stroke-linecap="round"/>
-<path d="M352 300 q-6 -70 22 -118" fill="none" stroke="#191021" stroke-width="13" stroke-linecap="round"/>
-<g fill="#191021">
-<path d="M374 182 q-52 -26 -92 -4 q46 -22 96 14 Z"/>
-<path d="M374 182 q-8 -50 -48 -66 q34 22 40 70 Z"/>
-<path d="M374 182 q30 -40 76 -40 q-42 8 -68 50 Z"/>
-<path d="M374 182 q48 -6 74 28 q-30 -22 -78 -16 Z"/>
-<path d="M374 182 q6 -44 44 -60 q-28 26 -34 64 Z"/>
-<circle cx="368" cy="188" r="6"/><circle cx="380" cy="192" r="6"/>
-</g>
-</svg></div>
-        <div class="p-body">
-          <span class="mono p-kicker">Mind Fit Retreat · Zanzibar, Tanzania</span>
-          <h3 class="display">Zanzibar</h3>
-          <div class="ticket">
-            <div class="slot"><span class="mono">Dates</span><b>1 – 8 Feb 2027</b></div>
-            <div class="slot"><span class="mono">Spots</span><b>Limited</b></div>
-          </div>
-          <span class="p-go">Get the details</span>
-        </div>
-      </a>
-      <a class="poster poster-sof reveal" href="/retreats/bulgaria">
-        <span class="frame" aria-hidden="true"></span>
-        <div class="scene"><svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mountain dusk and a steaming thermal pool, Bulgaria">
-<defs>
-<linearGradient id="bsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3A1B52"/><stop offset=".55" stop-color="#8A3B63"/><stop offset="1" stop-color="#FFA028"/></linearGradient>
-</defs>
-<rect width="400" height="300" fill="url(#bsky)"/>
-<circle cx="120" cy="58" r="2" fill="#FFE3B3" opacity=".8"/><circle cx="300" cy="40" r="1.6" fill="#FFE3B3" opacity=".7"/>
-<circle cx="222" cy="78" r="1.6" fill="#FFE3B3" opacity=".6"/><circle cx="60" cy="108" r="1.4" fill="#FFE3B3" opacity=".5"/>
-<circle cx="205" cy="150" r="34" fill="#FFD9A0"/>
-<path d="M0 190 L90 106 L180 190 Z" fill="#4A2360" opacity=".92"/>
-<path d="M120 190 L230 94 L340 190 Z" fill="#341745"/>
-<path d="M250 190 L330 118 L400 190 Z" fill="#4A2360" opacity=".92"/>
-<rect y="188" width="400" height="112" fill="#241630"/>
-<g fill="#191021">
-<path d="M40 190 l12 -26 l12 26 Z"/><path d="M44 176 l8 -18 l8 18 Z"/>
-<path d="M330 190 l11 -24 l11 24 Z"/><path d="M334 178 l7 -16 l7 16 Z"/>
-<path d="M368 190 l9 -20 l9 20 Z"/>
-</g>
-<ellipse cx="200" cy="244" rx="122" ry="34" fill="#12756A"/>
-<ellipse cx="200" cy="241" rx="97" ry="24" fill="#1AA290"/>
-<ellipse cx="186" cy="236" rx="40" ry="9" fill="#FFE3B3" opacity=".26"/>
-<g class="steam" fill="none" stroke="#FAF2E7" stroke-width="5" stroke-linecap="round" opacity=".55">
-<path d="M150 226 q-12 -18 2 -34 q12 -14 2 -30"/>
-<path d="M204 222 q14 -18 0 -36 q-12 -16 0 -30"/>
-<path d="M254 228 q-10 -16 3 -30 q11 -13 3 -28"/>
-</g>
-</svg></div>
-        <div class="p-body">
-          <span class="mono p-kicker">F.I.T Trip · Spa Break</span>
-          <h3 class="display">Bulgaria</h3>
-          <div class="ticket">
-            <div class="slot"><span class="mono">Dates</span><b>22 – 25 Apr 2027</b></div>
-            <div class="slot"><span class="mono">Spots</span><b>Limited</b></div>
-          </div>
-          <span class="p-go">Get the details</span>
-        </div>
-      </a>
-      </div>
-      <div class="set set-pass">
-      <a class="pass pass-znz reveal" href="/retreats/zanzibar">
-        <div class="pass-main">
-          <div class="pass-head">
-            <span class="mono">F.I.T Air · Boarding pass</span>
-            <span class="mono">Class: Intentional</span>
-          </div>
-          <div class="route display">
-            <span>LON</span>
-            <span class="lane" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="#191021" style="background:#FFFDF7;padding:0 5px" aria-hidden="true"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg></span>
-            <span class="code-to">ZNZ</span>
-          </div>
-          <h3 class="display pass-dest">Zanzibar, Tanzania</h3>
-          <div class="pass-grid">
-            <div class="fld"><span class="mono">Passenger</span><b>You</b></div>
-            <div class="fld"><span class="mono">Dates</span><b>1 – 8 Feb 2027</b></div>
-            <div class="fld"><span class="mono">Trip</span><b>Mind Fit Retreat</b></div>
-            <div class="fld"><span class="mono">Baggage</span><b>Leave it behind</b></div>
-          </div>
-        </div>
-        <div class="perf" aria-hidden="true"></div>
-        <div class="pass-stub">
-          <div class="barcode" aria-hidden="true"></div>
-          <span class="mono stub-code">FIT-027</span>
-          <span class="p-go">Get the details</span>
-        </div>
-      </a>
-      <a class="pass pass-sof reveal" href="/retreats/bulgaria">
-        <div class="pass-main">
-          <div class="pass-head">
-            <span class="mono">F.I.T Air · Boarding pass</span>
-            <span class="mono">Class: Intentional</span>
-          </div>
-          <div class="route display">
-            <span>LON</span>
-            <span class="lane" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="#191021" style="background:#FFFDF7;padding:0 5px" aria-hidden="true"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg></span>
-            <span class="code-to">SOF</span>
-          </div>
-          <h3 class="display pass-dest">Sofia, Bulgaria</h3>
-          <div class="pass-grid">
-            <div class="fld"><span class="mono">Passenger</span><b>You</b></div>
-            <div class="fld"><span class="mono">Dates</span><b>22 – 25 Apr 2027</b></div>
-            <div class="fld"><span class="mono">Trip</span><b>F.I.T Trip · Spa</b></div>
-            <div class="fld"><span class="mono">Baggage</span><b>Swimwear only</b></div>
-          </div>
-        </div>
-        <div class="perf" aria-hidden="true"></div>
-        <div class="pass-stub">
-          <div class="barcode" aria-hidden="true"></div>
-          <span class="mono stub-code">FIT-427</span>
-          <span class="p-go">Get the details</span>
-        </div>
-      </a>
-      </div>
-      <div class="set set-postcard">
-      <a class="postcard pc-znz reveal" href="/retreats/zanzibar">
-        <div class="pc-inner">
-          <span class="mono pc-label">Post card · Zanzibar, Tanzania</span>
-          <div class="pc-left">
-            <p class="hand">Sunrise swims, F.I.T Jam on the sand, deep deep rest. You&rsquo;d love it here —</p>
-            <p class="hand sign">Faye x</p>
-            <div class="ticket">
-              <div class="slot"><span class="mono">Dates</span><b>1 – 8 Feb 2027</b></div>
-              <div class="slot"><span class="mono">Spots</span><b>Limited</b></div>
-            </div>
-            <span class="p-go">Get the details</span>
-          </div>
-          <div class="pc-right">
-            <span class="stamp" aria-hidden="true">
-              <span class="display">F.I.T</span>
-              <span class="mono">LON → ZNZ</span>
-            </span>
-            <span class="postmark mono" aria-hidden="true">Mind Fit<br>1&ndash;8 Feb<br>2027</span>
-            <div class="addr" aria-hidden="true">
-              <span class="to">To: You</span>
-              <span class="line"></span>
-              <span class="line"></span>
-            </div>
-          </div>
-        </div>
-      </a>
-      <a class="postcard pc-sof reveal" href="/retreats/bulgaria">
-        <div class="pc-inner">
-          <span class="mono pc-label">Post card · Bulgaria</span>
-          <div class="pc-left">
-            <p class="hand">Mountain air, thermal pools, long slow dinners. A proper reset —</p>
-            <p class="hand sign">Faye x</p>
-            <div class="ticket">
-              <div class="slot"><span class="mono">Dates</span><b>22 – 25 Apr 2027</b></div>
-              <div class="slot"><span class="mono">Spots</span><b>Limited</b></div>
-            </div>
-            <span class="p-go">Get the details</span>
-          </div>
-          <div class="pc-right">
-            <span class="stamp" aria-hidden="true">
-              <span class="display">F.I.T</span>
-              <span class="mono">LON → SOF</span>
-            </span>
-            <span class="postmark mono" aria-hidden="true">F.I.T Trip<br>22&ndash;25 Apr<br>2027</span>
-            <div class="addr" aria-hidden="true">
-              <span class="to">To: You</span>
-              <span class="line"></span>
-              <span class="line"></span>
-            </div>
-          </div>
-        </div>
-      </a>
-      </div>
-      <div class="set set-simple">
-        <a class="simple-card sc-znz reveal" href="/retreats/zanzibar">
-          <span class="mono">Mind Fit Retreat · Zanzibar, Tanzania</span>
-          <h3 class="display">Zanzibar</h3>
-          <p class="meta">1 – 8 Feb 2027 · Limited spots</p>
-          <span class="p-go">Get the details</span>
-        </a>
-        <a class="simple-card sc-sof reveal" href="/retreats/bulgaria">
-          <span class="mono">F.I.T Trip · Spa Break</span>
-          <h3 class="display">Bulgaria</h3>
-          <p class="meta">22 – 25 Apr 2027 · Limited spots</p>
-          <span class="p-go">Get the details</span>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ======= 5 & 6 · ACADEMY + COMMUNITY ======= -->
-<section class="section dark duo" aria-labelledby="crew-h">
-  <div class="section-inner">
-    <p class="mono eyebrow" style="color:var(--tang)">Your people</p>
-    <h2 class="display" id="crew-h">Join the F.I.T side</h2>
-    <div class="duo-grid">
-      <div class="card reveal">
-        <p class="mono" style="color:var(--tang)">For instructors</p>
-        <h3 class="display">F.I.T Academy</h3>
-        <p class="tagline lede">Coaching, job opportunities and a community of instructors building real careers in fitness.</p>
-        <a class="btn hot wide" href="/academy">Join the academy</a>
-      </div>
-      <div class="card reveal">
-        <p class="mono" style="color:var(--tang)">For everyone</p>
-        <h3 class="display">F.I.T Community</h3>
-        <p class="tagline lede">Your personal coach to uplift, motivate and empower you — first word on events, retreats and discounts.</p>
-        <a class="btn ghost wide" href="/community">Join free</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 7 · F.I.T APP ============ -->
-<section class="section" aria-labelledby="app-h">
-  <div class="section-inner reveal">
-    <p class="mono eyebrow" style="color:var(--flame)">Train anywhere</p>
-    <h2 class="display" id="app-h">The F.I.T App</h2>
-    <div class="app-wrap">
-      <div class="phone" aria-hidden="true">
-        <div class="screen">
-          <div class="notch"></div>
-          <div class="app-title display">F.I.T</div>
-          <div class="app-sub mono">Home workout platform</div>
-          <div class="klass"><span>F.I.T Jam</span><em>Dance</em></div>
-          <div class="klass"><span>F.I.T Strength</span><em>Build</em></div>
-          <div class="klass"><span>F.I.T Combat</span><em>Sweat</em></div>
-          <div class="klass"><span>F.I.T Bands</span><em>Tone</em></div>
-          <div class="klass"><span>Stretch &amp; Mind</span><em>Restore</em></div>
-        </div>
-      </div>
-      <div class="app-copy">
-        <p class="lede">100+ workouts curated by Faye — every mood, every level, on your schedule. Tune in and focus on the feeling.</p>
-        <div class="price-chip"><span class="amt">£15</span><span class="per">to start</span></div>
-        <a class="btn wide" href="/app">Start on the app</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 8 · THE BOOK ============ -->
-<section class="section sand" aria-labelledby="read-h">
-  <div class="section-inner reveal">
-    <p class="mono eyebrow" style="color:var(--flame)">Read</p>
-    <h2 class="display" id="read-h">Where it comes from</h2>
-    <div class="book-wrap">
-      <div class="book" aria-hidden="true">
-        <div class="b-title display">Stand in your greatness</div>
-        <div class="b-author mono">Ann-Marie Gregory</div>
-      </div>
-      <div class="book-copy">
-        <p class="lede"><strong>Stand in Your Greatness</strong> by Ann-Marie Gregory — Faye's mum, and the original source of the motiFAYEtion. Read the book behind the mindset.</p>
-        <a class="btn wide" href="/the-book">Get it on Amazon</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ======= 9 & 10 · YOUTUBE + TIKTOK ======= -->
-<section class="section dark" aria-labelledby="watch-h">
-  <div class="section-inner reveal">
-    <p class="mono eyebrow" style="color:var(--tang)">Press play</p>
-    <h2 class="display" id="watch-h">Move with Faye</h2>
-    <p class="lede">A full F.I.T Jam session, free — then follow along for fitness, fun and motiFAYEtion.</p>
-
-    <div class="video-shell" id="video-shell">
-      <button class="video-facade" id="video-facade" aria-label="Play: F.I.T Jam full workout with Faye Edwards">
-        <img src="https://i.ytimg.com/vi/C7QkwNTu8wk/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()">
-        <span class="vplay" aria-hidden="true">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-        </span>
-        <span class="vtitle">F.I.T Jam — full workout with Faye</span>
+    <nav class="nav" aria-label="Main">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/#move">Move with Faye</a></li>
+        <li><a href="/#grow">Grow with Faye</a></li>
+        <li><a href="/#work">Work with Faye</a></li>
+      </ul>
+      <a class="btn btn-hot btn-sm" href="mailto:faye@fayesintentionaltraining.com">Get in touch</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links">
+        <span class="visually-hidden">Menu</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
-    </div>
-
-    <div class="follow-row">
-      <a class="btn hot" href="https://youtube.com/@fayeedwards453" target="_blank" rel="noopener">YouTube</a>
-      <a class="btn ghost" href="https://www.tiktok.com/@fayesfitness" target="_blank" rel="noopener">TikTok</a>
-    </div>
-  </div>
-</section>
-
-<!-- ================ FOOTER ================ -->
-<footer aria-label="Contact">
-  <div class="foot-inner">
-    <nav class="foot-nav" aria-label="Pages">
-      <a href="/fit-camp">F.I.T Camp</a>
-      <a href="/retreats/zanzibar">Zanzibar</a>
-      <a href="/retreats/bulgaria">Bulgaria</a>
-      <a href="/academy">F.I.T Academy</a>
-      <a href="/community">F.I.T Community</a>
-      <a href="/app">The F.I.T App</a>
-      <a href="/webinar">Webinar</a>
-      <a href="/the-book">The Book</a>
-      <a href="/watch">Watch</a>
-      <a href="/links">All links</a>
-      <a href="/why">Why this site</a>
     </nav>
-    <p class="display">Let's get F.I.T</p>
-    <div class="foot-links">
-      <a href="https://fayeedwards.co.uk" target="_blank" rel="noopener"><b>fayeedwards.co.uk</b></a>
-      <a href="mailto:faye@fayeedwards.co.uk"><b>faye@fayeedwards.co.uk</b></a>
-      <a href="https://instagram.com/fayes_fitness" target="_blank" rel="noopener"><b>@fayes_fitness</b></a>
+  </div>
+</header>
+<!-- /partial:header -->
+
+<main id="main">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <div class="hero-copy">
+        <p class="eyebrow">Faye's Intentional Training</p>
+        <h1 class="title" id="hero-title">Focus on <em>the feeling.</em></h1>
+        <p class="lede">Do what brings you joy, take away the pressure to be perfect &mdash; and feel stronger, physically and mentally. All levels, all abilities, all welcome.</p>
+        <div class="cta">
+          <a class="btn btn-hot" href="#move">Move with Faye</a>
+          <a class="btn btn-line" href="#work">Work with Faye</a>
+        </div>
+      </div>
+      <img class="hero-photo"
+           src="/assets/img/faye-laughing-640.webp"
+           srcset="/assets/img/faye-laughing-640.webp 640w, /assets/img/faye-laughing-1100.webp 1100w"
+           sizes="(min-width: 900px) 520px, 88vw"
+           width="1100" height="1091"
+           alt="Faye Edwards laughing, in a white training top and headband"
+           fetchpriority="high">
     </div>
-    <p class="foot-note">Faye's Intentional Training · London</p>
+  </section>
+
+  <section class="section" aria-labelledby="doors-title">
+    <div class="wrap">
+      <h2 class="title rule-title" id="doors-title">One home, three ways in</h2>
+      <div class="doors">
+        <article class="card door" id="move">
+          <img src="/assets/img/faye-stage-jam-636.webp" width="636" height="637" loading="lazy"
+               alt="Faye leading a packed F.I.T Jam class on stage under purple lights">
+          <div class="card-body">
+            <p class="eyebrow">Move with Faye</p>
+            <h3 class="heading">Classes, events, the F.I.T App &amp; retreats</h3>
+            <p>F.I.T Jam, Combat, Flow and more &mdash; playful, high-energy sessions for every level, in person and on the app, plus MindFit Retreats abroad.</p>
+            <a class="btn btn-hot btn-sm" href="mailto:faye@fayesintentionaltraining.com?subject=Moving%20with%20F.I.T">Ask about classes</a>
+          </div>
+        </article>
+        <article class="card door" id="grow">
+          <img src="/assets/img/faye-coaching-group-720.webp"
+               srcset="/assets/img/faye-coaching-group-720.webp 720w, /assets/img/faye-coaching-group-1200.webp 1200w"
+               sizes="(min-width: 900px) 380px, 92vw" width="1200" height="801" loading="lazy"
+               alt="Faye coaching a small group of instructors around a table">
+          <div class="card-body">
+            <p class="eyebrow">Grow with Faye</p>
+            <h3 class="heading">F.I.T Academy for instructors</h3>
+            <p>Instructor mentorship, fitness business coaching, certification training and group coaching programmes &mdash; built on 13 years in the industry.</p>
+            <a class="btn btn-hot btn-sm" href="mailto:faye@fayesintentionaltraining.com?subject=F.I.T%20Academy">Ask about the Academy</a>
+          </div>
+        </article>
+        <article class="card door" id="work">
+          <img src="/assets/img/ladies-who-launch-720.webp"
+               srcset="/assets/img/ladies-who-launch-720.webp 720w, /assets/img/ladies-who-launch-1200.webp 1200w"
+               sizes="(min-width: 900px) 380px, 92vw" width="1200" height="801" loading="lazy"
+               alt="Faye on stage at Ladies Who Launch, the whole room on its feet with hands in the air">
+          <div class="card-body">
+            <p class="eyebrow">Work with Faye</p>
+            <h3 class="heading">Speaking, presenting &amp; consulting</h3>
+            <p>Faye works with brands, fitness companies, wellness platforms and events to deliver high-energy experiences that inspire and educate.</p>
+            <a class="btn btn-hot btn-sm" href="mailto:faye@fayesintentionaltraining.com?subject=Working%20together">Start a conversation</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section mission" aria-labelledby="mission-title">
+    <div class="wrap">
+      <h2 class="eyebrow" id="mission-title">The mission</h2>
+      <figure>
+        <blockquote class="heading">To empower people through intentional movement and mindset, while creating a more diverse, inclusive fitness industry where everyone feels seen, supported, and inspired to thrive.</blockquote>
+        <figcaption class="sub">Faye Edwards, founder of F.I.T</figcaption>
+      </figure>
+    </div>
+  </section>
+</main>
+
+<!-- partial:footer -->
+<footer class="site-footer">
+  <div class="wrap">
+    <img class="footer-logo" src="/assets/img/logo/fit-logo-white.svg" width="1147" height="726" alt="F.I.T — Faye's Intentional Training" loading="lazy">
+    <div class="footer-cols">
+      <div>
+        <h2 class="eyebrow">Explore</h2>
+        <ul>
+          <li><a href="/#move">Move with Faye</a></li>
+          <li><a href="/#grow">Grow with Faye</a></li>
+          <li><a href="/#work">Work with Faye</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="eyebrow">Say hello</h2>
+        <ul>
+          <li><a href="mailto:faye@fayesintentionaltraining.com">faye@fayesintentionaltraining.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="eyebrow">Follow</h2>
+        <ul>
+          <li><a href="https://www.instagram.com/fayes_fitness/" rel="noopener" target="_blank">Instagram</a></li>
+          <li><a href="https://www.tiktok.com/@fayesfitness" rel="noopener" target="_blank">TikTok</a></li>
+          <li><a href="https://www.youtube.com/channel/UClJD5aYUrShejxYkWHV6O_g" rel="noopener" target="_blank">YouTube</a></li>
+          <li><a href="https://www.facebook.com/Fayesfitnesspage" rel="noopener" target="_blank">Facebook</a></li>
+          <li><a href="https://www.linkedin.com/in/faye-edwards-8633b2264" rel="noopener" target="_blank">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="legal">&copy; <span data-year>2026</span> Faye's Intentional Training Ltd &middot; 4 Chester Court, Chester Hall Lane, Basildon, Essex SS14&nbsp;3WR</p>
   </div>
 </footer>
-
-<div class="sticky-cta" id="sticky-cta">
-  <a href="/fit-camp">
-    <span class="dot" aria-hidden="true"></span>
-    F.I.T Camp · Thu 6 Aug — Book
-  </a>
-</div>
-
-<script>
-// duplicate marquee content so the loop is seamless
-(function(){
-  var t=document.getElementById('marquee');
-  t.innerHTML+=t.innerHTML;
-})();
-
-// countdown to F.I.T Camp — 6 Aug, local time
-(function(){
-  var target=new Date(2026,7,6,0,0,0).getTime();
-  var d=document.getElementById('c-d'),h=document.getElementById('c-h'),
-      m=document.getElementById('c-m'),s=document.getElementById('c-s'),
-      label=document.getElementById('count-label');
-  function pad(n){return String(n).padStart(2,'0')}
-  function tick(){
-    var diff=target-Date.now();
-    if(diff<=0){
-      label.textContent='Status';
-      document.getElementById('countdown').innerHTML='<div class="unit"><div class="num">IN SESSION</div><div class="lbl">next intake soon</div></div>';
-      return;
-    }
-    d.textContent=pad(Math.floor(diff/864e5));
-    h.textContent=pad(Math.floor(diff/36e5)%24);
-    m.textContent=pad(Math.floor(diff/6e4)%60);
-    s.textContent=pad(Math.floor(diff/1e3)%60);
-    setTimeout(tick,1000);
-  }
-  tick();
-})();
-
-// youtube facade -> real embed on tap
-(function(){
-  var f=document.getElementById('video-facade');
-  f.addEventListener('click',function(){
-    var i=document.createElement('iframe');
-    i.src='https://www.youtube-nocookie.com/embed/C7QkwNTu8wk?autoplay=1&rel=0';
-    i.title='F.I.T Jam full workout with Faye Edwards';
-    i.allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture';
-    i.allowFullscreen=true;
-    document.getElementById('video-shell').replaceChildren(i);
-  });
-})();
-
-// topbar + sticky CTA react to scroll position
-(function(){
-  var cta=document.getElementById('sticky-cta'),
-      hero=document.getElementById('top');
-  if('IntersectionObserver' in window){
-    new IntersectionObserver(function(e){
-      cta.classList.toggle('show',!e[0].isIntersecting);
-    },{rootMargin:'-70px 0px 0px 0px'}).observe(hero);
-    // reveals
-    var ro=new IntersectionObserver(function(es){
-      es.forEach(function(en){
-        if(en.isIntersecting){en.target.classList.add('in');ro.unobserve(en.target)}
-      });
-    },{threshold:.12});
-    document.querySelectorAll('.reveal').forEach(function(el){ro.observe(el)});
-  }else{
-    document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in')});
-  }
-})();
-
-// retreat card style switcher
-(function(){
-  var tabs=[].slice.call(document.querySelectorAll('.versions [role="tab"]'));
-  function select(i,focus){
-    tabs.forEach(function(t,j){
-      t.setAttribute('aria-selected', j===i ? 'true' : 'false');
-      t.tabIndex = j===i ? 0 : -1;
-    });
-    document.body.dataset.theme = tabs[i].dataset.theme;
-    if(focus) tabs[i].focus();
-  }
-  tabs.forEach(function(t,i){
-    t.addEventListener('click',function(){ select(i); });
-    t.addEventListener('keydown',function(e){
-      if(e.key==='ArrowRight'){ select((i+1)%tabs.length,true); }
-      if(e.key==='ArrowLeft'){ select((i-1+tabs.length)%tabs.length,true); }
-    });
-  });
-  select(0);
-})();
-</script>
+<!-- /partial:footer -->
 </body>
 </html>

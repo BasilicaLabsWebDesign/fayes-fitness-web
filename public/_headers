@@ -1,11 +1,31 @@
 /*
   X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
   Referrer-Policy: strict-origin-when-cross-origin
-  X-Frame-Options: SAMEORIGIN
-  Permissions-Policy: geolocation=(), microphone=(), camera=()
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), interest-cohort=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; manifest-src 'self'; worker-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests
 
-/index.html
+# Fonts and images never change in place: a changed picture gets a new name.
+/assets/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+/assets/img/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Styles and scripts keep their names, so browsers revalidate them (cheap 304s).
+/assets/css/*
+  Cache-Control: public, max-age=0, must-revalidate
+/assets/js/*
   Cache-Control: public, max-age=0, must-revalidate
 
-/404.html
+# The service worker and manifest must always be fresh, or updates stall.
+/sw.js
+  Cache-Control: no-cache
+/manifest.webmanifest
+  Cache-Control: no-cache
+
+# HTML must stay fresh so a deploy is visible immediately.
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+/
   Cache-Control: public, max-age=0, must-revalidate

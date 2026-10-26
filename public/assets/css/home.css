@@ -1,0 +1,35 @@
+/* Home page only. */
+
+.hero {
+  position: relative; overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, .86) 0%, rgba(0, 0, 0, .55) 50%, rgba(0, 0, 0, .1) 100%),
+    var(--black) url(/assets/img/particles-1280.webp) center / cover no-repeat;
+}
+@media (min-width: 1280px) {
+  .hero { background-image:
+    linear-gradient(90deg, rgba(0, 0, 0, .86) 0%, rgba(0, 0, 0, .55) 50%, rgba(0, 0, 0, .1) 100%),
+    url(/assets/img/particles-2400.webp); }
+}
+.hero .wrap { display: grid; gap: 8px; align-items: end; padding-top: 48px; }
+.hero-copy { padding-bottom: 8px; }
+.hero .eyebrow { color: var(--on-black-accent); }
+.hero h1 { font-size: clamp(2.4rem, 10vw, 5rem); margin: 14px 0 18px; }
+.hero h1 em { font-style: normal; color: var(--on-black-accent); }
+.hero .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.hero-photo { justify-self: center; width: min(88vw, 520px); margin-bottom: -2px; }
+
+.doors { display: grid; gap: 18px; }
+.door .card-body { display: flex; flex-direction: column; gap: 4px; height: 100%; }
+.door .btn { margin-top: 18px; align-self: flex-start; }
+
+.mission { background: var(--honey-flower); color: var(--on-honey); text-align: center; }
+.mission blockquote { max-width: 30ch; margin: 0 auto; font-size: clamp(1.35rem, 3.6vw, 2.1rem); line-height: 1.35; }
+.mission figcaption { margin-top: 22px; }
+
+@media (min-width: 900px) {
+  .hero .wrap { grid-template-columns: 1.05fr .95fr; padding-top: 72px; }
+  .hero-copy { padding-bottom: 88px; }
+  .hero-photo { justify-self: end; }
+  .doors { grid-template-columns: repeat(3, 1fr); }
+}

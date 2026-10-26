@@ -1,0 +1,66 @@
+/* F.I.T design tokens — every value here comes from the 2025 Brand Guide.
+   Change the brand in this file; components only ever read these variables. */
+
+@font-face { font-family: Montserrat; font-style: normal; font-weight: 400; font-display: swap; src: url(/assets/fonts/montserrat-400.woff2) format("woff2"); }
+@font-face { font-family: Montserrat; font-style: normal; font-weight: 500; font-display: swap; src: url(/assets/fonts/montserrat-500.woff2) format("woff2"); }
+@font-face { font-family: Montserrat; font-style: normal; font-weight: 700; font-display: swap; src: url(/assets/fonts/montserrat-700.woff2) format("woff2"); }
+@font-face { font-family: Montserrat; font-style: normal; font-weight: 900; font-display: swap; src: url(/assets/fonts/montserrat-900.woff2) format("woff2"); }
+
+:root {
+  /* Primary colours — mainly for backgrounds */
+  --honey-flower: #421769;
+  --blue-violet: #8a2be2;
+  --hot-purple: #bf00ff;
+  --black: #000000;
+
+  /* Supporting colours — mainly for text and accents */
+  --ocean: #036fa5;
+  --cobalt: #0047ab;
+  --persian-rose: #f715ab;
+  --off-white: #fdfdfd;
+
+  /* Concept colours, from the guide's concept logos */
+  --jam: var(--persian-rose);
+  --flow: var(--ocean);
+  --combat: var(--black);
+  --stretch: var(--blue-violet);
+  --strength: var(--cobalt);
+  --bands: var(--hot-purple);
+
+  /* Readable pairings (WCAG AA for body text unless noted).
+     Never set text in: hot purple on honey flower, cobalt on hot purple,
+     rose on cobalt, honey flower on hot purple — all under 3:1. */
+  --on-black: var(--off-white);          /* 20.6:1 */
+  --on-black-muted: rgba(253, 253, 253, 0.74);
+  --on-black-accent: var(--persian-rose); /* 5.65:1 */
+  --on-honey: var(--off-white);          /* 13.3:1 */
+  --on-violet: var(--off-white);         /* 5.86:1 */
+  --on-hot: var(--black);                /* 4.66:1 — never white (4.43) */
+  --on-rose: var(--black);               /* 5.65:1 — never white (3.65) */
+  --on-light: var(--black);
+  --on-light-muted: #3d3d3d;
+  --on-light-link: var(--cobalt);        /* 8.29:1 */
+
+  /* Type — Montserrat in the guide's four roles. Blandit is logo-only. */
+  --font: Montserrat, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --w-title: 900;      /* Montserrat Black — titles */
+  --w-heading: 700;    /* Montserrat Bold — headings */
+  --w-sub: 500;        /* Montserrat Medium — subheadings */
+  --w-body: 400;       /* Montserrat Regular — main body */
+  --track-title: 0.12em;
+  --track-eyebrow: 0.22em;
+
+  /* Body is 17px: the brand serves readers of every age */
+  --text: 1.0625rem;
+  --text-sm: 0.9375rem;
+  --text-xs: 0.8125rem;
+  --leading: 1.6;
+
+  /* Shape and space */
+  --radius: 18px;
+  --radius-pill: 999px;
+  --gutter: clamp(18px, 5vw, 40px);
+  --max: 1180px;
+  --tap: 48px;
+  --rule: 1px solid currentColor;
+}

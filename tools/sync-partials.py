@@ -1,0 +1,63 @@
+#!/usr/bin/env python3
+"""Stamp the shared header and footer into every page in public/.
+
+    python3 tools/sync-partials.py          # update pages
+    python3 tools/sync-partials.py --check  # exit 1 if any page is out of date
+
+Edit tools/partials/<name>.html, run this, commit the result. Pages hold the
+stamped markup between <!-- partial:name --> and <!-- /partial:name --> comments,
+so public/ stays plain HTML that Cloudflare serves with no build step. A new page
+can say {{HEADER}} / {{FOOTER}} and the first run fills it in.
+"""
+import re
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+PUBLIC = ROOT / "public"
+PARTIALS = ROOT / "tools" / "partials"
+MARK = ROOT / "public" / "assets" / "img" / "logo" / "fit-mark.svg"
+
+
+def load_partials() -> dict:
+    mark_path = re.search(r' d="([^"]+)"', MARK.read_text()).group(1)
+    parts = {}
+    for f in sorted(PARTIALS.glob("*.html")):
+        parts[f.stem] = f.read_text().strip().replace("{{MARK_PATH}}", mark_path)
+    return parts
+
+
+def stamp(html: str, parts: dict) -> str:
+    for name, body in parts.items():
+        block = f"<!-- partial:{name} -->\n{body}\n<!-- /partial:{name} -->"
+        token = "{{" + name.upper() + "}}"
+        if token in html:
+            html = html.replace(token, block)
+        else:
+            html = re.sub(rf"<!-- partial:{name} -->.*?<!-- /partial:{name} -->",
+                          lambda _m: block, html, flags=re.S)
+    return html
+
+
+def main() -> int:
+    check = "--check" in sys.argv
+    parts = load_partials()
+    stale = []
+    for page in sorted(PUBLIC.rglob("*.html")):
+        old = page.read_text()
+        new = stamp(old, parts)
+        if new != old:
+            stale.append(page.relative_to(ROOT))
+            if not check:
+                page.write_text(new)
+    for p in stale:
+        print(("out of date: " if check else "updated: ") + str(p))
+    if check and stale:
+        return 1
+    if not stale:
+        print("all pages up to date")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
