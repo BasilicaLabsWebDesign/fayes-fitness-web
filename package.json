@@ -1,11 +1,14 @@
 {
   "name": "fayes-fitness-web",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
-  "description": "Faye Edwards — F.I.T (Faye's Intentional Training) one-page site",
+  "description": "F.I.T — Faye's Intentional Training: website and booking app on Cloudflare Workers",
+  "type": "module",
   "scripts": {
     "dev": "wrangler dev",
-    "deploy": "wrangler deploy"
+    "deploy": "wrangler deploy",
+    "check": "wrangler deploy --dry-run",
+    "partials": "python3 tools/sync-partials.py"
   },
   "devDependencies": {
     "wrangler": "^4.0.0"

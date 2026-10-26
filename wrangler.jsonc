@@ -1,11 +1,22 @@
 {
-  // Static-assets-only Worker: everything in ./public is served directly,
-  // no Worker script needed. https://developers.cloudflare.com/workers/static-assets/
+  // F.I.T: static site in public/ plus a small Worker for the app's API.
+  // The Worker runs only for /api/*; everything else is served straight from public/.
+  // https://developers.cloudflare.com/workers/static-assets/
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "fayes-fitness-web",
-  "compatibility_date": "2026-08-05",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-10-20",
   "assets": {
     "directory": "./public",
-    "not_found_handling": "404-page"
+    "binding": "ASSETS",
+    // Serve the themed 404 for unknown paths instead of a bare Cloudflare error.
+    "not_found_handling": "404-page",
+    "run_worker_first": ["/api/*"]
+  },
+  "vars": {
+    "RELEASE": "v2.0-phase0"
+  },
+  "observability": {
+    "enabled": true
   }
 }

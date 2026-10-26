@@ -1,5 +1,8 @@
 node_modules/
 .wrangler/
+.render-check/
 .dev.vars
+.env
 .DS_Store
-npm-debug.log*
+*.log
+__pycache__/

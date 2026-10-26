@@ -1,0 +1,7 @@
+# Store binaries as binaries: no text diffs or line-ending changes
+*.pdf binary
+*.zip binary
+*.png binary
+*.jpg binary
+*.webp binary
+*.woff2 binary
