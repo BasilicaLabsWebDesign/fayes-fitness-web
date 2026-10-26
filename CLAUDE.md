@@ -9,10 +9,10 @@ Faye Edwards (Faye's Intentional Training Ltd). It replaces her Fibodo storefron
 Linktree with one site she owns: customer purchases, customer accounts, and notifications to
 customers and to Faye.
 
-It is version 2 — a ground-up rebuild. Version 1 (a one-page site, v1.0–v1.12) is what `main`
-serves until v2.0 launches. **All v2 work happens on the working branch
-`claude/repo-to-website-0442wi`**, which Cloudflare builds to a private preview URL. `main` is
-fast-forwarded to it only at launch (v2.0); every push to `main` after that is a release.
+It is version 2 — a ground-up rebuild of version 1 (a one-page site, v1.0–v1.12). v2.0 put the
+rebuilt public site on `main`; the remaining phases ship as v2.x releases. **Work happens on
+the working branch `claude/repo-to-website-0442wi`** (Cloudflare builds it to a private
+preview URL), and every verified batch is released by fast-forwarding `main` onto it.
 
 ## Architecture
 
@@ -39,7 +39,7 @@ request is served straight from `public/` by Cloudflare's asset handler.
 | 3 | Faye's admin: services, timetable, capacity | |
 | 4 | Purchases: Stripe test mode, memberships, vouchers, retreat deposits + instalments, QR check-in | needs Stripe |
 | 5 | Notifications: emails, in-app messages, reminders, push, Faye's digest | needs email provider + DNS |
-| 6 | Launch: legal pages from a data audit, Stripe live, domain, Fibodo cutover, **v2.0 on main** | |
+| 6 | Go live: legal pages from a data audit, Stripe live, domain, Fibodo cutover | |
 
 ## Repository layout
 
@@ -50,6 +50,7 @@ public/                 everything served (no build step — these files are the
   work-with-faye book contact .html   (served without .html: /about, /book …)
   manifest.webmanifest  sw.js  favicon.svg  apple-touch-icon.png  icons/
   _headers              security headers (incl. CSP) + caching
+  _redirects            v1 addresses (/why, /retreats/zanzibar …) → their v2 pages; never remove
   assets/css/           tokens.css (brand) → site.css (components) → home.css | pages.css
   assets/js/app.js      menu + service-worker registration
   assets/js/video.js    YouTube facades: nothing loads from YouTube until play is pressed
@@ -146,7 +147,7 @@ implement, verify, commit, push.
 - Before committing: `git config user.name "Fid" && git config user.email "fid_kk@proton.me"`,
   and after the first commit confirm with `git log -1 --format='%an <%ae>'`.
 - Develop on the working branch and push there first. Release verified work by
-  fast-forwarding `main` onto it and pushing `main`. Until v2.0, v2 work stays off `main`.
+  fast-forwarding `main` onto it and pushing `main`.
 - Every push to `main` is a release. Versions are an ascending `vMAJOR.MINOR` sequence; every
   push bumps the minor regardless of size; a major bump is reserved for a ground-up overhaul
   (v2.0 is one).
@@ -178,11 +179,11 @@ otherwise, or the model that truly did the work) and every input image and file 
 provided, each under its own name. The files are owner-supplied records: never edit,
 reformat, trim or regenerate them.
 
-Version 1 of the archive (`prompt text/1/`) belongs to the v2.0 launch. It is filled as the
-build goes: every owner message that shapes v2.0 is appended to `input.txt` in order, every
-supplied file is attached, and `output.txt` is written last, with the launch reply.
+`prompt text/1/` shipped with v2.0: every owner message from the start of the rebuild to that
+release, the brand guide, the deck and the old site's zip. The next release that ships new
+owner words starts `prompt text/2/`.
 
-## Launch checklist (v2.0)
+## Go-live checklist (phase 6)
 
 - [ ] Domain fayesintentionaltraining.com (the deck's) attached in Cloudflare
 - [ ] Every social link clicked through: the deck's handles were built into URLs without
@@ -197,8 +198,7 @@ supplied file is attached, and `output.txt` is written last, with the launch rep
 - [ ] Firestore rules published; Firebase authorised domains include the live domain
 - [ ] Stripe in live mode; webhook endpoint registered for the live domain
 - [ ] Email sending domain verified (SPF/DKIM)
-- [ ] `sw.js` VERSION bumped; `RELEASE` var in `wrangler.jsonc` set to v2.0
-- [ ] `prompt text/1/` complete: input.txt, output.txt, ai model.txt, all supplied files
+- [ ] `sw.js` VERSION and the `RELEASE` var in `wrangler.jsonc` match the release (every release)
 
 ## Owner inputs still needed
 
@@ -210,7 +210,7 @@ supplied file is attached, and `output.txt` is written last, with the launch rep
 ## Release ledger
 
 Releases v1.0–v1.12 are version 1 (the one-page site), recorded from the release notes
-handed back with each push.
+handed back with each push. v2.0 onwards is the rebuild.
 
 | Version | Title | Description |
 | --- | --- | --- |
@@ -228,4 +228,6 @@ handed back with each push.
 | v1.11 | The Book button steps out of the shadows | The booking button in the top bar was being painted over by the styling of the tilted book cover further down the page — near-invisible on two of the five styles, and slightly askew on all of them. It now shows its true colours everywhere. The Zanzibar page also gains proper payment options to match Bulgaria: pay in full, instalments, or a deposit to secure the room. |
 | v1.12 | The Why tab earns its place up top | The page that sells the whole concept was hiding in the footer where nobody would find it. It now has a proper tab in the top bar of every page, so the story of the site — one place instead of a list of links — is one tap away from anywhere. |
 
-Next release: **v2.0** — the rebuilt site, at launch.
+| v2.0 | Faye's whole world in one rebuilt site | The one-page site gives way to a full site built from Faye's 2025 brand and her latest deck, with pages for her classes and app, presenting, consulting, speaking, the Academy, retreats and working with brands, and enquiries that arrive as a ready-written email to Faye. It installs on a phone like an app and still opens offline, and every old address now lands on the page that covers it. |
+
+Next release: **v2.1**.

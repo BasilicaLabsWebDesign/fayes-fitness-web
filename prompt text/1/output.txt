@@ -1,0 +1,20 @@
+Done. The rebuilt site is on main as v2.0, so Cloudflare will now build it to the live address in place of the one-page site.
+
+Before moving main I kept a promise the old site made: every page address stays permanent. The nine v1 pages that no longer exist now forward to the page that covers them: /why and /links go to the home page, both retreat pages and /community go to Retreats & experiences, /fit-camp goes to Services, /webinar to the Academy, /watch to the App page and /the-book to About. The release is stamped v2.0 throughout and the ledger has its row. The project notes now say that main carries v2 and that later phases ship as v2.1, v2.2 and so on.
+
+The git skills were followed:
+- Every commit is authored as Fid <fid_kk@proton.me>, with an imperative subject, a prose body and no attribution trailers.
+- The work went to the working branch first, then main was fast-forwarded onto it, with no merge commit and no tags pushed.
+- The prompt archive (prompt text/1/) ships in the same commit as the release. It holds all your messages since the rebuild began, this reply, the model line and the three files you supplied: the old site's zip, the brand guide and the deck.
+
+Verified before pushing:
+- All twelve pages at phone, tablet and desktop widths: no console errors or blocked content, and every image and internal link loads.
+- The enquiry form and the video posters work.
+- The site installs like an app and opens offline.
+- All nineteen old addresses (the nine pages, plus their .html forms and /retreats) answer with a permanent redirect.
+- The API answers its health check and returns a proper not-found for unknown paths.
+
+Worth knowing now that it's live:
+- Class booking, memberships and vouchers still hand over to the Fibodo storefront until purchases arrive in phase 4.
+- Enquiries open the visitor's own email app until phase 5.
+- The retreat dates, the app store links and the social links still need someone to click through and confirm them.

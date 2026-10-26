@@ -19,3 +19,7 @@ Use the logos btw
 You got the cloudflare link?
 
 go on, phase 1 it
+
+can you push to main for now?
+
+make sure you are following all of the git skills btw
