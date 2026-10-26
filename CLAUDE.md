@@ -104,6 +104,17 @@ prompt text/            the archive for the version in service (see below)
   physical goals. Talk like a close friend. Tagline: "Focus on the feeling."
 - **Audiences:** Move with Faye (participants — Mandy, Grace), Grow with Faye (instructors —
   Paul, Penny), Work with Faye (brands and event organisers, from Faye's deck).
+- **Family logos — always use them:** F.I.T (`fit-logo-*.svg`), F.I.T Academy (the winged F/A,
+  `fit-academy-*.svg`, traced from the deck), MindFit Retreats (`mindfit-retreats-*`), and the
+  six concept logos (`fit-jam` … `fit-bands`). Originals live in `brand/logo/`.
+
+## Source of truth for content
+
+**Faye's deck (`prompt text/1/FAYEs_DECK.pdf`, June 2026) is the latest information** and
+wins over older sources (the Fibodo export, the v1 site, Flodesk emails). From it:
+email `faye@fayesintentionaltraining.com`, phone 07539 734633, Instagram @fayes_fitness,
+TikTok @fayesfitness, Facebook @fayesfitness, LinkedIn @fayeedwards, YouTube @fayeedwards;
+her bio, mission, the F.I.T ecosystem, services and clients.
 
 ## Local development
 
@@ -168,7 +179,9 @@ supplied file is attached, and `output.txt` is written last, with the launch rep
 
 ## Launch checklist (v2.0)
 
-- [ ] Domain chosen (owner leaning: fayesintentionaltraining.com) and attached in Cloudflare
+- [ ] Domain fayesintentionaltraining.com (the deck's) attached in Cloudflare
+- [ ] Every social link clicked through: the deck's handles were built into URLs without
+      being opened (this environment cannot reach those sites)
 - [ ] Absolute `og:image` / `og:url` / canonical tags, sitemap.xml and the robots Sitemap line
 - [ ] Company registration number in the footer (UK companies must show it on their website)
 - [ ] Privacy, terms, cookie and account-deletion pages from a data audit (app-legal-admin)
@@ -182,8 +195,8 @@ supplied file is attached, and `output.txt` is written last, with the launch rep
 
 - Firebase project, Stripe account (in the Ltd's name), email provider + DNS access
 - Offerings, prices, timetable, membership plans, voucher amounts, cancellation/refund policy
-- F.I.T Academy logo file; full-size originals of the pool and beach photos
-- Domain decision; whether to show partner logos (permission) or names only
+- Full-size originals of the pool and beach photos
+- Whether to show partner logos (permission) or names only
 
 ## Release ledger
 
