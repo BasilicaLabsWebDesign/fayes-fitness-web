@@ -34,8 +34,8 @@ request is served straight from `public/` by Cloudflare's asset handler.
 | Phase | Scope | Status |
 | --- | --- | --- |
 | 0 | Foundations: repo layout, design system, installable shell, Worker skeleton, locked database rules | done |
-| 1 | Public site: home, about, services, memberships, vouchers, timetable (view only), Work with Faye, contact | next |
-| 2 | Accounts: Firebase sign-up/in (email, Google, Apple), profile, settings, delete account | needs Firebase project |
+| 1 | Public site: home, about, services (app, presenting, consulting, speaking), academy, experiences, book (timetable, memberships, vouchers — on Fibodo until phase 4), Work with Faye, contact | done |
+| 2 | Accounts: Firebase sign-up/in (email, Google, Apple), profile, settings, delete account | next — needs Firebase project |
 | 3 | Faye's admin: services, timetable, capacity | |
 | 4 | Purchases: Stripe test mode, memberships, vouchers, retreat deposits + instalments, QR check-in | needs Stripe |
 | 5 | Notifications: emails, in-app messages, reminders, push, Faye's digest | needs email provider + DNS |
@@ -46,10 +46,14 @@ request is served straight from `public/` by Cloudflare's asset handler.
 ```
 public/                 everything served (no build step — these files are the site)
   index.html 404.html offline.html
+  about services app presenting consulting speaking academy experiences
+  work-with-faye book contact .html   (served without .html: /about, /book …)
   manifest.webmanifest  sw.js  favicon.svg  apple-touch-icon.png  icons/
   _headers              security headers (incl. CSP) + caching
-  assets/css/           tokens.css (brand) → site.css (components) → <page>.css
+  assets/css/           tokens.css (brand) → site.css (components) → home.css | pages.css
   assets/js/app.js      menu + service-worker registration
+  assets/js/video.js    YouTube facades: nothing loads from YouTube until play is pressed
+  assets/js/enquiry.js  enquiry form → pre-filled email to Faye (→ /api/enquiry in phase 5)
   assets/fonts/         Montserrat, self-hosted (OFL.txt beside it)
   assets/img/           web-sized WebP from tools/optimise-images.py; logo/ = traced SVGs
 worker/index.js         the API (Cloudflare Worker)
@@ -74,7 +78,8 @@ prompt text/            the archive for the version in service (see below)
   picture gets a new file name, never an in-place edit.
 - **CSP is strict** (`public/_headers`): no inline `<script>`, no inline `style=""`, no
   third-party origins. When a phase adds a third party (Firebase, Stripe, YouTube embeds),
-  add exactly its origins to the right directive in the same commit.
+  add exactly its origins to the right directive in the same commit. So far:
+  `frame-src https://www.youtube-nocookie.com` (phase 1, video facades).
 - **Service worker:** bump `VERSION` in `public/sw.js` with every release, and add new core
   files to `CORE`. The API is never cached.
 - **Fonts are self-hosted** so no visitor data goes to Google; keep it that way.
@@ -183,6 +188,10 @@ supplied file is attached, and `output.txt` is written last, with the launch rep
 - [ ] Every social link clicked through: the deck's handles were built into URLs without
       being opened (this environment cannot reach those sites)
 - [ ] Absolute `og:image` / `og:url` / canonical tags, sitemap.xml and the robots Sitemap line
+- [ ] App Store and Google Play links on /app opened and confirmed
+- [ ] Retreat dates, venues and availability on /experiences confirmed with Faye
+- [ ] Book page's interim Fibodo links (timetable, memberships, vouchers) replaced by
+      the site's own booking (phase 4)
 - [ ] Company registration number in the footer (UK companies must show it on their website)
 - [ ] Privacy, terms, cookie and account-deletion pages from a data audit (app-legal-admin)
 - [ ] Firestore rules published; Firebase authorised domains include the live domain
