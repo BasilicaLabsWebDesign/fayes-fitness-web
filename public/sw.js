@@ -1,6 +1,6 @@
 // Service worker: makes the site installable and keeps a working shell offline.
 // Bump VERSION with every release so installed copies fetch the new files.
-const VERSION = "2.0.0-phase0.1";
+const VERSION = "2.0.0-phase1";
 const CACHE = `fit-${VERSION}`;
 
 const CORE = [
@@ -11,6 +11,7 @@ const CORE = [
   "/assets/css/tokens.css",
   "/assets/css/site.css",
   "/assets/css/home.css",
+  "/assets/css/pages.css",
   "/assets/js/app.js",
   "/assets/fonts/montserrat-400.woff2",
   "/assets/fonts/montserrat-500.woff2",

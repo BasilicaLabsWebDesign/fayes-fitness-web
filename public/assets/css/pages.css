@@ -1,0 +1,154 @@
+/* Components for the inner pages (about, services, academy, experiences, work, book, contact).
+   Reads tokens.css; every page also loads site.css. */
+
+/* Page hero: title, lede and a photo or logo, on the brand's black particle canvas */
+.page-hero {
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, .9) 0%, rgba(0, 0, 0, .62) 55%, rgba(0, 0, 0, .3) 100%),
+    var(--black) url(/assets/img/particles-1280.webp) center / cover no-repeat;
+  padding: clamp(44px, 7vw, 84px) 0;
+}
+.page-hero .wrap { display: grid; gap: 36px; align-items: center; }
+.page-hero .eyebrow { color: var(--on-black-accent); }
+.page-hero h1 { font-size: clamp(2.1rem, 8vw, 4rem); margin: 12px 0 16px; }
+.page-hero .lede { max-width: 46ch; }
+.page-hero .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+.hero-media { justify-self: center; width: min(86vw, 440px); }
+.hero-media.tilt { transform: rotate(2.5deg); }
+.hero-media img { width: 100%; }
+.hero-logo { justify-self: center; width: min(44vw, 260px); }
+
+/* Section headings inside a column (rule-title is for full-width centred titles) */
+.section-head { font-size: clamp(1.5rem, 4.6vw, 2.4rem); margin-bottom: 22px; }
+.section-intro { max-width: 60ch; margin: 24px auto 0; text-align: center; }
+.rule-title + .section-intro { margin: -12px auto 32px; }
+.light .section-intro { color: var(--on-light-muted); }
+.section-intro.muted { color: var(--on-black-muted); }
+
+/* Two-column text + picture */
+.split { display: grid; gap: 32px; align-items: center; }
+.split img { width: 100%; border-radius: var(--radius); }
+.split.top { align-items: start; }
+.prose { max-width: 62ch; }
+.prose p + p { margin-top: 16px; }
+.prose .lead-in { font-size: 1.2rem; font-weight: var(--w-sub); }
+.muted { color: var(--on-black-muted); }
+.light .muted { color: var(--on-light-muted); }
+
+/* Lists with the brand tick */
+.ticks { list-style: none; padding: 0; display: grid; gap: 12px; }
+.ticks + p, .contact-list + p { margin-top: 24px; }
+.ticks li { position: relative; padding-left: 32px; font-weight: var(--w-sub); }
+.ticks li::before {
+  content: ""; position: absolute; left: 0; top: .32em; width: 18px; height: 18px; border-radius: 50%;
+  background: var(--persian-rose) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center / 12px no-repeat;
+}
+
+/* Service cards */
+.card-grid { display: grid; gap: 18px; }
+.service-card { display: flex; flex-direction: column; }
+.service-card .card-body { display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.service-card .ticks { margin: 6px 0 4px; gap: 8px; }
+.service-card .ticks li { font-weight: var(--w-body); font-size: var(--text-sm); color: var(--on-black-muted); }
+.light .service-card .ticks li { color: var(--on-light-muted); }
+.service-card .btn { align-self: flex-start; margin-top: auto; }
+.service-card img { aspect-ratio: 4 / 3; object-fit: cover; }
+
+/* Three values / pillars */
+.trio { display: grid; gap: 18px; }
+.trio-item { border-top: 3px solid var(--persian-rose); padding-top: 18px; }
+.light .trio-item { border-top-color: var(--honey-flower); }
+.trio-item h3 { font-size: 1.2rem; margin-bottom: 6px; }
+
+/* Big quote */
+.big-quote { max-width: 34ch; margin: 0 auto; text-align: center; font-size: clamp(1.3rem, 3.4vw, 2rem); line-height: 1.35; }
+.big-quote-band { background: var(--honey-flower); color: var(--on-honey); }
+
+/* Client and partner names */
+.names { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+.names li {
+  padding: 10px 16px; border-radius: var(--radius-pill);
+  border: 1.5px solid rgba(253, 253, 253, .3); font-weight: var(--w-sub); font-size: var(--text-sm);
+}
+.light .names li { border-color: var(--black); }
+
+/* Videos: a branded poster until tapped, so YouTube only loads when asked */
+.video-grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(220px, 280px)); justify-content: center; }
+.video { position: relative; border-radius: var(--radius); overflow: hidden; background: #111; aspect-ratio: 9 / 16; }
+.video button {
+  position: absolute; inset: 0; width: 100%; padding: 0; border: 0; cursor: pointer;
+  background: transparent; color: var(--off-white); text-align: left;
+}
+.video img { width: 100%; height: 100%; object-fit: cover; filter: brightness(.62); }
+.video .play {
+  position: absolute; left: 50%; top: 42%; transform: translate(-50%, -50%);
+  width: 68px; height: 68px; border-radius: 50%; background: var(--hot-purple); color: var(--black);
+  display: grid; place-items: center;
+}
+.video .play svg { width: 26px; height: 26px; margin-left: 4px; }
+.video .caption { position: absolute; left: 16px; right: 16px; bottom: 16px; font-weight: var(--w-heading); line-height: 1.3; }
+.video .caption small { display: block; font-weight: var(--w-body); color: var(--on-black-muted); margin-top: 4px; }
+.video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.video-note { font-size: var(--text-xs); color: var(--on-black-muted); margin-top: 14px; text-align: center; }
+
+/* Call-to-action band */
+.cta-band { background: var(--honey-flower); color: var(--on-honey); text-align: center; }
+.cta-band h2 { font-size: clamp(1.6rem, 5vw, 2.6rem); }
+.cta-band p { max-width: 46ch; margin: 14px auto 0; }
+.cta-band .cta { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 26px; }
+.cta-band .btn-line { color: var(--off-white); }
+
+/* Simple facts row */
+.facts { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+.fact { border: 1.5px solid rgba(253, 253, 253, .26); border-radius: var(--radius); padding: 18px; }
+.fact b { display: block; font-size: 1.1rem; }
+.fact span { color: var(--on-black-muted); font-size: var(--text-sm); }
+
+/* Booking: concept legend and route cards */
+.legend { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 10px 18px; }
+.legend li { display: flex; align-items: center; gap: 10px; font-weight: var(--w-sub); }
+.legend .swatch { width: 18px; height: 18px; border-radius: 5px; }
+.swatch-jam { background: var(--jam); }
+.swatch-flow { background: var(--flow); }
+.swatch-combat { background: var(--combat); box-shadow: inset 0 0 0 2px var(--off-white); }
+.light .swatch-combat { box-shadow: none; }
+.swatch-stretch { background: var(--stretch); }
+.swatch-strength { background: var(--strength); }
+.swatch-bands { background: var(--bands); }
+.route { display: flex; flex-direction: column; gap: 10px; padding: 26px; border-radius: var(--radius); background: #111; }
+.light .route { background: transparent; border: 1.5px solid var(--black); }
+.route h3 { font-size: 1.3rem; }
+.route .btn { align-self: flex-start; margin-top: 8px; }
+
+/* Contact details */
+.contact-list { list-style: none; padding: 0; display: grid; gap: 14px; }
+.contact-list a { font-weight: var(--w-heading); font-size: 1.1rem; }
+.contact-list small { display: block; color: var(--on-black-muted); }
+
+/* Enquiry form */
+.form { display: grid; gap: 18px; }
+.form .row { display: grid; gap: 18px; }
+.field { display: grid; gap: 8px; }
+.field label { font-weight: var(--w-heading); font-size: var(--text-sm); }
+.field .hint { font-weight: var(--w-body); color: var(--on-black-muted); }
+.field input, .field select, .field textarea {
+  width: 100%; min-height: var(--tap); padding: 12px 14px;
+  font: var(--w-body) var(--text) / 1.4 var(--font);
+  color: var(--off-white); background: #111;
+  border: 1.5px solid rgba(253, 253, 253, .35); border-radius: 12px;
+}
+.field textarea { min-height: 150px; resize: vertical; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: 3px solid var(--persian-rose); outline-offset: 1px; border-color: transparent; }
+.field [aria-invalid="true"] { border-color: var(--persian-rose); }
+.form-note { font-size: var(--text-sm); color: var(--on-black-muted); }
+.form-status { font-weight: var(--w-heading); color: var(--on-black-accent); min-height: 1.6em; }
+
+@media (min-width: 900px) {
+  .page-hero .wrap { grid-template-columns: 1.15fr .85fr; }
+  .split { grid-template-columns: 1fr 1fr; gap: 56px; }
+  .split.flip > :first-child { order: 2; }
+  .card-grid { grid-template-columns: repeat(3, 1fr); }
+  .card-grid.two { grid-template-columns: repeat(2, 1fr); }
+  .trio { grid-template-columns: repeat(3, 1fr); gap: 32px; }
+  .form .row { grid-template-columns: 1fr 1fr; }
+}

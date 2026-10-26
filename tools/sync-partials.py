@@ -27,8 +27,22 @@ def load_partials() -> dict:
     return parts
 
 
-def stamp(html: str, parts: dict) -> str:
+def page_path(page: Path) -> str:
+    """The URL a page is served at: about.html -> /about, index.html -> /."""
+    rel = page.relative_to(PUBLIC).with_suffix("")
+    return "/" if rel.name == "index" else "/" + rel.as_posix()
+
+
+def mark_current(body: str, path: str) -> str:
+    """Flag the link to this page so the menu shows, and screen readers say, where you are."""
+    if path == "/":
+        return body
+    return body.replace(f'href="{path}"', f'href="{path}" aria-current="page"')
+
+
+def stamp(html: str, parts: dict, path: str = "") -> str:
     for name, body in parts.items():
+        body = mark_current(body, path)
         block = f"<!-- partial:{name} -->\n{body}\n<!-- /partial:{name} -->"
         token = "{{" + name.upper() + "}}"
         if token in html:
@@ -45,7 +59,7 @@ def main() -> int:
     stale = []
     for page in sorted(PUBLIC.rglob("*.html")):
         old = page.read_text()
-        new = stamp(old, parts)
+        new = stamp(old, parts, page_path(page))
         if new != old:
             stale.append(page.relative_to(ROOT))
             if not check:
