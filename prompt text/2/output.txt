@@ -1,0 +1,27 @@
+All eleven changes from Website Updates are done and released to main as v2.1.
+
+The home page is now a short overview. On a desktop it is about two screens, including the footer; on a phone it is about three, down from roughly seven and a half. Going through the document:
+1–3. "Focus on the feeling" is gone. The top now shows F.I.T large in purple, with "Faye's Intentional Training" at its usual size underneath.
+4. The "Do what brings you joy" paragraph is replaced by your ecosystem sentence, word for word.
+5. The two buttons are now one: "Join the mail list", linked to your Flodesk sign-up.
+6. The hero photo is your white-outfit picture, cropped just below the hand on your hip, in the brand's tilted black frame.
+7. The subheading reads "One space, three ways in" and is sized to stay on one line, even on a small phone.
+8. The first card is now "The F.I.T App, Events and Retreats", with your new wording and a "Join the F.I.T App" button linked to the app sign-up.
+9. The Academy card has the instructor-circle photo, a comma instead of the dash, and a "Join mail list" button linked to the Academy mail list.
+10. The third card reads "Speaking, presenting, hosting and consulting", and its button is "Enquire here", which opens an email to you.
+11. Everything from The F.I.T Ecosystem down to the mission is gone. The black footer stays as it was.
+
+A few choices I made that you may want to change:
+- The purple is the brand's hot purple. The darker purple from the logo almost disappears on the black background.
+- F.I.T is the logo artwork, not typed letters, as the brand guide asks.
+- Button wording matches the site's other buttons ("Join mail list", "Enquire here") rather than all capitals. The site writes "MindFit Retreats" elsewhere, but I used your "Mind Fit Retreats" on this card.
+- On a phone the three cards now sit side by side and swipe, with the next one peeking in. That is what brings the page down to a couple of scrolls.
+- Of the removed parts, the concept logos and the three family logos are still on other pages. The mission quote is no longer anywhere on the site; I can put it on the About page if you'd like.
+
+The brand guide and your deck now also live in the brand folder, so they stay with the project now that the prompt archive has moved on to this version.
+
+Verified before pushing:
+- The home page at phone, small phone and desktop widths: no console errors or blocked content, every image loads, the heading stays on one line, the cards swipe without the page scrolling sideways, and every button links to the right place.
+- The other eleven pages, the old v1 addresses, offline mode and the API all still pass.
+
+One thing outside the code: the live link will keep showing the old site until Cloudflare is reconnected to the repository's new GitHub home (BasilicaLabsWebDesign). Once it is, this version goes live with the next build.

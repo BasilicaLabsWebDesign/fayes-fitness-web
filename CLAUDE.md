@@ -60,6 +60,7 @@ public/                 everything served (no build step — these files are the
 worker/index.js         the API (Cloudflare Worker)
 firestore.rules         database rules (closed until phase 2) — firebase.json points at it
 brand/                  full-size originals: logos, photos, backgrounds — NOT deployed
+  docs/                 the brand guide and Faye's deck (reference copies; never deployed)
 tools/                  authoring tools; their output is committed
   partials/             shared header.html + footer.html
   sync-partials.py      stamps partials into every page
@@ -74,8 +75,10 @@ prompt text/            the archive for the version in service (see below)
 - **Header and footer are partials.** Edit `tools/partials/*.html`, then
   `python3 tools/sync-partials.py`. `--check` fails if any page is stale. A new page writes
   `{{HEADER}}` / `{{FOOTER}}` and the first run fills them in.
-- **Images:** add the original to `brand/`, a line to `IMAGES` in `tools/optimise-images.py`,
-  run it (needs Pillow), commit the WebP. Image URLs are cached as immutable — a changed
+- **Images:** add the original to `brand/` (a new name; never overwrite an original), a line
+  to `IMAGES` in `tools/optimise-images.py` (and a box in `CROPS` if it needs cropping), run
+  it with that output name as the argument so other images aren't re-encoded (needs Pillow),
+  commit the WebP. Image URLs are cached as immutable — a changed
   picture gets a new file name, never an in-place edit.
 - **CSP is strict** (`public/_headers`): no inline `<script>`, no inline `style=""`, no
   third-party origins. When a phase adds a third party (Firebase, Stripe, YouTube embeds),
@@ -86,10 +89,14 @@ prompt text/            the archive for the version in service (see below)
 - **Fonts are self-hosted** so no visitor data goes to Google; keep it that way.
 - **Database:** nothing money-related (orders, bookings, memberships, vouchers, payments)
   is ever writable from a browser. Only the Worker writes those, with server credentials.
+- **The home page is a short overview** (Faye's brief, `prompt text/2/`): the F.I.T mark in
+  hot purple, the ecosystem sentence, one mail-list button, then "One space, three ways in"
+  (three cards that swipe on a phone). Keep it to two or three phone scrolls; longer content
+  belongs on the inner pages.
 - **Accessibility is part of the brand** (the guide's personas run from 28 to 55): body text
   ≥ 17px, contrast AA, tap targets ≥ 48px, visible focus, reduced-motion respected.
 
-## Brand rules (F.I.T 2025 Brand Guide — `prompt text/1/F.I.T_2025_Brand_Guide.pdf`)
+## Brand rules (F.I.T 2025 Brand Guide — `brand/docs/F.I.T_2025_Brand_Guide.pdf`)
 
 - **Colours:** primary (backgrounds) Honey Flower `#421769`, Blue Violet `#8A2BE2`,
   Hot Purple `#BF00FF`, Black `#000000`; supporting (text, accents) Ocean `#036FA5`,
@@ -116,7 +123,7 @@ prompt text/            the archive for the version in service (see below)
 
 ## Source of truth for content
 
-**Faye's deck (`prompt text/1/FAYEs_DECK.pdf`, June 2026) is the latest information** and
+**Faye's deck (`brand/docs/FAYEs_DECK.pdf`, June 2026) is the latest information** and
 wins over older sources (the Fibodo export, the v1 site, Flodesk emails). From it:
 email `faye@fayesintentionaltraining.com`, phone 07539 734633, Instagram @fayes_fitness,
 TikTok @fayesfitness, Facebook @fayesfitness, LinkedIn @fayeedwards, YouTube @fayeedwards;
@@ -179,9 +186,10 @@ otherwise, or the model that truly did the work) and every input image and file 
 provided, each under its own name. The files are owner-supplied records: never edit,
 reformat, trim or regenerate them.
 
-`prompt text/1/` shipped with v2.0: every owner message from the start of the rebuild to that
-release, the brand guide, the deck and the old site's zip. The next release that ships new
-owner words starts `prompt text/2/`.
+`prompt text/1/` shipped with v2.0 (every owner message from the start of the rebuild, the
+brand guide, the deck and the old site's zip; `git show <v2.0 commit>:"prompt text/1/…"`
+brings any of it back). `prompt text/2/` shipped with v2.1: the home page brief
+(Website_Updates.docx). The next release that ships new owner words starts `prompt text/3/`.
 
 ## Go-live checklist (phase 6)
 
@@ -228,5 +236,6 @@ handed back with each push. v2.0 onwards is the rebuild.
 | v1.11 | The Book button steps out of the shadows | The booking button in the top bar was being painted over by the styling of the tilted book cover further down the page — near-invisible on two of the five styles, and slightly askew on all of them. It now shows its true colours everywhere. The Zanzibar page also gains proper payment options to match Bulgaria: pay in full, instalments, or a deposit to secure the room. |
 | v1.12 | The Why tab earns its place up top | The page that sells the whole concept was hiding in the footer where nobody would find it. It now has a proper tab in the top bar of every page, so the story of the site — one place instead of a list of links — is one tap away from anywhere. |
 | v2.0 | Faye's whole world in one rebuilt site | The one-page site gives way to a full site built from Faye's 2025 brand and her latest deck, with pages for her classes and app, presenting, consulting, speaking, the Academy, retreats and working with brands, and enquiries that arrive as a ready-written email to Faye. It installs on a phone like an app and still opens offline, and every old address now lands on the page that covers it. |
+| v2.1 | The home page gets straight to the point | Faye's home page is now a quick overview instead of a long scroll: the F.I.T mark in bold purple, one sentence on the whole ecosystem and a button to join the mail list, then three cards for the app, events and retreats, the Academy, and speaking, hosting and consulting, each with its own sign-up or enquiry button. Her new white-outfit portrait and instructor-circle photo replace the old pictures, and on a phone the cards swipe side by side so the whole page takes a couple of scrolls. |
 
-Next release: **v2.1**.
+Next release: **v2.2**.
