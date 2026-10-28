@@ -89,7 +89,7 @@ prompt text/            the archive for the version in service (see below)
 - **Fonts are self-hosted** so no visitor data goes to Google; keep it that way.
 - **Database:** nothing money-related (orders, bookings, memberships, vouchers, payments)
   is ever writable from a browser. Only the Worker writes those, with server credentials.
-- **The home page is a short overview** (Faye's brief, `prompt text/2/`): the F.I.T mark in
+- **The home page is a short overview** (Faye's brief, archived with v2.1 as `prompt text/2/`): the F.I.T mark in
   hot purple, the ecosystem sentence, one mail-list button, then "One space, three ways in"
   (three cards that swipe on a phone). Keep it to two or three phone scrolls; longer content
   belongs on the inner pages.
@@ -118,8 +118,10 @@ prompt text/            the archive for the version in service (see below)
 - **Audiences:** Move with Faye (participants — Mandy, Grace), Grow with Faye (instructors —
   Paul, Penny), Work with Faye (brands and event organisers, from Faye's deck).
 - **Family logos — always use them:** F.I.T (`fit-logo-*.svg`), F.I.T Academy (the winged F/A,
-  `fit-academy-*.svg`, traced from the deck), MindFit Retreats (`mindfit-retreats-*`), and the
+  `fit-academy-*.svg`, traced from the deck), Mind Fit Retreats (`mindfit-retreats-*`), and the
   six concept logos (`fit-jam` … `fit-bands`). Originals live in `brand/logo/`.
+- **Names:** "Mind Fit Retreats" is two words with capitals (Faye's spelling, October 2026),
+  never "MindFit"; file names and ids stay `mindfit-…`.
 
 ## Source of truth for content
 
@@ -189,7 +191,8 @@ reformat, trim or regenerate them.
 `prompt text/1/` shipped with v2.0 (every owner message from the start of the rebuild, the
 brand guide, the deck and the old site's zip; `git show <v2.0 commit>:"prompt text/1/…"`
 brings any of it back). `prompt text/2/` shipped with v2.1: the home page brief
-(Website_Updates.docx). The next release that ships new owner words starts `prompt text/3/`.
+(Website_Updates.docx). `prompt text/3/` shipped with v2.2: the Mind Fit Retreats spelling. The next release that
+ships new owner words starts `prompt text/4/`.
 
 ## Go-live checklist (phase 6)
 
@@ -237,5 +240,6 @@ handed back with each push. v2.0 onwards is the rebuild.
 | v1.12 | The Why tab earns its place up top | The page that sells the whole concept was hiding in the footer where nobody would find it. It now has a proper tab in the top bar of every page, so the story of the site — one place instead of a list of links — is one tap away from anywhere. |
 | v2.0 | Faye's whole world in one rebuilt site | The one-page site gives way to a full site built from Faye's 2025 brand and her latest deck, with pages for her classes and app, presenting, consulting, speaking, the Academy, retreats and working with brands, and enquiries that arrive as a ready-written email to Faye. It installs on a phone like an app and still opens offline, and every old address now lands on the page that covers it. |
 | v2.1 | The home page gets straight to the point | Faye's home page is now a quick overview instead of a long scroll: the F.I.T mark in bold purple, one sentence on the whole ecosystem and a button to join the mail list, then three cards for the app, events and retreats, the Academy, and speaking, hosting and consulting, each with its own sign-up or enquiry button. Her new white-outfit portrait and instructor-circle photo replace the old pictures, and on a phone the cards swipe side by side so the whole page takes a couple of scrolls. |
+| v2.2 | Mind Fit Retreats, spelled her way everywhere | The retreats now carry Faye's own spelling, Mind Fit Retreats, on every page that mentions them — the about, services, experiences and Work with Faye pages and the descriptions search engines show — so the name reads the same wherever a visitor meets it. |
 
-Next release: **v2.2**.
+Next release: **v2.3**.
