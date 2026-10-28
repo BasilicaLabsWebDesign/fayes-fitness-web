@@ -1,4 +1,4 @@
-/* Home page only. */
+/* Home page only: a short overview — the brand, the ecosystem in a sentence, three ways in. */
 
 .hero {
   position: relative; overflow: hidden;
@@ -11,43 +11,43 @@
     linear-gradient(90deg, rgba(0, 0, 0, .86) 0%, rgba(0, 0, 0, .55) 50%, rgba(0, 0, 0, .1) 100%),
     url(/assets/img/particles-2400.webp); }
 }
-.hero .wrap { display: grid; gap: 8px; align-items: end; padding-top: 48px; }
-.hero-copy { padding-bottom: 8px; }
-.hero .eyebrow { color: var(--on-black-accent); }
-.hero h1 { font-size: clamp(2.4rem, 10vw, 5rem); margin: 14px 0 18px; }
-.hero h1 em { font-style: normal; color: var(--on-black-accent); }
-.hero .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
-.hero-photo { justify-self: center; width: min(88vw, 520px); margin-bottom: -2px; }
+.hero .wrap { display: grid; gap: 36px; align-items: center; padding-top: 40px; padding-bottom: 48px; }
+
+/* The F.I.T mark, large and in hot purple (4.66:1 on black), with the name beneath it */
+.hero-brand { margin: 0; }
+.hero-mark { display: block; width: min(64vw, 420px); height: auto; color: var(--hot-purple); }
+.hero-brand .eyebrow { display: block; margin-top: 16px; color: var(--on-black-accent); }
+.hero .lede { margin-top: 20px; max-width: 46ch; }
+.hero .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+.hero-photo { justify-self: center; width: min(72vw, 440px); }
 
 .doors { display: grid; gap: 18px; }
-.door .card-body { display: flex; flex-direction: column; gap: 4px; height: 100%; }
-.door .btn { margin-top: 18px; align-self: flex-start; }
+.door { display: flex; flex-direction: column; }
+.door .card-body { display: flex; flex-direction: column; gap: 4px; flex: 1; }
+.door .card-body p:not(.eyebrow) { margin-bottom: 18px; }
+.door .btn { margin-top: auto; align-self: flex-start; }
 
-.mission { background: var(--honey-flower); color: var(--on-honey); text-align: center; }
-.mission blockquote { max-width: 30ch; margin: 0 auto; font-size: clamp(1.35rem, 3.6vw, 2.1rem); line-height: 1.35; }
-.mission figcaption { margin-top: 22px; }
+/* "One space, three ways in" stays on one line, even on a small phone */
+.rule-title.one-line { white-space: nowrap; font-size: clamp(.85rem, 4.3vw, 1.9rem); letter-spacing: .08em; }
+
+@media (max-width: 899px) {
+  /* On a phone the three doors sit side by side and swipe, the next one peeking in,
+     so the whole page is a couple of scrolls instead of a long stack. */
+  .doors-section { padding-top: 40px; }
+  .doors {
+    grid-auto-flow: column; grid-auto-columns: 84%;
+    overflow-x: auto; overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory; scroll-padding-inline: var(--gutter);
+    margin-inline: calc(var(--gutter) * -1); padding: 0 var(--gutter) 6px;
+    scrollbar-width: none;
+  }
+  .doors::-webkit-scrollbar { display: none; }
+  .door { scroll-snap-align: start; }
+  .door img { aspect-ratio: 16 / 9; }
+}
 
 @media (min-width: 900px) {
-  .hero .wrap { grid-template-columns: 1.05fr .95fr; padding-top: 72px; }
-  .hero-copy { padding-bottom: 88px; }
-  .hero-photo { justify-self: end; }
+  .hero .wrap { grid-template-columns: 1.1fr .9fr; padding-top: 64px; padding-bottom: 72px; }
+  .hero-photo { justify-self: end; margin-right: 12px; }
   .doors { grid-template-columns: repeat(3, 1fr); }
-}
-
-/* The F.I.T ecosystem — the three family brands, with their logos (from Faye's deck) */
-.eco-lede { margin: 0 auto 40px; text-align: center; max-width: 52ch; }
-.eco { display: grid; gap: 18px; }
-.eco-item {
-  text-align: center; padding: 30px 24px 32px;
-  border: 1px solid rgba(253, 253, 253, .22); border-radius: var(--radius);
-}
-.eco-logo { height: 110px; display: grid; place-items: center; margin-bottom: 18px; }
-.eco-logo img { max-height: 110px; width: auto; max-width: 220px; }
-.eco-item h3 { font-size: 1.25rem; margin-bottom: 6px; }
-.eco-item p { color: var(--on-black-muted); }
-.eco-link { display: inline-block; margin-top: 14px; font-weight: var(--w-heading); color: var(--on-black-accent); text-decoration: none; }
-.eco-link:hover { text-decoration: underline; }
-
-@media (min-width: 900px) {
-  .eco { grid-template-columns: repeat(3, 1fr); }
 }
