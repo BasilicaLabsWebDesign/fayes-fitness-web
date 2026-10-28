@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
 """Make web-sized WebP copies of the brand library for the site.
 
-    python3 tools/optimise-images.py
+    python3 tools/optimise-images.py                 # every image
+    python3 tools/optimise-images.py faye-white-hip  # only these output names
 
 Reads full-size originals from brand/ and writes public/assets/img/<name>-<width>.webp.
 Add a line to IMAGES when a page needs a new picture, run this, and commit the output:
 public/ stays plain files with no build step. Needs Pillow (pip install pillow).
 """
+import sys
 from pathlib import Path
 
 from PIL import Image
@@ -39,6 +41,9 @@ IMAGES = [
     ("photos/faye-beach-kick.jpg", "faye-beach-kick", (661,), 80),
     ("photos/davina-fit-jam.jpg", "davina-fit-jam", (668,), 80),
     ("backgrounds/purple-smoke.png", "purple-smoke", (1600,), 70),
+    # home page (Website Updates, October 2026)
+    ("photos/faye-white-hand-on-hip.jpg", "faye-white-hip", (600, 1000), 82),
+    ("photos/faye-instructor-circle.jpg", "faye-instructor-circle", (720, 1200), 78),
     # sub-brand and concept logos (transparent)
     ("logo/mindfit-retreats-blue.png", "logo/mindfit-retreats-white", (520,), 90, "#FDFDFD"),
     ("logo/concepts/fit-jam.png", "logo/fit-jam", (420,), 90),
@@ -49,12 +54,22 @@ IMAGES = [
     ("logo/concepts/fit-bands.png", "logo/fit-bands", (420,), 90),
 ]
 
+# output name → crop box (left, top, right, bottom) in the original's pixels, applied first
+CROPS = {
+    "faye-white-hip": (250, 110, 1250, 1050),  # waist up, just below the hand on her hip
+}
+
 
 def main() -> None:
+    only = set(sys.argv[1:])
     OUT.mkdir(parents=True, exist_ok=True)
     for src, name, widths, quality, *tint in IMAGES:
+        if only and name not in only:
+            continue
         im = Image.open(SRC / src)
         im = im.convert("RGBA" if im.mode in ("RGBA", "LA", "P") else "RGB")
+        if name in CROPS:
+            im = im.crop(CROPS[name])
         if tint:
             solid = Image.new("RGBA", im.size, tint[0])
             solid.putalpha(im.getchannel("A"))
