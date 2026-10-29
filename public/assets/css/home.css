@@ -40,9 +40,9 @@
   .hero-fit-logo { width: 100%; max-width: 220px; }
   .hero-photo {
     grid-column: 2; grid-row: 1; width: 100%; align-self: end;
-    /* the photo stops at her waist: fade that edge out instead of a hard line */
-    -webkit-mask-image: linear-gradient(to bottom, #000 78%, transparent);
-    mask-image: linear-gradient(to bottom, #000 78%, transparent);
+    /* soften the crop line below her lower hand, leaving the hand itself clear */
+    -webkit-mask-image: linear-gradient(to bottom, #000 96%, transparent);
+    mask-image: linear-gradient(to bottom, #000 96%, transparent);
   }
   .hero .lede, .hero .cta { grid-column: 1 / -1; }
   .hero .lede { margin-top: 22px; }
@@ -66,6 +66,6 @@
   /* the cut-out stands on the bottom edge of the hero, like the original */
   .hero .wrap { grid-template-columns: 1.1fr .9fr; gap: 36px; align-items: end; padding-top: 64px; padding-bottom: 0; }
   .hero-copy { padding-bottom: 88px; }
-  .hero-photo { justify-self: end; margin-bottom: -1px; }
+  .hero-photo { justify-self: end; width: min(30vw, 400px); margin-bottom: -1px; }
   .doors { grid-template-columns: repeat(3, 1fr); }
 }
