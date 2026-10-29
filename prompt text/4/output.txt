@@ -1,8 +1,0 @@
-Done, and released to main as v2.3. On a phone, F.I.T is now smaller and sits beside your photo at the top. The logo, the picture, the ecosystem sentence and the mail-list button are all on the first screen before anyone scrolls, including on the smallest iPhone. "Faye's Intentional Training" stays the same size under F.I.T, and the desktop layout is unchanged.
-
-Your screenshot also showed a real problem: F.I.T was white and far too big, when it should have been purple. Your phone had loaded the new page with the previous release's styling, because the app's offline storage was handing back its saved copy of the styles first. I've changed that, so pages and their styling always come fresh from the site and the saved copies are only used when you're offline. I tested it by changing the styling while a page was open and reloading once: the old version kept the stale look and the new version picks up the change straight away. Your phone may show the previous styling one last time on its first visit after this update, while the fix installs itself. After that, every update shows correctly on the first visit.
-
-Verified before pushing:
-- The home page on five phone sizes (iPhone SE, 14 and Pro Max, two Androids): the logo, photo and button all show before any scrolling.
-- Every page still passes at phone, tablet and desktop widths with no errors.
-- Offline mode, the old addresses and the API all still work.

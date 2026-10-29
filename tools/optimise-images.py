@@ -44,6 +44,7 @@ IMAGES = [
     # home page (Website Updates, October 2026)
     ("photos/faye-white-hand-on-hip.jpg", "faye-white-hip", (600, 1000), 82),
     ("photos/faye-instructor-circle.jpg", "faye-instructor-circle", (720, 1200), 78),
+    ("photos/faye-white-hand-on-hip-cutout.png", "faye-white-cutout", (480, 720), 82),
     # sub-brand and concept logos (transparent)
     ("logo/mindfit-retreats-blue.png", "logo/mindfit-retreats-white", (520,), 90, "#FDFDFD"),
     ("logo/concepts/fit-jam.png", "logo/fit-jam", (420,), 90),
@@ -57,6 +58,7 @@ IMAGES = [
 # output name → crop box (left, top, right, bottom) in the original's pixels, applied first
 CROPS = {
     "faye-white-hip": (250, 110, 1250, 1050),  # waist up, just below the hand on her hip
+    "faye-white-cutout": (390, 220, 1110, 1050),  # the same, background removed, tight to her
 }
 
 
