@@ -85,13 +85,16 @@ prompt text/            the archive for the version in service (see below)
   add exactly its origins to the right directive in the same commit. So far:
   `frame-src https://www.youtube-nocookie.com` (phase 1, video facades).
 - **Service worker:** bump `VERSION` in `public/sw.js` with every release, and add new core
-  files to `CORE`. The API is never cached.
+  files to `CORE`. The API is never cached. Pages, CSS and JS are network-first (cache only
+  when offline) so a page never meets an older release's styles; only images and fonts,
+  which never change in place, are answered from cache.
 - **Fonts are self-hosted** so no visitor data goes to Google; keep it that way.
 - **Database:** nothing money-related (orders, bookings, memberships, vouchers, payments)
   is ever writable from a browser. Only the Worker writes those, with server credentials.
 - **The home page is a short overview** (Faye's brief, archived with v2.1 as `prompt text/2/`): the F.I.T mark in
   hot purple, the ecosystem sentence, one mail-list button, then "One space, three ways in"
-  (three cards that swipe on a phone). Keep it to two or three phone scrolls; longer content
+  (three cards that swipe on a phone). On a phone the mark and the photo share the top row
+  so both are on the first screen (Faye's request, v2.3). Keep it to two or three phone scrolls; longer content
   belongs on the inner pages.
 - **Accessibility is part of the brand** (the guide's personas run from 28 to 55): body text
   ≥ 17px, contrast AA, tap targets ≥ 48px, visible focus, reduced-motion respected.
@@ -191,8 +194,9 @@ reformat, trim or regenerate them.
 `prompt text/1/` shipped with v2.0 (every owner message from the start of the rebuild, the
 brand guide, the deck and the old site's zip; `git show <v2.0 commit>:"prompt text/1/…"`
 brings any of it back). `prompt text/2/` shipped with v2.1: the home page brief
-(Website_Updates.docx). `prompt text/3/` shipped with v2.2: the Mind Fit Retreats spelling. The next release that
-ships new owner words starts `prompt text/4/`.
+(Website_Updates.docx). `prompt text/3/` shipped with v2.2: the Mind Fit Retreats spelling. `prompt text/4/` shipped
+with v2.3: the smaller F.I.T on phones, with Faye's screenshot. The next release that ships
+new owner words starts `prompt text/5/`.
 
 ## Go-live checklist (phase 6)
 
@@ -241,5 +245,6 @@ handed back with each push. v2.0 onwards is the rebuild.
 | v2.0 | Faye's whole world in one rebuilt site | The one-page site gives way to a full site built from Faye's 2025 brand and her latest deck, with pages for her classes and app, presenting, consulting, speaking, the Academy, retreats and working with brands, and enquiries that arrive as a ready-written email to Faye. It installs on a phone like an app and still opens offline, and every old address now lands on the page that covers it. |
 | v2.1 | The home page gets straight to the point | Faye's home page is now a quick overview instead of a long scroll: the F.I.T mark in bold purple, one sentence on the whole ecosystem and a button to join the mail list, then three cards for the app, events and retreats, the Academy, and speaking, hosting and consulting, each with its own sign-up or enquiry button. Her new white-outfit portrait and instructor-circle photo replace the old pictures, and on a phone the cards swipe side by side so the whole page takes a couple of scrolls. |
 | v2.2 | Mind Fit Retreats, spelled her way everywhere | The retreats now carry Faye's own spelling, Mind Fit Retreats, on every page that mentions them — the about, services, experiences and Work with Faye pages and the descriptions search engines show — so the name reads the same wherever a visitor meets it. |
+| v2.3 | F.I.T and her photo share the first screen | On a phone the purple F.I.T mark is now smaller and sits beside Faye's photo, so the logo, the picture, the ecosystem sentence and the mail-list button all appear together before any scrolling. Returning visitors also always get the latest look straight away, instead of a page that briefly mixes new words with the previous release's styling. |
 
-Next release: **v2.3**.
+Next release: **v2.4**.
