@@ -73,7 +73,9 @@ prompt text/            the archive for the version in service (see below)
 - **No build step for the site.** `public/` is served as-is. Tools in `tools/` produce files
   that are committed; Cloudflare never runs them.
 - **Header and footer are partials.** Edit `tools/partials/*.html`, then
-  `python3 tools/sync-partials.py`. `--check` fails if any page is stale. A new page writes
+  `python3 tools/sync-partials.py`. `--check` fails if any page is stale. The same run stamps
+  `?v=<sw.js VERSION>` onto every `/assets/css` and `/assets/js` link, so a release's pages
+  always load that release's styles: bump `VERSION`, then run it. A new page writes
   `{{HEADER}}` / `{{FOOTER}}` and the first run fills them in.
 - **Images:** add the original to `brand/` (a new name; never overwrite an original), a line
   to `IMAGES` in `tools/optimise-images.py` (and a box in `CROPS` if it needs cropping), run
@@ -86,15 +88,16 @@ prompt text/            the archive for the version in service (see below)
   `frame-src https://www.youtube-nocookie.com` (phase 1, video facades).
 - **Service worker:** bump `VERSION` in `public/sw.js` with every release, and add new core
   files to `CORE`. The API is never cached. Pages, CSS and JS are network-first (cache only
-  when offline) so a page never meets an older release's styles; only images and fonts,
-  which never change in place, are answered from cache.
+  when offline, matched ignoring `?v=`) so a page never meets an older release's styles;
+  only images and fonts, which never change in place, are answered from cache.
 - **Fonts are self-hosted** so no visitor data goes to Google; keep it that way.
 - **Database:** nothing money-related (orders, bookings, memberships, vouchers, payments)
   is ever writable from a browser. Only the Worker writes those, with server credentials.
 - **The home page is a short overview** (Faye's brief, archived with v2.1 as `prompt text/2/`): the F.I.T mark in
   hot purple, the ecosystem sentence, one mail-list button, then "One space, three ways in"
   (three cards that swipe on a phone). On a phone the mark and the photo share the top row
-  so both are on the first screen (Faye's request, v2.3). Keep it to two or three phone scrolls; longer content
+  so both are on the first screen (Faye's request, v2.3). The photo is a cut-out with the
+  background removed: no frame, no tilt (Faye's request, v2.4). Keep it to two or three phone scrolls; longer content
   belongs on the inner pages.
 - **Accessibility is part of the brand** (the guide's personas run from 28 to 55): body text
   ≥ 17px, contrast AA, tap targets ≥ 48px, visible focus, reduced-motion respected.
@@ -195,8 +198,9 @@ reformat, trim or regenerate them.
 brand guide, the deck and the old site's zip; `git show <v2.0 commit>:"prompt text/1/…"`
 brings any of it back). `prompt text/2/` shipped with v2.1: the home page brief
 (Website_Updates.docx). `prompt text/3/` shipped with v2.2: the Mind Fit Retreats spelling. `prompt text/4/` shipped
-with v2.3: the smaller F.I.T on phones, with Faye's screenshot. The next release that ships
-new owner words starts `prompt text/5/`.
+with v2.3: the smaller F.I.T on phones, with Faye's screenshot. `prompt text/5/` shipped with
+v2.4: the cut-out photo, with her screenshot. The next release that ships new owner words
+starts `prompt text/6/`.
 
 ## Go-live checklist (phase 6)
 
@@ -246,5 +250,6 @@ handed back with each push. v2.0 onwards is the rebuild.
 | v2.1 | The home page gets straight to the point | Faye's home page is now a quick overview instead of a long scroll: the F.I.T mark in bold purple, one sentence on the whole ecosystem and a button to join the mail list, then three cards for the app, events and retreats, the Academy, and speaking, hosting and consulting, each with its own sign-up or enquiry button. Her new white-outfit portrait and instructor-circle photo replace the old pictures, and on a phone the cards swipe side by side so the whole page takes a couple of scrolls. |
 | v2.2 | Mind Fit Retreats, spelled her way everywhere | The retreats now carry Faye's own spelling, Mind Fit Retreats, on every page that mentions them — the about, services, experiences and Work with Faye pages and the descriptions search engines show — so the name reads the same wherever a visitor meets it. |
 | v2.3 | F.I.T and her photo share the first screen | On a phone the purple F.I.T mark is now smaller and sits beside Faye's photo, so the logo, the picture, the ecosystem sentence and the mail-list button all appear together before any scrolling. Returning visitors also always get the latest look straight away, instead of a page that briefly mixes new words with the previous release's styling. |
+| v2.4 | Faye stands free of the frame again | The home page photo is back to the look Faye liked: her white-outfit portrait cut out from its studio background, standing straight with no frame or tilt, resting on the bottom of the banner on a computer and fading softly beside the logo on a phone. Every visitor now sees each release's styling the moment it goes out, even on a phone that had saved an older copy of the site. |
 
-Next release: **v2.4**.
+Next release: **v2.5**.
