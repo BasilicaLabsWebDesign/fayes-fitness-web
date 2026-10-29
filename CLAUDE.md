@@ -93,9 +93,9 @@ prompt text/            the archive for the version in service (see below)
 - **Fonts are self-hosted** so no visitor data goes to Google; keep it that way.
 - **Database:** nothing money-related (orders, bookings, memberships, vouchers, payments)
   is ever writable from a browser. Only the Worker writes those, with server credentials.
-- **The home page is a short overview** (Faye's brief, archived with v2.1 as `prompt text/2/`): the F.I.T mark in
-  hot purple, the ecosystem sentence, one mail-list button, then "One space, three ways in"
-  (three cards that swipe on a phone). On a phone the mark and the photo share the top row
+- **The home page is a short overview** (Faye's brief, archived with v2.1 as `prompt text/2/`): Faye's
+  F.I.T logo (the white on-dark version with its purple name bar — her choice, v2.5), the ecosystem sentence, one mail-list button, then "One space, three ways in"
+  (three cards that swipe on a phone). On a phone the logo and the photo share the top row
   so both are on the first screen (Faye's request, v2.3). The photo is a cut-out with the
   background removed: no frame, no tilt (Faye's request, v2.4). Keep it to two or three phone scrolls; longer content
   belongs on the inner pages.
@@ -199,8 +199,9 @@ brand guide, the deck and the old site's zip; `git show <v2.0 commit>:"prompt te
 brings any of it back). `prompt text/2/` shipped with v2.1: the home page brief
 (Website_Updates.docx). `prompt text/3/` shipped with v2.2: the Mind Fit Retreats spelling. `prompt text/4/` shipped
 with v2.3: the smaller F.I.T on phones, with Faye's screenshot. `prompt text/5/` shipped with
-v2.4: the cut-out photo, with her screenshot. The next release that ships new owner words
-starts `prompt text/6/`.
+v2.4: the cut-out photo, with her screenshot. `prompt text/6/` shipped with v2.5: her real
+logo at the top (she chose the white version). The next release that ships new owner words
+starts `prompt text/7/`.
 
 ## Go-live checklist (phase 6)
 
@@ -251,5 +252,6 @@ handed back with each push. v2.0 onwards is the rebuild.
 | v2.2 | Mind Fit Retreats, spelled her way everywhere | The retreats now carry Faye's own spelling, Mind Fit Retreats, on every page that mentions them — the about, services, experiences and Work with Faye pages and the descriptions search engines show — so the name reads the same wherever a visitor meets it. |
 | v2.3 | F.I.T and her photo share the first screen | On a phone the purple F.I.T mark is now smaller and sits beside Faye's photo, so the logo, the picture, the ecosystem sentence and the mail-list button all appear together before any scrolling. Returning visitors also always get the latest look straight away, instead of a page that briefly mixes new words with the previous release's styling. |
 | v2.4 | Faye stands free of the frame again | The home page photo is back to the look Faye liked: her white-outfit portrait cut out from its studio background, standing straight with no frame or tilt, resting on the bottom of the banner on a computer and fading softly beside the logo on a phone. Every visitor now sees each release's styling the moment it goes out, even on a phone that had saved an older copy of the site. |
+| v2.5 | Her own logo leads the home page | The top of the home page now carries Faye's actual F.I.T logo, white with its purple Faye's Intentional Training bar, exactly as the brand guide shows it on dark backgrounds, in place of the plain purple lettering. It still sits beside her photo on a phone, so the logo, the picture and the mail-list button all show before any scrolling. |
 
-Next release: **v2.5**.
+Next release: **v2.6**.

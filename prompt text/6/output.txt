@@ -1,0 +1,8 @@
+Done, and released to main as v2.5. The top of the home page now shows your actual logo: the white F.I.T with its purple "Faye's Intentional Training" bar, as you chose. That's the version the brand guide uses on dark backgrounds, the same artwork as in the site's footer. The logo has your name built in, so the separate pink "Faye's Intentional Training" line underneath is gone.
+
+On a phone it still sits beside your photo, so the logo, the picture, the ecosystem sentence and the mail-list button are all on the first screen, on every phone size I tried. On a computer it sits above the sentence with your photo to the right, as before.
+
+Verified before pushing:
+- The home page on five phone sizes and on desktop, with no errors.
+- Every other page still passes at phone, tablet and desktop widths.
+- Offline mode keeps its styling, and new styling arrives on the first visit.
