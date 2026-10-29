@@ -13,12 +13,12 @@
 }
 .hero .wrap { display: grid; gap: 28px; align-items: center; padding-top: 28px; padding-bottom: 40px; }
 
-/* The F.I.T mark in hot purple (4.66:1 on black), with the name beneath it. On a phone the
-   mark, the sentence, the button and the photo all fit on the first screen. */
+/* Faye's F.I.T logo: the white version with its purple name bar, the brand guide's logo for
+   dark backgrounds. On a phone the logo, the sentence, the button and the photo all fit on
+   the first screen. */
 .hero-brand { margin: 0; }
-.hero-mark { display: block; width: min(36vw, 420px); height: auto; color: var(--hot-purple); }
-.hero-brand .eyebrow { display: block; margin-top: 12px; color: var(--on-black-accent); }
-.hero .lede { margin-top: 14px; max-width: 46ch; }
+.hero-fit-logo { display: block; width: min(40vw, 440px); height: auto; }
+.hero .lede { margin-top: 22px; max-width: 46ch; }
 .hero .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
 /* Faye as a cut-out (background removed, no frame), as the hero has always had her */
 .hero-photo { justify-self: center; width: min(58vw, 440px); }
@@ -37,7 +37,7 @@
   .hero .wrap { grid-template-columns: 1fr 44%; column-gap: 18px; row-gap: 0; }
   .hero-copy { display: contents; }
   .hero-brand { grid-column: 1; grid-row: 1; }
-  .hero-mark { width: 100%; max-width: 220px; }
+  .hero-fit-logo { width: 100%; max-width: 220px; }
   .hero-photo {
     grid-column: 2; grid-row: 1; width: 100%; align-self: end;
     /* the photo stops at her waist: fade that edge out instead of a hard line */

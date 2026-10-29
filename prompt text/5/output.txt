@@ -1,8 +1,0 @@
-Done, and released to main as v2.4. Your photo is back to the old look: the grey studio background is removed, so you stand straight on the black, with no frame and no tilt. On a computer you rest on the bottom edge of the banner, like the old photo. On a phone you sit beside F.I.T and fade out softly at the waist, so the logo and the picture are still both on the first screen.
-
-Your screenshot also showed your phone was still mixing the new page with older styling. That's why the photo was big and framed and "One space, three ways in" broke onto two lines. Last time's fix only takes over once your phone has installed it, so I've added a stronger one. Every page now asks for its styles under that release's own name, so no saved copy, from your phone, the browser or anywhere in between, can ever be handed back by mistake. I tested it on a phone still running the old offline code, and the new styling arrived on the very first reload.
-
-Verified before pushing:
-- The home page on five phone sizes, with the logo, photo and button all on the first screen, and on desktop.
-- Every page still passes at phone, tablet and desktop widths with no errors.
-- Offline mode keeps its styling, and the old addresses and the API still work.
