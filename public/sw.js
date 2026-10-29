@@ -1,6 +1,6 @@
 // Service worker: makes the site installable and keeps a working shell offline.
 // Bump VERSION with every release so installed copies fetch the new files.
-const VERSION = "2.3";
+const VERSION = "2.4";
 const CACHE = `fit-${VERSION}`;
 
 const CORE = [
@@ -57,7 +57,8 @@ self.addEventListener("fetch", (event) => {
   // the same release; the cached copy when offline, and the offline page for pages never seen.
   event.respondWith(
     fetchAndKeep(req).catch(() =>
-      caches.match(req).then((hit) => hit || (req.mode === "navigate" ? caches.match("/offline") : Response.error())),
+      // ignoreSearch: pages ask for /assets/css/site.css?v=…, the shell cached it without
+      caches.match(req, { ignoreSearch: true }).then((hit) => hit || (req.mode === "navigate" ? caches.match("/offline") : Response.error())),
     ),
   );
 });

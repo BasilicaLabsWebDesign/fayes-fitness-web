@@ -8,6 +8,10 @@ Edit tools/partials/<name>.html, run this, commit the result. Pages hold the
 stamped markup between <!-- partial:name --> and <!-- /partial:name --> comments,
 so public/ stays plain HTML that Cloudflare serves with no build step. A new page
 can say {{HEADER}} / {{FOOTER}} and the first run fills it in.
+
+It also stamps the release (VERSION in public/sw.js) onto every stylesheet and script
+link, e.g. /assets/css/site.css?v=2.4, so a new release's pages can never be paired with
+an older release's styles from any cache. Bump VERSION, run this, and every page follows.
 """
 import re
 import sys
@@ -17,6 +21,12 @@ ROOT = Path(__file__).resolve().parent.parent
 PUBLIC = ROOT / "public"
 PARTIALS = ROOT / "tools" / "partials"
 MARK = ROOT / "public" / "assets" / "img" / "logo" / "fit-mark.svg"
+SW = ROOT / "public" / "sw.js"
+ASSET_LINK = re.compile(r'((?:href|src)="/assets/(?:css|js)/[^"?]+)(?:\?v=[^"]*)?"')
+
+
+def release() -> str:
+    return re.search(r'const VERSION = "([^"]+)"', SW.read_text()).group(1)
 
 
 def load_partials() -> dict:
@@ -40,7 +50,7 @@ def mark_current(body: str, path: str) -> str:
     return body.replace(f'href="{path}"', f'href="{path}" aria-current="page"')
 
 
-def stamp(html: str, parts: dict, path: str = "") -> str:
+def stamp(html: str, parts: dict, path: str = "", version: str = "") -> str:
     for name, body in parts.items():
         body = mark_current(body, path)
         block = f"<!-- partial:{name} -->\n{body}\n<!-- /partial:{name} -->"
@@ -50,16 +60,19 @@ def stamp(html: str, parts: dict, path: str = "") -> str:
         else:
             html = re.sub(rf"<!-- partial:{name} -->.*?<!-- /partial:{name} -->",
                           lambda _m: block, html, flags=re.S)
+    if version:
+        html = ASSET_LINK.sub(rf'\1?v={version}"', html)
     return html
 
 
 def main() -> int:
     check = "--check" in sys.argv
     parts = load_partials()
+    version = release()
     stale = []
     for page in sorted(PUBLIC.rglob("*.html")):
         old = page.read_text()
-        new = stamp(old, parts, page_path(page))
+        new = stamp(old, parts, page_path(page), version)
         if new != old:
             stale.append(page.relative_to(ROOT))
             if not check:
