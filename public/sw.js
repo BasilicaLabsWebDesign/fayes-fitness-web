@@ -1,6 +1,6 @@
 // Service worker: makes the site installable and keeps a working shell offline.
 // Bump VERSION with every release so installed copies fetch the new files.
-const VERSION = "2.2";
+const VERSION = "2.3";
 const CACHE = `fit-${VERSION}`;
 
 const CORE = [
@@ -33,36 +33,31 @@ self.addEventListener("activate", (event) => {
   );
 });
 
+function fetchAndKeep(req) {
+  return fetch(req).then((res) => {
+    if (res.ok) { const copy = res.clone(); caches.open(CACHE).then((c) => c.put(req, copy)); }
+    return res;
+  });
+}
+
 self.addEventListener("fetch", (event) => {
   const req = event.request;
   const url = new URL(req.url);
   // Only same-origin GETs; the API, payments and sign-in always go to the network.
   if (req.method !== "GET" || url.origin !== self.location.origin || url.pathname.startsWith("/api/")) return;
 
-  if (req.mode === "navigate") {
-    // Pages: freshest copy first, the cached copy if offline, then the offline page.
-    event.respondWith(
-      fetch(req)
-        .then((res) => {
-          const copy = res.clone();
-          if (res.ok) caches.open(CACHE).then((c) => c.put(req, copy));
-          return res;
-        })
-        .catch(() => caches.match(req).then((hit) => hit || caches.match("/offline"))),
-    );
+  // Pictures and fonts never change in place (a new picture gets a new name), so the cached
+  // copy is always right: answer from cache, fetch only what isn't there yet.
+  if (url.pathname.startsWith("/assets/img/") || url.pathname.startsWith("/assets/fonts/")) {
+    event.respondWith(caches.match(req).then((hit) => hit || fetchAndKeep(req)));
     return;
   }
 
-  // Everything else: answer from cache straight away, refresh it in the background.
+  // Pages, styles and scripts: freshest copy first, so a page and its styles always come from
+  // the same release; the cached copy when offline, and the offline page for pages never seen.
   event.respondWith(
-    caches.match(req).then((hit) => {
-      const fresh = fetch(req)
-        .then((res) => {
-          if (res.ok) { const copy = res.clone(); caches.open(CACHE).then((c) => c.put(req, copy)); }
-          return res;
-        })
-        .catch(() => hit || Response.error());
-      return hit || fresh;
-    }),
+    fetchAndKeep(req).catch(() =>
+      caches.match(req).then((hit) => hit || (req.mode === "navigate" ? caches.match("/offline") : Response.error())),
+    ),
   );
 });
