@@ -11,15 +11,16 @@
     linear-gradient(90deg, rgba(0, 0, 0, .86) 0%, rgba(0, 0, 0, .55) 50%, rgba(0, 0, 0, .1) 100%),
     url(/assets/img/particles-2400.webp); }
 }
-.hero .wrap { display: grid; gap: 36px; align-items: center; padding-top: 40px; padding-bottom: 48px; }
+.hero .wrap { display: grid; gap: 28px; align-items: center; padding-top: 28px; padding-bottom: 40px; }
 
-/* The F.I.T mark, large and in hot purple (4.66:1 on black), with the name beneath it */
+/* The F.I.T mark in hot purple (4.66:1 on black), with the name beneath it. On a phone the
+   mark, the sentence, the button and the photo all fit on the first screen. */
 .hero-brand { margin: 0; }
-.hero-mark { display: block; width: min(64vw, 420px); height: auto; color: var(--hot-purple); }
-.hero-brand .eyebrow { display: block; margin-top: 16px; color: var(--on-black-accent); }
-.hero .lede { margin-top: 20px; max-width: 46ch; }
-.hero .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
-.hero-photo { justify-self: center; width: min(72vw, 440px); }
+.hero-mark { display: block; width: min(36vw, 420px); height: auto; color: var(--hot-purple); }
+.hero-brand .eyebrow { display: block; margin-top: 12px; color: var(--on-black-accent); }
+.hero .lede { margin-top: 14px; max-width: 46ch; }
+.hero .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+.hero-photo { justify-self: center; width: min(58vw, 440px); }
 
 .doors { display: grid; gap: 18px; }
 .door { display: flex; flex-direction: column; }
@@ -31,6 +32,15 @@
 .rule-title.one-line { white-space: nowrap; font-size: clamp(.85rem, 4.3vw, 1.9rem); letter-spacing: .08em; }
 
 @media (max-width: 899px) {
+  /* On a phone the mark and the photo share the top row, so both are on the first screen */
+  .hero .wrap { grid-template-columns: 1fr 44%; column-gap: 18px; row-gap: 0; }
+  .hero-copy { display: contents; }
+  .hero-brand { grid-column: 1; grid-row: 1; }
+  .hero-mark { width: 100%; max-width: 220px; }
+  .hero-photo { grid-column: 2; grid-row: 1; width: 100%; border-width: 8px; }
+  .hero .lede, .hero .cta { grid-column: 1 / -1; }
+  .hero .lede { margin-top: 22px; }
+
   /* On a phone the three doors sit side by side and swipe, the next one peeking in,
      so the whole page is a couple of scrolls instead of a long stack. */
   .doors-section { padding-top: 40px; }
@@ -47,7 +57,7 @@
 }
 
 @media (min-width: 900px) {
-  .hero .wrap { grid-template-columns: 1.1fr .9fr; padding-top: 64px; padding-bottom: 72px; }
+  .hero .wrap { grid-template-columns: 1.1fr .9fr; gap: 36px; padding-top: 64px; padding-bottom: 72px; }
   .hero-photo { justify-self: end; margin-right: 12px; }
   .doors { grid-template-columns: repeat(3, 1fr); }
 }
