@@ -97,7 +97,8 @@ prompt text/            the archive for the version in service (see below)
   F.I.T logo (the white on-dark version with its purple name bar — her choice, v2.5), the ecosystem sentence, one mail-list button, then "One space, three ways in"
   (three cards that swipe on a phone). On a phone the logo and the photo share the top row
   so both are on the first screen (Faye's request, v2.3). The photo is a cut-out with the
-  background removed: no frame, no tilt (Faye's request, v2.4). Keep it to two or three phone scrolls; longer content
+  background removed: no frame, no tilt (Faye's request, v2.4), cropped from her head to just
+  below her lower hand (v2.6). Keep it to two or three phone scrolls; longer content
   belongs on the inner pages.
 - **Accessibility is part of the brand** (the guide's personas run from 28 to 55): body text
   ≥ 17px, contrast AA, tap targets ≥ 48px, visible focus, reduced-motion respected.
@@ -126,6 +127,9 @@ prompt text/            the archive for the version in service (see below)
 - **Family logos — always use them:** F.I.T (`fit-logo-*.svg`), F.I.T Academy (the winged F/A,
   `fit-academy-*.svg`, traced from the deck), Mind Fit Retreats (`mindfit-retreats-*`), and the
   six concept logos (`fit-jam` … `fit-bands`). Originals live in `brand/logo/`.
+- **Headings:** capitalise the first letter of each word in card and section headings ("F.I.T
+  Academy for Instructors"), leaving small joining words (and, for, of, the) lower case after
+  the first word — Faye's request, v2.6. Titles set in capitals by CSS are unaffected.
 - **Names:** "Mind Fit Retreats" is two words with capitals (Faye's spelling, October 2026),
   never "MindFit"; file names and ids stay `mindfit-…`.
 
@@ -200,8 +204,9 @@ brings any of it back). `prompt text/2/` shipped with v2.1: the home page brief
 (Website_Updates.docx). `prompt text/3/` shipped with v2.2: the Mind Fit Retreats spelling. `prompt text/4/` shipped
 with v2.3: the smaller F.I.T on phones, with Faye's screenshot. `prompt text/5/` shipped with
 v2.4: the cut-out photo, with her screenshot. `prompt text/6/` shipped with v2.5: her real
-logo at the top (she chose the white version). The next release that ships new owner words
-starts `prompt text/7/`.
+logo at the top (she chose the white version). `prompt text/7/` shipped with v2.6: the longer
+photo crop and capitalised headings. The next release that ships new owner words starts
+`prompt text/8/`.
 
 ## Go-live checklist (phase 6)
 
@@ -253,5 +258,6 @@ handed back with each push. v2.0 onwards is the rebuild.
 | v2.3 | F.I.T and her photo share the first screen | On a phone the purple F.I.T mark is now smaller and sits beside Faye's photo, so the logo, the picture, the ecosystem sentence and the mail-list button all appear together before any scrolling. Returning visitors also always get the latest look straight away, instead of a page that briefly mixes new words with the previous release's styling. |
 | v2.4 | Faye stands free of the frame again | The home page photo is back to the look Faye liked: her white-outfit portrait cut out from its studio background, standing straight with no frame or tilt, resting on the bottom of the banner on a computer and fading softly beside the logo on a phone. Every visitor now sees each release's styling the moment it goes out, even on a phone that had saved an older copy of the site. |
 | v2.5 | Her own logo leads the home page | The top of the home page now carries Faye's actual F.I.T logo, white with its purple Faye's Intentional Training bar, exactly as the brand guide shows it on dark backgrounds, in place of the plain purple lettering. It still sits beside her photo on a phone, so the logo, the picture and the mail-list button all show before any scrolling. |
+| v2.6 | Her full pose and properly capitalised headings | The home page photo now shows Faye from her head to just below her lower hand, the crop she originally asked for, instead of stopping at the hand on her hip. Headings across the site now start each word with a capital, from the home page cards to the About, Academy and Book pages. |
 
-Next release: **v2.6**.
+Next release: **v2.7**.
