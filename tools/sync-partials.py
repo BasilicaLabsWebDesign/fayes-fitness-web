@@ -20,7 +20,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 PUBLIC = ROOT / "public"
 PARTIALS = ROOT / "tools" / "partials"
-MARK = ROOT / "public" / "assets" / "img" / "logo" / "fit-mark.svg"
+MARK = ROOT / "public" / "assets" / "img" / "logo" / "fit-mark-hd.svg"
 SW = ROOT / "public" / "sw.js"
 ASSET_LINK = re.compile(r'((?:href|src)="/assets/(?:css|js)/[^"?]+)(?:\?v=[^"]*)?"')
 
