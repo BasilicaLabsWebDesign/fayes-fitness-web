@@ -65,6 +65,7 @@ tools/                  authoring tools; their output is committed
   partials/             shared header.html + footer.html
   sync-partials.py      stamps partials into every page
   optimise-images.py    brand/ originals → public/assets/img/*.webp
+  build-logo.py         draws the F.I.T logo + mark as exact vectors (logo/*-hd.svg)
 prompt text/            the archive for the version in service (see below)
 ```
 
@@ -94,7 +95,7 @@ prompt text/            the archive for the version in service (see below)
 - **Database:** nothing money-related (orders, bookings, memberships, vouchers, payments)
   is ever writable from a browser. Only the Worker writes those, with server credentials.
 - **The home page is a short overview** (Faye's brief, archived with v2.1 as `prompt text/2/`): Faye's
-  purple F.I.T logo (`fit-logo-purple.svg`: purple letters, purple name bar with white lettering — her own logo, v2.8, replacing the white version from v2.5), her two-paragraph introduction (her wording, v2.7), one mail-list button, then "One space, three ways in"
+  purple F.I.T logo (`fit-logo-purple-hd.svg`: purple letters, purple name bar with white lettering — her own logo, v2.8, replacing the white version from v2.5), her two-paragraph introduction (her wording, v2.7), one mail-list button, then "One space, three ways in"
   (three cards that swipe on a phone; each has its Move/Grow/Work with Faye label, her
   subheading as the heading and her paragraph, v2.7). On a phone the logo and the photo share the top row
   so both are on the first screen (Faye's request, v2.3). The photo is a cut-out with the
@@ -126,7 +127,11 @@ prompt text/            the archive for the version in service (see below)
   physical goals. Talk like a close friend. Tagline: "Focus on the feeling."
 - **Audiences:** Move with Faye (participants — Mandy, Grace), Grow with Faye (instructors —
   Paul, Penny), Work with Faye (brands and event organisers, from Faye's deck).
-- **Family logos — always use them:** F.I.T (`fit-logo-*.svg`), F.I.T Academy (the winged F/A,
+- **The F.I.T logo is drawn, not traced** (v2.9): `tools/build-logo.py` writes
+  `fit-logo-{purple,white,black}-hd.svg` and `fit-mark-hd.svg` from shapes measured off the
+  guide's logo, with the name set in Montserrat Bold outlines; 4000px transparent PNGs of
+  each are in `brand/logo/` for Faye's own use. Change the logo there, never by hand.
+- **Family logos — always use them:** F.I.T (`fit-logo-*-hd.svg`), F.I.T Academy (the winged F/A,
   `fit-academy-*.svg`, traced from the deck), Mind Fit Retreats (`mindfit-retreats-*`), and the
   six concept logos (`fit-jam` … `fit-bands`). Originals live in `brand/logo/`.
 - **Headings:** capitalise the first letter of each word in card and section headings ("F.I.T
@@ -209,7 +214,8 @@ v2.4: the cut-out photo, with her screenshot. `prompt text/6/` shipped with v2.5
 logo at the top (she chose the white version). `prompt text/7/` shipped with v2.6: the longer
 photo crop and capitalised headings. `prompt text/8/` shipped with v2.7: Faye's new home page
 copy. `prompt text/9/` shipped with v2.8: her purple logo at the top, with her screenshot of it.
-The next release that ships new owner words starts `prompt text/10/`.
+`prompt text/10/` shipped with v2.9: the
+high-resolution logo. The next release that ships new owner words starts `prompt text/11/`.
 
 ## Go-live checklist (phase 6)
 
@@ -264,5 +270,6 @@ handed back with each push. v2.0 onwards is the rebuild.
 | v2.6 | Her full pose and properly capitalised headings | The home page photo now shows Faye from her head to just below her lower hand, the crop she originally asked for, instead of stopping at the hand on her hip. Headings across the site now start each word with a capital, from the home page cards to the About, Academy and Book pages. |
 | v2.7 | The home page speaks in Faye's own words | The home page now opens with Faye's own introduction to F.I.T. and what it offers, and each of the three cards carries her new heading and description: workouts, events and wellness retreats; training, coaching and mentorship for instructors; and speaking, presenting, hosting and consulting. Visitors read exactly how she describes her business, in her voice. |
 | v2.8 | Faye's purple logo takes the top spot | The home page now opens with Faye's logo exactly as she uses it, purple F.I.T with its purple Faye's Intentional Training bar, in place of the white version. Her name is part of the logo itself, so nothing else is written beside it. |
+| v2.9 | Faye's logo, pin-sharp at any size | Faye's F.I.T logo has been redrawn as true vector artwork, from its exact shapes and the Montserrat lettering it was set in, so it stays perfectly crisp at any size, from the menu bar to a billboard. Every logo on the site now uses it, and large picture versions sit in her brand folder for social media and print. |
 
-Next release: **v2.9**.
+Next release: **v2.10**.

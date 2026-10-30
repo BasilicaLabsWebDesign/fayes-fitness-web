@@ -14,7 +14,7 @@
     "run_worker_first": ["/api/*"]
   },
   "vars": {
-    "RELEASE": "v2.8"
+    "RELEASE": "v2.9"
   },
   "observability": {
     "enabled": true
