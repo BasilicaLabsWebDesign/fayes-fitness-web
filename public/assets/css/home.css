@@ -14,11 +14,12 @@
 .hero .wrap { display: grid; gap: 28px; align-items: center; padding-top: 28px; padding-bottom: 40px; }
 
 /* Faye's F.I.T logo: the white version with its purple name bar, the brand guide's logo for
-   dark backgrounds. On a phone the logo, the sentence, the button and the photo all fit on
-   the first screen. */
+   dark backgrounds, then her introduction and the mail-list button. On a phone the logo and
+   the photo share the first screen. */
 .hero-brand { margin: 0; }
 .hero-fit-logo { display: block; width: min(40vw, 440px); height: auto; }
 .hero .lede { margin-top: 22px; max-width: 46ch; }
+.hero-more { margin-top: 14px; max-width: 54ch; color: var(--on-black-muted); }
 .hero .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
 /* Faye as a cut-out (background removed, no frame), as the hero has always had her */
 .hero-photo { justify-self: center; width: min(58vw, 440px); }
@@ -44,7 +45,7 @@
     -webkit-mask-image: linear-gradient(to bottom, #000 96%, transparent);
     mask-image: linear-gradient(to bottom, #000 96%, transparent);
   }
-  .hero .lede, .hero .cta { grid-column: 1 / -1; }
+  .hero .lede, .hero-more, .hero .cta { grid-column: 1 / -1; }
   .hero .lede { margin-top: 22px; }
 
   /* On a phone the three doors sit side by side and swipe, the next one peeking in,
