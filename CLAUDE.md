@@ -137,7 +137,9 @@ prompt text/            the archive for the version in service (see below)
 - **Headings:** capitalise the first letter of each word in card and section headings ("F.I.T
   Academy for Instructors"), leaving small joining words (and, for, of, the) lower case after
   the first word — Faye's request, v2.6. Titles set in capitals by CSS are unaffected.
-- **Names:** "Mind Fit Retreats" is two words with capitals (Faye's spelling, October 2026),
+- **Names:** "F.I.T" never takes a full stop after the T (Faye's request, v2.10), even when her
+  copy arrives as "F.I.T."; a sentence that ends on the name keeps its own full stop.
+  "Mind Fit Retreats" is two words with capitals (Faye's spelling, October 2026),
   never "MindFit"; file names and ids stay `mindfit-…`.
 
 ## Source of truth for content
@@ -215,7 +217,8 @@ logo at the top (she chose the white version). `prompt text/7/` shipped with v2.
 photo crop and capitalised headings. `prompt text/8/` shipped with v2.7: Faye's new home page
 copy. `prompt text/9/` shipped with v2.8: her purple logo at the top, with her screenshot of it.
 `prompt text/10/` shipped with v2.9: the
-high-resolution logo. The next release that ships new owner words starts `prompt text/11/`.
+high-resolution logo. `prompt text/11/` shipped with v2.10: F.I.T without a trailing full stop.
+The next release that ships new owner words starts `prompt text/12/`.
 
 ## Go-live checklist (phase 6)
 
@@ -271,5 +274,6 @@ handed back with each push. v2.0 onwards is the rebuild.
 | v2.7 | The home page speaks in Faye's own words | The home page now opens with Faye's own introduction to F.I.T. and what it offers, and each of the three cards carries her new heading and description: workouts, events and wellness retreats; training, coaching and mentorship for instructors; and speaking, presenting, hosting and consulting. Visitors read exactly how she describes her business, in her voice. |
 | v2.8 | Faye's purple logo takes the top spot | The home page now opens with Faye's logo exactly as she uses it, purple F.I.T with its purple Faye's Intentional Training bar, in place of the white version. Her name is part of the logo itself, so nothing else is written beside it. |
 | v2.9 | Faye's logo, pin-sharp at any size | Faye's F.I.T logo has been redrawn as true vector artwork, from its exact shapes and the Montserrat lettering it was set in, so it stays perfectly crisp at any size, from the menu bar to a billboard. Every logo on the site now uses it, and large picture versions sit in her brand folder for social media and print. |
+| v2.10 | F.I.T, written the same way everywhere | Faye's name for her business now appears as F.I.T throughout the site, matching her logo, with the extra full stop gone from her home page introduction, the app and Academy cards, and the description search engines show. |
 
-Next release: **v2.10**.
+Next release: **v2.11**.

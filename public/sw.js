@@ -1,6 +1,6 @@
 // Service worker: makes the site installable and keeps a working shell offline.
 // Bump VERSION with every release so installed copies fetch the new files.
-const VERSION = "2.9";
+const VERSION = "2.10";
 const CACHE = `fit-${VERSION}`;
 
 const CORE = [
