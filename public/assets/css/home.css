@@ -13,8 +13,8 @@
 }
 .hero .wrap { display: grid; gap: 28px; align-items: center; padding-top: 28px; padding-bottom: 40px; }
 
-/* Faye's F.I.T logo: the white version with its purple name bar, the brand guide's logo for
-   dark backgrounds, then her introduction and the mail-list button. On a phone the logo and
+/* Faye's F.I.T logo in her purple (purple letters, purple name bar with white lettering, her
+   choice), then her introduction and the mail-list button. On a phone the logo and
    the photo share the first screen. */
 .hero-brand { margin: 0; }
 .hero-fit-logo { display: block; width: min(40vw, 440px); height: auto; }
