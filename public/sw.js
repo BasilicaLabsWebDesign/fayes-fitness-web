@@ -1,6 +1,6 @@
 // Service worker: makes the site installable and keeps a working shell offline.
 // Bump VERSION with every release so installed copies fetch the new files.
-const VERSION = "2.7";
+const VERSION = "2.8";
 const CACHE = `fit-${VERSION}`;
 
 const CORE = [
@@ -18,6 +18,7 @@ const CORE = [
   "/assets/fonts/montserrat-700.woff2",
   "/assets/fonts/montserrat-900.woff2",
   "/assets/img/logo/fit-logo-white.svg",
+  "/assets/img/logo/fit-logo-purple.svg",
   "/assets/img/particles-1280.webp",
 ];
 

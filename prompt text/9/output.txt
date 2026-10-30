@@ -1,0 +1,8 @@
+Got it, thanks for the picture. You meant your purple logo: purple F.I.T with the purple "Faye's Intentional Training" bar in white lettering. Done, and released to main as v2.8. That logo now sits at the top of the home page in place of the white version. Your name is part of the logo, so nothing else is written beside it.
+
+It's the same artwork as yours, traced from your brand guide, in the same purple. On the black banner it reads as a deep purple, darker than the white version but clearly visible, as in your screenshot. On a phone it still sits beside your photo on the first screen. The small F.I.T in the menu bar and the white logo in the footer are unchanged.
+
+Verified before pushing:
+- The home page on five phone sizes and on desktop, and offline, where the logo shows too.
+- Every page at phone, tablet and desktop widths with no errors.
+- Fresh styling on the first visit, the old addresses and the API.

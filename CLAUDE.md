@@ -94,7 +94,7 @@ prompt text/            the archive for the version in service (see below)
 - **Database:** nothing money-related (orders, bookings, memberships, vouchers, payments)
   is ever writable from a browser. Only the Worker writes those, with server credentials.
 - **The home page is a short overview** (Faye's brief, archived with v2.1 as `prompt text/2/`): Faye's
-  F.I.T logo (the white on-dark version with its purple name bar — her choice, v2.5), her two-paragraph introduction (her wording, v2.7), one mail-list button, then "One space, three ways in"
+  purple F.I.T logo (`fit-logo-purple.svg`: purple letters, purple name bar with white lettering — her own logo, v2.8, replacing the white version from v2.5), her two-paragraph introduction (her wording, v2.7), one mail-list button, then "One space, three ways in"
   (three cards that swipe on a phone; each has its Move/Grow/Work with Faye label, her
   subheading as the heading and her paragraph, v2.7). On a phone the logo and the photo share the top row
   so both are on the first screen (Faye's request, v2.3). The photo is a cut-out with the
@@ -118,7 +118,8 @@ prompt text/            the archive for the version in service (see below)
   Medium for subheadings, Regular for body. Blandit is for the logo only: the logo is
   artwork (`assets/img/logo/*.svg`, traced from the guide), never typed text.
 - **Logo:** purple on light backgrounds, white (with purple tagline) on dark; the F.I.T mark
-  without tagline is an approved additional mark (used in the header).
+  without tagline is an approved additional mark (used in the header). Exception by Faye's
+  choice: the home page hero shows the purple logo on black (v2.8).
 - **Look:** black canvas, particle/smoke backgrounds, thin rule lines framing titles,
   tilted black-framed photos.
 - **Voice:** uplifting, friendly, enthusiastic. About how people *feel*, never aesthetics or
@@ -207,7 +208,8 @@ with v2.3: the smaller F.I.T on phones, with Faye's screenshot. `prompt text/5/`
 v2.4: the cut-out photo, with her screenshot. `prompt text/6/` shipped with v2.5: her real
 logo at the top (she chose the white version). `prompt text/7/` shipped with v2.6: the longer
 photo crop and capitalised headings. `prompt text/8/` shipped with v2.7: Faye's new home page
-copy. The next release that ships new owner words starts `prompt text/9/`.
+copy. `prompt text/9/` shipped with v2.8: her purple logo at the top, with her screenshot of it.
+The next release that ships new owner words starts `prompt text/10/`.
 
 ## Go-live checklist (phase 6)
 
@@ -261,5 +263,6 @@ handed back with each push. v2.0 onwards is the rebuild.
 | v2.5 | Her own logo leads the home page | The top of the home page now carries Faye's actual F.I.T logo, white with its purple Faye's Intentional Training bar, exactly as the brand guide shows it on dark backgrounds, in place of the plain purple lettering. It still sits beside her photo on a phone, so the logo, the picture and the mail-list button all show before any scrolling. |
 | v2.6 | Her full pose and properly capitalised headings | The home page photo now shows Faye from her head to just below her lower hand, the crop she originally asked for, instead of stopping at the hand on her hip. Headings across the site now start each word with a capital, from the home page cards to the About, Academy and Book pages. |
 | v2.7 | The home page speaks in Faye's own words | The home page now opens with Faye's own introduction to F.I.T. and what it offers, and each of the three cards carries her new heading and description: workouts, events and wellness retreats; training, coaching and mentorship for instructors; and speaking, presenting, hosting and consulting. Visitors read exactly how she describes her business, in her voice. |
+| v2.8 | Faye's purple logo takes the top spot | The home page now opens with Faye's logo exactly as she uses it, purple F.I.T with its purple Faye's Intentional Training bar, in place of the white version. Her name is part of the logo itself, so nothing else is written beside it. |
 
-Next release: **v2.8**.
+Next release: **v2.9**.
