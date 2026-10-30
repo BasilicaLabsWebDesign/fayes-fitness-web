@@ -94,8 +94,9 @@ prompt text/            the archive for the version in service (see below)
 - **Database:** nothing money-related (orders, bookings, memberships, vouchers, payments)
   is ever writable from a browser. Only the Worker writes those, with server credentials.
 - **The home page is a short overview** (Faye's brief, archived with v2.1 as `prompt text/2/`): Faye's
-  F.I.T logo (the white on-dark version with its purple name bar — her choice, v2.5), the ecosystem sentence, one mail-list button, then "One space, three ways in"
-  (three cards that swipe on a phone). On a phone the logo and the photo share the top row
+  F.I.T logo (the white on-dark version with its purple name bar — her choice, v2.5), her two-paragraph introduction (her wording, v2.7), one mail-list button, then "One space, three ways in"
+  (three cards that swipe on a phone; each has its Move/Grow/Work with Faye label, her
+  subheading as the heading and her paragraph, v2.7). On a phone the logo and the photo share the top row
   so both are on the first screen (Faye's request, v2.3). The photo is a cut-out with the
   background removed: no frame, no tilt (Faye's request, v2.4), cropped from her head to just
   below her lower hand (v2.6). Keep it to two or three phone scrolls; longer content
@@ -205,8 +206,8 @@ brings any of it back). `prompt text/2/` shipped with v2.1: the home page brief
 with v2.3: the smaller F.I.T on phones, with Faye's screenshot. `prompt text/5/` shipped with
 v2.4: the cut-out photo, with her screenshot. `prompt text/6/` shipped with v2.5: her real
 logo at the top (she chose the white version). `prompt text/7/` shipped with v2.6: the longer
-photo crop and capitalised headings. The next release that ships new owner words starts
-`prompt text/8/`.
+photo crop and capitalised headings. `prompt text/8/` shipped with v2.7: Faye's new home page
+copy. The next release that ships new owner words starts `prompt text/9/`.
 
 ## Go-live checklist (phase 6)
 
@@ -259,5 +260,6 @@ handed back with each push. v2.0 onwards is the rebuild.
 | v2.4 | Faye stands free of the frame again | The home page photo is back to the look Faye liked: her white-outfit portrait cut out from its studio background, standing straight with no frame or tilt, resting on the bottom of the banner on a computer and fading softly beside the logo on a phone. Every visitor now sees each release's styling the moment it goes out, even on a phone that had saved an older copy of the site. |
 | v2.5 | Her own logo leads the home page | The top of the home page now carries Faye's actual F.I.T logo, white with its purple Faye's Intentional Training bar, exactly as the brand guide shows it on dark backgrounds, in place of the plain purple lettering. It still sits beside her photo on a phone, so the logo, the picture and the mail-list button all show before any scrolling. |
 | v2.6 | Her full pose and properly capitalised headings | The home page photo now shows Faye from her head to just below her lower hand, the crop she originally asked for, instead of stopping at the hand on her hip. Headings across the site now start each word with a capital, from the home page cards to the About, Academy and Book pages. |
+| v2.7 | The home page speaks in Faye's own words | The home page now opens with Faye's own introduction to F.I.T. and what it offers, and each of the three cards carries her new heading and description: workouts, events and wellness retreats; training, coaching and mentorship for instructors; and speaking, presenting, hosting and consulting. Visitors read exactly how she describes her business, in her voice. |
 
-Next release: **v2.7**.
+Next release: **v2.8**.
