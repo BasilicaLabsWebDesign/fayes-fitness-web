@@ -1,0 +1,19 @@
+Done, and released to main as v2.13.
+
+The menu across the top of every page is now yours: Home, About, Retreats, Coaching, Instructor Training and Work With Faye, with the pink Book button kept alongside as you chose. It fits on one line on every computer screen size, and on phones and tablets the same six appear in the menu button. The tab for the page you're on is underlined, including Home.
+
+Where each tab goes:
+- Retreats opens your retreats page (Mind Fit Retreats, events and community).
+- Instructor Training opens the F.I.T Academy page.
+- Coaching is your old Consulting page, now called Coaching, as you picked. I've added "1-to-1 fitness business coaching" to its opening line and its list; the rest of its wording is unchanged, so send me your own words for it whenever you like. Anyone with an old link to the Consulting page is forwarded to Coaching automatically. The matching cards on Services and Work With Faye, the link on the Academy page and the enquiry form's topic now say Coaching too.
+
+Services, Contact, the F.I.T App and Book are no longer tabs, but they're still one tap away in the footer, which now lists your six pages first.
+
+On a computer, page titles now sit close under the menu bar on every page, about a third of the space there was before. Titles beside a tall photo also start at the top rather than halfway down. Phones keep their original spacing, since you said this was for desktop.
+
+Your screenshot of the gap came through only as a picture in the chat, not as a file, so it isn't saved in this release's records. Resend it as a file if you'd like it kept.
+
+Verified before pushing:
+- The menu at every desktop width and in the phone and tablet menu.
+- Every page at phone, tablet and desktop widths with no errors, and the gap under the menu measured on every page.
+- The old Consulting address forwards to Coaching, and offline mode, fresh styling on the first visit, the other old addresses and the API all still work.

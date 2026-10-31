@@ -46,11 +46,12 @@ request is served straight from `public/` by Cloudflare's asset handler.
 ```
 public/                 everything served (no build step — these files are the site)
   index.html 404.html offline.html
-  about services app presenting consulting speaking academy experiences
+  about services app presenting coaching speaking academy experiences
   work-with-faye book contact .html   (served without .html: /about, /book …)
   manifest.webmanifest  sw.js  favicon.svg  apple-touch-icon.png  icons/
   _headers              security headers (incl. CSP) + caching
-  _redirects            v1 addresses (/why, /retreats/zanzibar …) → their v2 pages; never remove
+  _redirects            old addresses (v1's /why, /retreats/zanzibar …; /consulting) → their
+                        current pages; never remove a line
   assets/css/           tokens.css (brand) → site.css (components) → home.css | pages.css
   assets/js/app.js      menu + service-worker registration
   assets/js/video.js    YouTube facades: nothing loads from YouTube until play is pressed
@@ -94,6 +95,12 @@ prompt text/            the archive for the version in service (see below)
 - **Fonts are self-hosted** so no visitor data goes to Google; keep it that way.
 - **Database:** nothing money-related (orders, bookings, memberships, vouchers, payments)
   is ever writable from a browser. Only the Worker writes those, with server credentials.
+- **The menu is Faye's** (v2.13): Home, About, Retreats (/experiences), Coaching (/coaching,
+  formerly Consulting), Instructor Training (/academy), Work With Faye, plus the Book button.
+  Pages outside the menu (Services, F.I.T App, Presenting, Speaking, Book, Contact) stay linked
+  from the footer and the pages themselves. On desktop, page titles sit close under the menu bar
+  (her request, v2.13): banners start 32px below it, text aligned to the top; phones keep
+  their original spacing.
 - **The home page is a short overview** (Faye's brief, archived with v2.1 as `prompt text/2/`): no logo in the
   banner (v2.12: the menu-bar F.I.T is the page's only logo; the purple logo used in v2.8–v2.11
   stays stored as `fit-logo-purple-hd.svg` for later), her two-paragraph introduction (her
@@ -227,7 +234,9 @@ copy. `prompt text/9/` shipped with v2.8: her purple logo at the top, with her s
 high-resolution logo. `prompt text/11/` shipped with v2.10: F.I.T without a trailing full stop.
 `prompt text/12/` shipped with v2.11: the About page brief
 (Website_Updates_ABOUT.docx). `prompt text/13/` shipped with v2.12: one logo on the home page.
-The next release that ships new owner words starts `prompt text/14/`.
+`prompt text/14/` shipped with v2.13: the new menu (with her
+answers: Coaching takes over Consulting, Book stays) and the tighter desktop title spacing;
+her screenshot of the gap arrived only inline and could not be saved. The next release that ships new owner words starts `prompt text/15/`.
 
 ## Go-live checklist (phase 6)
 
@@ -286,5 +295,6 @@ handed back with each push. v2.0 onwards is the rebuild.
 | v2.10 | F.I.T, written the same way everywhere | Faye's name for her business now appears as F.I.T throughout the site, matching her logo, with the extra full stop gone from her home page introduction, the app and Academy cards, and the description search engines show. |
 | v2.11 | The About page tells the story of F.I.T | The About page now reads simply as About Faye Edwards, with Faye's updated bio beside her portrait, standing straight and free of its frame, followed by The Story of F.I.T: how Faye's Intensive Training became Faye's Intentional Training, told in her own words alongside a photo of the Mind Fit Retreats family. The page is shorter and more personal, with the older banner, values, feelings, client list and call to action taken out. |
 | v2.12 | One logo on the home page | The home page banner no longer repeats the logo: the F.I.T in the menu bar is now the only one, and Faye's opening line leads the banner instead, beside her photo. The purple logo is kept safely stored, ready to use again whenever it's wanted. |
+| v2.13 | Faye's new menu, with titles right under it | The top of every page now carries Faye's own menu: Home, About, Retreats, Coaching, Instructor Training and Work With Faye, with the Book button alongside. The Consulting page has become her Coaching page, and old links to it still arrive. On a computer, every page title now sits close under the menu instead of floating halfway down the banner. |
 
-Next release: **v2.13**.
+Next release: **v2.14**.
