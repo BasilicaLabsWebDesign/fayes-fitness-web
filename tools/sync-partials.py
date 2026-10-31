@@ -45,9 +45,8 @@ def page_path(page: Path) -> str:
 
 def mark_current(body: str, path: str) -> str:
     """Flag the link to this page so the menu shows, and screen readers say, where you are."""
-    if path == "/":
-        return body
-    return body.replace(f'href="{path}"', f'href="{path}" aria-current="page"')
+    # matches plain links only, so the logo (class="brand", also "/") is never flagged
+    return body.replace(f'<a href="{path}">', f'<a href="{path}" aria-current="page">')
 
 
 def stamp(html: str, parts: dict, path: str = "", version: str = "") -> str:

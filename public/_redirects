@@ -18,3 +18,6 @@
 /watch.html               /app            301
 /the-book                 /about          301
 /the-book.html            /about          301
+# The Consulting page became Coaching (v2.13)
+/consulting               /coaching       301
+/consulting.html          /coaching       301
