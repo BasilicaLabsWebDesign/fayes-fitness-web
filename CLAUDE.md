@@ -94,11 +94,13 @@ prompt text/            the archive for the version in service (see below)
 - **Fonts are self-hosted** so no visitor data goes to Google; keep it that way.
 - **Database:** nothing money-related (orders, bookings, memberships, vouchers, payments)
   is ever writable from a browser. Only the Worker writes those, with server credentials.
-- **The home page is a short overview** (Faye's brief, archived with v2.1 as `prompt text/2/`): Faye's
-  purple F.I.T logo (`fit-logo-purple-hd.svg`: purple letters, purple name bar with white lettering — her own logo, v2.8, replacing the white version from v2.5), her two-paragraph introduction (her wording, v2.7), one mail-list button, then "One space, three ways in"
+- **The home page is a short overview** (Faye's brief, archived with v2.1 as `prompt text/2/`): no logo in the
+  banner (v2.12: the menu-bar F.I.T is the page's only logo; the purple logo used in v2.8–v2.11
+  stays stored as `fit-logo-purple-hd.svg` for later), her two-paragraph introduction (her
+  wording, v2.7) with the opening line leading the banner, one mail-list button, then "One space, three ways in"
   (three cards that swipe on a phone; each has its Move/Grow/Work with Faye label, her
-  subheading as the heading and her paragraph, v2.7). On a phone the logo and the photo share the top row
-  so both are on the first screen (Faye's request, v2.3). The photo is a cut-out with the
+  subheading as the heading and her paragraph, v2.7). On a phone her opening line and the photo share the
+  top row so the photo is on the first screen (Faye's request, v2.3). The photo is a cut-out with the
   background removed: no frame, no tilt (Faye's request, v2.4), cropped from her head to just
   below her lower hand (v2.6). Keep it to two or three phone scrolls; longer content
   belongs on the inner pages.
@@ -125,7 +127,7 @@ prompt text/            the archive for the version in service (see below)
   artwork (`assets/img/logo/*.svg`, traced from the guide), never typed text.
 - **Logo:** purple on light backgrounds, white (with purple tagline) on dark; the F.I.T mark
   without tagline is an approved additional mark (used in the header). Exception by Faye's
-  choice: the home page hero shows the purple logo on black (v2.8).
+  choice: the home page hero showed the purple logo on black (v2.8), removed again in v2.12.
 - **Look:** black canvas, particle/smoke backgrounds, thin rule lines framing titles,
   tilted black-framed photos.
 - **Voice:** uplifting, friendly, enthusiastic. About how people *feel*, never aesthetics or
@@ -224,7 +226,8 @@ copy. `prompt text/9/` shipped with v2.8: her purple logo at the top, with her s
 `prompt text/10/` shipped with v2.9: the
 high-resolution logo. `prompt text/11/` shipped with v2.10: F.I.T without a trailing full stop.
 `prompt text/12/` shipped with v2.11: the About page brief
-(Website_Updates_ABOUT.docx). The next release that ships new owner words starts `prompt text/13/`.
+(Website_Updates_ABOUT.docx). `prompt text/13/` shipped with v2.12: one logo on the home page.
+The next release that ships new owner words starts `prompt text/14/`.
 
 ## Go-live checklist (phase 6)
 
@@ -282,5 +285,6 @@ handed back with each push. v2.0 onwards is the rebuild.
 | v2.9 | Faye's logo, pin-sharp at any size | Faye's F.I.T logo has been redrawn as true vector artwork, from its exact shapes and the Montserrat lettering it was set in, so it stays perfectly crisp at any size, from the menu bar to a billboard. Every logo on the site now uses it, and large picture versions sit in her brand folder for social media and print. |
 | v2.10 | F.I.T, written the same way everywhere | Faye's name for her business now appears as F.I.T throughout the site, matching her logo, with the extra full stop gone from her home page introduction, the app and Academy cards, and the description search engines show. |
 | v2.11 | The About page tells the story of F.I.T | The About page now reads simply as About Faye Edwards, with Faye's updated bio beside her portrait, standing straight and free of its frame, followed by The Story of F.I.T: how Faye's Intensive Training became Faye's Intentional Training, told in her own words alongside a photo of the Mind Fit Retreats family. The page is shorter and more personal, with the older banner, values, feelings, client list and call to action taken out. |
+| v2.12 | One logo on the home page | The home page banner no longer repeats the logo: the F.I.T in the menu bar is now the only one, and Faye's opening line leads the banner instead, beside her photo. The purple logo is kept safely stored, ready to use again whenever it's wanted. |
 
-Next release: **v2.12**.
+Next release: **v2.13**.
