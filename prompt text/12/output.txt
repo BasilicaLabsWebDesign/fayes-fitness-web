@@ -1,0 +1,14 @@
+Done, and released to main as v2.11. The About page now follows your document point by point.
+
+1. The top reads "ABOUT" over "FAYE EDWARDS". "About" is bigger than the old small label, and your name is a little smaller than before, so it no longer reads "About Faye, Faye Edwards".
+2. Your photo there has no frame and stands straight, the same way as the home page. I cut out its dark studio background, so you stand on the banner's black background and rest on its bottom edge. On a phone the photo sits beside the title.
+3. The page has just the two titles, "About Faye Edwards" and "The Story of F.I.T". Your bio, in your updated wording, sits under the first, starting with "Faye is a powerhouse of energy…".
+4. Your group photo sits beside the story at a modest size, about a third of the width, and stays in view as people read down. On a phone it sits underneath the story. I've captioned it "The Mind Fit Retreats family"; tell me if you'd like different words or none.
+5. The purple "To make fitness fun" banner, What F.I.T Stands For, How It Feels, Faye Has Worked With and Come and Feel It are all removed.
+
+One thing that went with them: the photo of you laughing on the wall bars sat beside your bio in the old "Her story" section, so it's gone too. I can bring it back if you'd like it.
+
+Verified before pushing:
+- The About page on a phone and a desktop: both titles, both photos, and no errors.
+- Every other page at phone, tablet and desktop widths.
+- Offline mode, fresh styling on the first visit, the old addresses and the API.

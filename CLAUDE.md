@@ -102,6 +102,11 @@ prompt text/            the archive for the version in service (see below)
   background removed: no frame, no tilt (Faye's request, v2.4), cropped from her head to just
   below her lower hand (v2.6). Keep it to two or three phone scrolls; longer content
   belongs on the inner pages.
+- **The About page has exactly two titles** (Faye's ABOUT brief, v2.11): "About" over
+  "Faye Edwards" with her bio and her arms-folded portrait as a cut-out (no frame, no tilt),
+  then "The Story of F.I.T" in her words with the Mind Fit Retreats group photo beside it.
+  Its old banner, values, feelings, clients and call-to-action sections were removed at her
+  request; the copy is hers, so change it only from her wording.
 - **Accessibility is part of the brand** (the guide's personas run from 28 to 55): body text
   ≥ 17px, contrast AA, tap targets ≥ 48px, visible focus, reduced-motion respected.
 
@@ -218,7 +223,8 @@ photo crop and capitalised headings. `prompt text/8/` shipped with v2.7: Faye's 
 copy. `prompt text/9/` shipped with v2.8: her purple logo at the top, with her screenshot of it.
 `prompt text/10/` shipped with v2.9: the
 high-resolution logo. `prompt text/11/` shipped with v2.10: F.I.T without a trailing full stop.
-The next release that ships new owner words starts `prompt text/12/`.
+`prompt text/12/` shipped with v2.11: the About page brief
+(Website_Updates_ABOUT.docx). The next release that ships new owner words starts `prompt text/13/`.
 
 ## Go-live checklist (phase 6)
 
@@ -275,5 +281,6 @@ handed back with each push. v2.0 onwards is the rebuild.
 | v2.8 | Faye's purple logo takes the top spot | The home page now opens with Faye's logo exactly as she uses it, purple F.I.T with its purple Faye's Intentional Training bar, in place of the white version. Her name is part of the logo itself, so nothing else is written beside it. |
 | v2.9 | Faye's logo, pin-sharp at any size | Faye's F.I.T logo has been redrawn as true vector artwork, from its exact shapes and the Montserrat lettering it was set in, so it stays perfectly crisp at any size, from the menu bar to a billboard. Every logo on the site now uses it, and large picture versions sit in her brand folder for social media and print. |
 | v2.10 | F.I.T, written the same way everywhere | Faye's name for her business now appears as F.I.T throughout the site, matching her logo, with the extra full stop gone from her home page introduction, the app and Academy cards, and the description search engines show. |
+| v2.11 | The About page tells the story of F.I.T | The About page now reads simply as About Faye Edwards, with Faye's updated bio beside her portrait, standing straight and free of its frame, followed by The Story of F.I.T: how Faye's Intensive Training became Faye's Intentional Training, told in her own words alongside a photo of the Mind Fit Retreats family. The page is shorter and more personal, with the older banner, values, feelings, client list and call to action taken out. |
 
-Next release: **v2.11**.
+Next release: **v2.12**.
