@@ -8,9 +8,9 @@
     var(--black) url(/assets/img/particles-1280.webp) center / cover no-repeat;
   padding: clamp(44px, 7vw, 84px) 0;
 }
-.page-hero .wrap { display: grid; gap: 36px; align-items: center; }
+.page-hero .wrap { display: grid; gap: 36px; align-items: start; }
 .page-hero .eyebrow { color: var(--on-black-accent); }
-.page-hero h1 { font-size: clamp(2.1rem, 8vw, 4rem); margin: 12px 0 16px; }
+.page-hero h1 { font-size: clamp(2.1rem, 8vw, 4rem); margin: 8px 0 16px; }
 .page-hero .lede { max-width: 46ch; }
 .page-hero .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
 .hero-media { justify-self: center; width: min(86vw, 440px); }
@@ -171,7 +171,10 @@
   .card-grid.two { grid-template-columns: repeat(2, 1fr); }
   .trio { grid-template-columns: repeat(3, 1fr); gap: 32px; }
   .form .row { grid-template-columns: 1fr 1fr; }
+  /* on desktop, titles start close under the menu bar (Faye, v2.13) */
+  .page-hero { padding-top: 32px; }
   .about-hero { padding-bottom: 0; }
+  .about-title { align-self: start; }
   .about-hero .wrap { grid-template-columns: 1.15fr .85fr; grid-template-rows: auto 1fr; column-gap: 36px; }
   .about-bio { grid-column: 1; grid-row: 2; margin-top: 22px; padding-bottom: 72px; }
   .about-photo {
