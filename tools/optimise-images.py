@@ -26,8 +26,6 @@ IMAGES = [
     ("photos/faye-coaching-group.jpg", "faye-coaching-group", (720, 1200), 78),
     ("photos/ladies-who-launch.jpg", "ladies-who-launch", (720, 1200), 78),
     # phase 1 pages
-    ("photos/faye-mission-portrait.jpg", "faye-mission-portrait", (640, 1000), 80),
-    ("photos/faye-wall-bars.jpg", "faye-wall-bars", (600, 1000), 80),
     ("photos/faye-neon-kick.jpg", "faye-neon-kick", (640, 1000), 80),
     ("photos/faye-flex.png", "faye-flex", (749,), 82),
     ("photos/faye-portrait-white.png", "faye-portrait-white", (640,), 82),
@@ -44,6 +42,9 @@ IMAGES = [
     # home page (Website Updates, October 2026)
     ("photos/faye-instructor-circle.jpg", "faye-instructor-circle", (720, 1200), 78),
     ("photos/faye-white-hand-on-hip-cutout.png", "faye-white-cutout-full", (480, 755), 82),
+    # about page (Website Updates ABOUT, October 2026)
+    ("photos/faye-mission-portrait-cutout.png", "faye-arms-folded-cutout", (480, 840), 82),
+    ("photos/mind-fit-retreat-group.jpg", "mind-fit-group", (640, 1000), 80),
     # sub-brand and concept logos (transparent)
     ("logo/mindfit-retreats-blue.png", "logo/mindfit-retreats-white", (520,), 90, "#FDFDFD"),
     ("logo/concepts/fit-jam.png", "logo/fit-jam", (420,), 90),
@@ -57,6 +58,7 @@ IMAGES = [
 # output name → crop box (left, top, right, bottom) in the original's pixels, applied first
 CROPS = {
     "faye-white-cutout-full": (350, 220, 1105, 1360),  # head to just below her lower hand
+    "faye-arms-folded-cutout": (210, 100, 1050, 1277),  # tight to her, down to the frame edge
 }
 
 
