@@ -29,3 +29,9 @@
   Cache-Control: public, max-age=0, must-revalidate
 /
   Cache-Control: public, max-age=0, must-revalidate
+
+# Documents (the Retreat Planner PDF) open in the browser's own viewer, which the page CSP
+# would block; nothing in them runs script, so they go without it.
+/assets/docs/*
+  ! Content-Security-Policy
+  Cache-Control: public, max-age=3600, must-revalidate

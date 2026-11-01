@@ -45,6 +45,9 @@ IMAGES = [
     # about page (Website Updates ABOUT, October 2026)
     ("photos/faye-mission-portrait-cutout.png", "faye-arms-folded-cutout", (480, 840), 82),
     ("photos/mind-fit-retreat-group.jpg", "mind-fit-group", (640, 1000), 80),
+    # retreats page (Retreats brief, November 2026)
+    ("photos/grand-therme-pools.jpg", "grand-therme-pools", (640, 1000), 80),
+    ("photos/retreat-planner-hug.jpg", "retreat-planner-hug", (640, 1000), 80),
     # sub-brand and concept logos (transparent)
     ("logo/mindfit-retreats-blue.png", "logo/mindfit-retreats-white", (520,), 90, "#FDFDFD"),
     ("logo/concepts/fit-jam.png", "logo/fit-jam", (420,), 90),
@@ -59,6 +62,7 @@ IMAGES = [
 CROPS = {
     "faye-white-cutout-full": (350, 220, 1105, 1360),  # head to just below her lower hand
     "faye-arms-folded-cutout": (210, 100, 1050, 1277),  # tight to her, down to the frame edge
+    "retreat-planner-hug": (0, 280, 1377, 1657),  # square, around the two of them
 }
 
 
