@@ -83,7 +83,7 @@
 .video { position: relative; border-radius: var(--radius); overflow: hidden; background: #111; aspect-ratio: 9 / 16; }
 .video button {
   position: absolute; inset: 0; width: 100%; padding: 0; border: 0; cursor: pointer;
-  background: transparent; color: var(--off-white); text-align: left;
+  background: transparent; color: var(--off-white); text-align: left; font: inherit;
 }
 .video img { width: 100%; height: 100%; object-fit: cover; filter: brightness(.62); }
 .video .play {
@@ -95,6 +95,10 @@
 .video .caption { position: absolute; left: 16px; right: 16px; bottom: 16px; font-weight: var(--w-heading); line-height: 1.3; }
 .video .caption small { display: block; font-weight: var(--w-body); color: var(--on-black-muted); margin-top: 4px; }
 .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+/* a landscape video (Retreats, v2.20): one wide player instead of the portrait Shorts' column */
+.video-grid.wide { grid-template-columns: minmax(0, 820px); }
+.video.wide { aspect-ratio: 16 / 9; }
+.videos + .videos { padding-top: 0; }
 .video-note { font-size: var(--text-xs); color: var(--on-black-muted); margin-top: 14px; text-align: center; }
 
 /* Call-to-action band */
