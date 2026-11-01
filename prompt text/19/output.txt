@@ -1,0 +1,10 @@
+Done, and released to main as v2.18. The photo on the Coaching page now shows the whole picture in its original shape, just smaller, instead of being cropped to fit.
+
+On a computer it still ends level with the Make an enquiry and Work with Faye buttons, so it's narrower than before. All of it is there: the ceiling, the chairs and you from head to toe. It keeps its black frame and slight tilt.
+
+The Speaking and Book banner photos had the same crop and are fixed the same way. On phones these photos now show whole too.
+
+Verified before pushing:
+- Coaching, Speaking and Book at three computer widths and on a phone: each photo's shape matches the original, and on a computer each ends level with the buttons.
+- Every page at phone, tablet and desktop sizes: no errors, every image loads, every link works.
+- Offline mode, fresh styling on the first visit, the old addresses and the API.

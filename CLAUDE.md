@@ -108,7 +108,8 @@ prompt text/            the archive for the version in service (see below)
   never size a single page's title on its own. Desktop gaps are tight: a banner ends 40px
   under its buttons and the next section starts 40px later. Tall banner photos (`hero-tall`:
   Coaching, Speaking, Book) take their height from the words beside them and end level with
-  the buttons. Faye checks pages on a computer at full screen: on Home, Services and Retreats
+  the buttons, always the whole photo in its own proportions, scaled and never cropped
+  (Faye, v2.18). Faye checks pages on a computer at full screen: on Home, Services and Retreats
   the first content (cards or first retreat) must show on the opening screen (1440x900).
 - **The Services page follows Faye's brief** (v2.14): titled "Move. Grow. Work." (she cut
   "With Faye", v2.17) beside a large F.I.T logo, one
@@ -262,8 +263,9 @@ brief. `prompt text/16/` shipped with v2.15: the Retreats brief (Retreats.docx) 
 Retreat Planner PDF. `prompt text/17/` shipped with v2.16: the About photo lined up with the
 title, with her marked-up screenshot. `prompt text/18/` shipped with v2.17: one title style
 on every page and the opening screens on a computer, with the five screenshots saved from her
-first message (her later screenshots arrived only inline and could not be saved). The next
-release that ships new owner words starts `prompt text/19/`.
+first message (her later screenshots arrived only inline and could not be saved).
+`prompt text/19/` shipped with v2.18: the Coaching photo in its own proportions, with her
+screenshot. The next release that ships new owner words starts `prompt text/20/`.
 
 ## Go-live checklist (phase 6)
 
@@ -327,5 +329,6 @@ handed back with each push. v2.0 onwards is the rebuild.
 | v2.15 | Three ways to retreat with Faye | The Retreats page now opens simply as Retreats, with Faye's own introduction, and presents her three offers in her words: Mind Fit Retreats in Zanzibar in February 2027, the F.I.T Trip spa break in Bulgaria in April 2027, and The Retreat Planner for fitness professionals dreaming of hosting their own. Each has its own photo and a More Info Here button, the last opening her Retreat Planner brochure. |
 | v2.16 | Faye's About photo stands tall beside her name | On the About page, Faye's portrait now starts level with the top of her name on a computer, instead of sitting low at the bottom of the banner, so her photo and her title meet the eye together. The bottom of the photo fades softly away, and phones look just as before. |
 | v2.17 | Every page title in step, every opening on screen | Every page now opens the same way, a pink label over a title of the same size at the same height, and on a computer the banners end close to what follows. The home page, Services and Retreats now show their cards and first retreat on the opening screen, with Faye's home photo sized to her words, bigger F.I.T and Mind Fit Retreats logos, Move. Grow. Work. on Services, and Retreats titled Your sign to say yes to you. |
+| v2.18 | Faye's whole photo, in its true shape | The banner photos on the Coaching, Speaking and Book pages now show the whole picture in its original shape, simply scaled down, instead of being cropped to fit. They still end level with the buttons on a computer, and phones show the whole photo too. |
 
-Next release: **v2.18**.
+Next release: **v2.19**.
