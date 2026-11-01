@@ -218,6 +218,10 @@
      (Faye, v2.22). With the wrap's content width W, that photo's centre sits at 0.75W + 14px
      (.split: two columns, 56px gap) and this column starts at 0.575W + 15.3px (1.15fr .85fr,
      36px gap), so the centre goes 0.175W - 1.3px into the column. */
+  /* Work With Faye: the banner photo in the Coaching frame, a little larger, centred
+     against the words beside it (Faye, v2.22) */
+  .page-hero .wrap:has(.hero-feature) { grid-template-columns: 1fr 1fr; align-items: center; }
+  .hero-media.hero-feature { width: min(38vw, 500px); }
   .page-hero .wrap:has(.align-below) { container-type: inline-size; }
   .hero-media.hero-tall.align-below { justify-self: start; margin-left: calc(17.5cqw - 1.3px); transform: translateX(-50%) rotate(2.5deg); }
   .about-hero .wrap { grid-template-columns: 1.15fr .85fr; grid-template-rows: auto 1fr; column-gap: 36px; }
@@ -230,4 +234,12 @@
   }
   .story { grid-template-columns: minmax(0, 1fr) 380px; gap: 56px; align-items: start; }
   .story-photo { position: sticky; top: 96px; margin-top: 8px; }
+}
+
+/* Services on a wide screen: "Move. Grow. Work." on one line, the words' column as wide as
+   the title and the F.I.T logo filling what is left (Faye, v2.22) */
+@media (min-width: 1200px) {
+  .services-hero .wrap { grid-template-columns: max-content minmax(0, 1fr); }
+  .services-hero h1 { white-space: nowrap; }
+  .services-hero .hero-logo-lg { width: min(100%, 420px); justify-self: center; }
 }
