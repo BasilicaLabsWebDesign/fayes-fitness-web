@@ -118,7 +118,14 @@ prompt text/            the archive for the version in service (see below)
   one-line title with a smaller logo was tried in v2.22 and undone at her request (v2.23); one
   "Ask a question" button to her email; the Coaching card's label is "Gyms, Studios and
   Brands", on one line; the App card's "Join the app" goes to the app's
-  sign-up, and the Presenting, Coaching and Speaking cards' "Enquire here" open her email.
+  sign-up, and the Presenting, Coaching, Speaking and F.I.T Academy cards' "Enquire here"
+  open her email (Academy from v2.24); the Experiences card lists "Retreat consulting"; no
+  closing banner (v2.24).
+- **The Coaching page follows Faye's brief** (v2.24): "Business Growth" over "Coaching and
+  Consulting", her introduction in her words and one "Enquire here" button to her email; then
+  "Choose Your Path to Growth" on one line (sized to its column, `one-line-head`) over her four
+  paths, written "need → offer". No closing banner. Tall banner photos are capped in height so
+  a long introduction never pushes them into the words.
 - **The Retreats page** (/experiences, Faye's Retreats brief, v2.15) has the pink label
   "Experiences" over the white title "Retreats" (Faye, v2.21), the large Mind Fit Retreats
   logo beside her introduction, then Mind Fit Retreats Zanzibar (1st–10th Feb 2027), the F.I.T Trip Spa
@@ -276,8 +283,9 @@ her marked-up screenshot. `prompt text/21/` shipped with v2.20: the two retreat 
 `prompt text/23/` shipped with v2.22: the Coaching photo centred over the one below, the
 framed Work With Faye photo and Services on one line (her three screenshots arrived only
 inline and could not be saved). `prompt text/24/` shipped with v2.23: the Services banner
-back to the other pages' layout, with her screenshot. The next release that ships new owner
-words starts `prompt text/25/`.
+back to the other pages' layout, with her screenshot. `prompt text/25/` shipped with v2.24:
+the Services and Coaching brief. The next release that ships new owner words starts
+`prompt text/26/`.
 
 ## Go-live checklist (phase 6)
 
@@ -349,5 +357,6 @@ handed back with each push. v2.0 onwards is the rebuild.
 | v2.21 | Experiences, with Retreats in white | The Retreats page now opens with Experiences in pink and Retreats as its big white title, matching the way every other page announces itself, with Faye's introduction and the Mind Fit Retreats logo just below. |
 | v2.22 | Photos lined up, framed and in proportion | On a computer the Coaching photo now sits centred over the photo below it, the Work With Faye photo gains the same black frame and tilt, a little larger and centred beside its words, and the Services title Move. Grow. Work. now runs on a single line with the F.I.T logo sized to suit. |
 | v2.23 | Services back in step with every page | The Services banner returns to the same proportions as every other page, with Faye's words at their usual width and the F.I.T logo back to its earlier, larger size, so Move. Grow. Work. sits over two lines again beside it. |
+| v2.24 | Coaching and Consulting, in Faye's words | The Coaching page now opens as Business Growth over Coaching and Consulting with Faye's own introduction and a single Enquire here button, then lets visitors choose their path to growth: business coaching, The Retreat Planner, consulting or instructor training. On Services, the Academy card now opens an email to Faye and the retreats card adds retreat consulting, and both pages end without the closing banner. |
 
-Next release: **v2.24**.
+Next release: **v2.25**.
