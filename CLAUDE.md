@@ -56,6 +56,7 @@ public/                 everything served (no build step — these files are the
   assets/js/app.js      menu + service-worker registration
   assets/js/video.js    YouTube facades: nothing loads from YouTube until play is pressed
   assets/js/enquiry.js  enquiry form → pre-filled email to Faye (→ /api/enquiry in phase 5)
+  assets/docs/          documents for visitors (the Retreat Planner PDF); served without CSP
   assets/fonts/         Montserrat, self-hosted (OFL.txt beside it)
   assets/img/           web-sized WebP from tools/optimise-images.py; logo/ = traced SVGs
 worker/index.js         the API (Cloudflare Worker)
@@ -105,6 +106,10 @@ prompt text/            the archive for the version in service (see below)
 - **The Services page follows Faye's brief** (v2.14): "Move. Grow. Work With Faye.", one
   "Ask a question" button to her email; the App card's "Join the app" goes to the app's
   sign-up, and the Presenting, Coaching and Speaking cards' "Enquire here" open her email.
+- **The Retreats page** (/experiences, Faye's Retreats brief, v2.15) is titled "Retreats" with
+  her introduction, then Mind Fit Retreats Zanzibar (1st–10th Feb 2027), the F.I.T Trip Spa
+  Break Bulgaria (22nd–26th Apr 2027) and The Retreat Planner, each in her words with a
+  "More Info Here" button: her two Flodesk pages, and `/assets/docs/the-retreat-planner.pdf`.
 - **The home page is a short overview** (Faye's brief, archived with v2.1 as `prompt text/2/`): no logo in the
   banner (v2.12: the menu-bar F.I.T is the page's only logo; the purple logo used in v2.8–v2.11
   stays stored as `fit-logo-purple-hd.svg` for later), her two-paragraph introduction (her
@@ -241,7 +246,8 @@ high-resolution logo. `prompt text/11/` shipped with v2.10: F.I.T without a trai
 `prompt text/14/` shipped with v2.13: the new menu (with her
 answers: Coaching takes over Consulting, Book stays) and the tighter desktop title spacing;
 her screenshot of the gap arrived only inline and could not be saved. `prompt text/15/` shipped with v2.14: Services in the menu and the Services page
-brief. The next release that ships new owner words starts `prompt text/16/`.
+brief. `prompt text/16/` shipped with v2.15: the Retreats brief (Retreats.docx) and The
+Retreat Planner PDF. The next release that ships new owner words starts `prompt text/17/`.
 
 ## Go-live checklist (phase 6)
 
@@ -250,7 +256,7 @@ brief. The next release that ships new owner words starts `prompt text/16/`.
       being opened (this environment cannot reach those sites)
 - [ ] Absolute `og:image` / `og:url` / canonical tags, sitemap.xml and the robots Sitemap line
 - [ ] App Store and Google Play links on /app opened and confirmed
-- [ ] Retreat dates, venues and availability on /experiences confirmed with Faye
+- [x] Retreat dates, venues and links on /experiences confirmed by Faye (her Retreats brief, v2.15)
 - [ ] Book page's interim Fibodo links (timetable, memberships, vouchers) replaced by
       the site's own booking (phase 4)
 - [ ] Company registration number in the footer (UK companies must show it on their website)
@@ -302,5 +308,6 @@ handed back with each push. v2.0 onwards is the rebuild.
 | v2.12 | One logo on the home page | The home page banner no longer repeats the logo: the F.I.T in the menu bar is now the only one, and Faye's opening line leads the banner instead, beside her photo. The purple logo is kept safely stored, ready to use again whenever it's wanted. |
 | v2.13 | Faye's new menu, with titles right under it | The top of every page now carries Faye's own menu: Home, About, Retreats, Coaching, Instructor Training and Work With Faye, with the Book button alongside. The Consulting page has become her Coaching page, and old links to it still arrive. On a computer, every page title now sits close under the menu instead of floating halfway down the banner. |
 | v2.14 | Services joins the menu, in Faye's words | Services is back in the menu between About and Retreats, and the Services page now opens with Move. Grow. Work With Faye. Its cards carry Faye's wording and send visitors straight where they need to go: Join the app takes them to the F.I.T App sign-up at £15 a month, and Enquire here on events and workshops, coaching and speaking opens an email to Faye. |
+| v2.15 | Three ways to retreat with Faye | The Retreats page now opens simply as Retreats, with Faye's own introduction, and presents her three offers in her words: Mind Fit Retreats in Zanzibar in February 2027, the F.I.T Trip spa break in Bulgaria in April 2027, and The Retreat Planner for fitness professionals dreaming of hosting their own. Each has its own photo and a More Info Here button, the last opening her Retreat Planner brochure. |
 
-Next release: **v2.15**.
+Next release: **v2.16**.

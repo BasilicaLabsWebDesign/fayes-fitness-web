@@ -1,0 +1,21 @@
+Done, and released to main as v2.15. The Retreats page now follows your brief.
+
+1. The title is just "Retreats", with your new paragraph underneath, word for word.
+2. Mind Fit Retreats, Zanzibar at Zen Boutique Resort, 1st–10th February 2027, with your description and a "More Info Here" button to your Zanzibar page. Your brief says "Zan Boutique Resort" in the heading but "Zen" in the text, so I've used Zen in both.
+3. The F.I.T Trip, Spa Break Bulgaria, 22nd–26th April 2027, with your description, the Grand Therme photo you sent, and "More Info Here" to your Bulgaria page.
+4. The Retreat Planner, with "Dreaming of hosting your own?", your description, and the photo of the two of them greeting each other, cropped square around them. Its "More Info Here" button opens The Retreat Planner PDF you sent, so there's nothing to email over.
+
+Each section has its name in large capitals with the place on a line below, and the dates in pink.
+
+To make room, the page's older pieces have gone:
+- The old Mind Fit introduction.
+- The Three Pillars (Power Hour, Mindful Hour, Happy Hour).
+- The "Coming up" list, which had the older dates.
+- The F.I.T Events & Community section.
+
+The Bulgaria video and the purple "Your sign to say yes to you" banner at the bottom are still there. If you'd like any of the removed pieces back, just say.
+
+Verified before pushing:
+- The Retreats page on a phone and a desktop: every button goes to the right place, every photo loads, and the PDF opens.
+- Every page at phone, tablet and desktop widths with no errors.
+- Offline mode, fresh styling on the first visit, the old addresses (including the old retreat links) and the API.
