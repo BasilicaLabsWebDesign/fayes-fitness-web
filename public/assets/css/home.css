@@ -61,12 +61,21 @@
 }
 
 @media (min-width: 900px) {
-  /* the cut-out stands on the bottom edge of the hero, like the original */
-  .hero .wrap { grid-template-columns: 1.1fr .9fr; gap: 36px; align-items: end; padding-top: 32px; padding-bottom: 0; }
+  /* the cut-out stands on the bottom edge of the hero, like the original; it is scaled, in
+     proportion, to the height of her words, from her opening line to just under the button,
+     so the banner ends there (Faye, v2.17) */
+  .hero .wrap { grid-template-columns: 1.45fr .55fr; gap: 36px; align-items: stretch; padding-top: 32px; padding-bottom: 0; }
   /* on desktop her words start just under the menu bar (Faye, v2.13), beside the photo */
-  .hero-copy { align-self: start; padding: 0 0 48px; }
+  .hero-copy { align-self: start; padding: 0 0 28px; }
   /* with no logo above it, her opening line leads the banner */
-  .hero .lede { font-size: clamp(1.45rem, 1.9vw, 1.8rem); line-height: 1.4; max-width: 30ch; color: var(--off-white); }
-  .hero-photo { justify-self: end; width: min(30vw, 400px); margin-bottom: -1px; }
+  .hero .lede { font-size: clamp(1.35rem, 1.65vw, 1.6rem); line-height: 1.4; max-width: 50ch; color: var(--off-white); }
+  .hero-more { max-width: 76ch; }
+  .hero-photo { justify-self: center; align-self: end; height: 0; min-height: 100%; width: auto; max-width: 100%; margin-bottom: -1px; }
+  /* "One space, three ways in" and the cards' pictures and headings show on the opening
+     screen (Faye, v2.17) */
   .doors { grid-template-columns: repeat(3, 1fr); }
+  .doors-section { padding-top: 28px; }
+  .doors-section .rule-title { padding: 10px 0; margin-bottom: 22px; }
+  .door .card-body { padding-top: 18px; }
+  .door img { aspect-ratio: 2 / 1; }
 }
