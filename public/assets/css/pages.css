@@ -235,11 +235,3 @@
   .story { grid-template-columns: minmax(0, 1fr) 380px; gap: 56px; align-items: start; }
   .story-photo { position: sticky; top: 96px; margin-top: 8px; }
 }
-
-/* Services on a wide screen: "Move. Grow. Work." on one line, the words' column as wide as
-   the title and the F.I.T logo filling what is left (Faye, v2.22) */
-@media (min-width: 1200px) {
-  .services-hero .wrap { grid-template-columns: max-content minmax(0, 1fr); }
-  .services-hero h1 { white-space: nowrap; }
-  .services-hero .hero-logo-lg { width: min(100%, 420px); justify-self: center; }
-}
