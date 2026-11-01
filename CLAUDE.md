@@ -121,7 +121,8 @@ prompt text/            the archive for the version in service (see below)
   below her lower hand (v2.6). Keep it to two or three phone scrolls; longer content
   belongs on the inner pages.
 - **The About page has exactly two titles** (Faye's ABOUT brief, v2.11): "About" over
-  "Faye Edwards" with her bio and her arms-folded portrait as a cut-out (no frame, no tilt),
+  "Faye Edwards" with her bio and her arms-folded portrait as a cut-out (no frame, no tilt;
+  on desktop its top is level with the title, v2.16),
   then "The Story of F.I.T" in her words with the Mind Fit Retreats group photo beside it.
   Its old banner, values, feelings, clients and call-to-action sections were removed at her
   request; the copy is hers, so change it only from her wording.
@@ -247,7 +248,9 @@ high-resolution logo. `prompt text/11/` shipped with v2.10: F.I.T without a trai
 answers: Coaching takes over Consulting, Book stays) and the tighter desktop title spacing;
 her screenshot of the gap arrived only inline and could not be saved. `prompt text/15/` shipped with v2.14: Services in the menu and the Services page
 brief. `prompt text/16/` shipped with v2.15: the Retreats brief (Retreats.docx) and The
-Retreat Planner PDF. The next release that ships new owner words starts `prompt text/17/`.
+Retreat Planner PDF. `prompt text/17/` shipped with v2.16: the About photo lined up with the
+title, with her marked-up screenshot. The next release that ships new owner words starts
+`prompt text/18/`.
 
 ## Go-live checklist (phase 6)
 
@@ -309,5 +312,6 @@ handed back with each push. v2.0 onwards is the rebuild.
 | v2.13 | Faye's new menu, with titles right under it | The top of every page now carries Faye's own menu: Home, About, Retreats, Coaching, Instructor Training and Work With Faye, with the Book button alongside. The Consulting page has become her Coaching page, and old links to it still arrive. On a computer, every page title now sits close under the menu instead of floating halfway down the banner. |
 | v2.14 | Services joins the menu, in Faye's words | Services is back in the menu between About and Retreats, and the Services page now opens with Move. Grow. Work With Faye. Its cards carry Faye's wording and send visitors straight where they need to go: Join the app takes them to the F.I.T App sign-up at £15 a month, and Enquire here on events and workshops, coaching and speaking opens an email to Faye. |
 | v2.15 | Three ways to retreat with Faye | The Retreats page now opens simply as Retreats, with Faye's own introduction, and presents her three offers in her words: Mind Fit Retreats in Zanzibar in February 2027, the F.I.T Trip spa break in Bulgaria in April 2027, and The Retreat Planner for fitness professionals dreaming of hosting their own. Each has its own photo and a More Info Here button, the last opening her Retreat Planner brochure. |
+| v2.16 | Faye's About photo stands tall beside her name | On the About page, Faye's portrait now starts level with the top of her name on a computer, instead of sitting low at the bottom of the banner, so her photo and her title meet the eye together. The bottom of the photo fades softly away, and phones look just as before. |
 
-Next release: **v2.16**.
+Next release: **v2.17**.

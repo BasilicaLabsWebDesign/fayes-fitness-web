@@ -1,0 +1,10 @@
+Done, and released to main as v2.16. On the About page your photo now starts level with the top of "ABOUT FAYE EDWARDS" on a computer, so your face sits beside your name, as in your marked-up screenshot.
+
+It used to stand on the bottom edge of the banner, which left it low down beside your long bio. Now it's lined up at the top. Because the photo ends at your waist, its bottom edge fades softly into the background instead of stopping on a hard line, the same as on phones.
+
+On a phone nothing changes: the photo still sits beside the title at the top.
+
+Verified before pushing:
+- The About page at four computer widths: the top of the photo is within a few pixels of the top of "About" on all of them.
+- Every page at phone, tablet and desktop widths with no errors.
+- Offline mode, fresh styling on the first visit, the old addresses and the API.
