@@ -28,7 +28,7 @@
 .door .card-body p:not(.eyebrow) { margin-bottom: 18px; }
 .door .btn { margin-top: auto; align-self: flex-start; }
 
-/* "One space, three ways in" stays on one line, even on a small phone */
+/* "One space • Three ways in" stays on one line, even on a small phone */
 .rule-title.one-line { white-space: nowrap; font-size: clamp(.85rem, 4.3vw, 1.9rem); letter-spacing: .08em; }
 
 @media (max-width: 899px) {
@@ -71,7 +71,7 @@
   .hero .lede { font-size: clamp(1.35rem, 1.65vw, 1.6rem); line-height: 1.4; max-width: 50ch; color: var(--off-white); }
   .hero-more { max-width: 76ch; }
   .hero-photo { justify-self: center; align-self: end; height: 0; min-height: 100%; width: auto; max-width: 100%; margin-bottom: -1px; }
-  /* "One space, three ways in" and the cards' pictures and headings show on the opening
+  /* "One space • Three ways in" and the cards' pictures and headings show on the opening
      screen (Faye, v2.17) */
   .doors { grid-template-columns: repeat(3, 1fr); }
   .doors-section { padding-top: 28px; }
