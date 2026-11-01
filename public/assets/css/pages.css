@@ -9,12 +9,17 @@
   padding: clamp(44px, 7vw, 84px) 0;
 }
 .page-hero .wrap { display: grid; gap: 36px; align-items: start; }
-.page-hero .eyebrow { color: var(--on-black-accent); }
-.page-hero h1 { font-size: clamp(2.1rem, 8vw, 4rem); margin: 8px 0 16px; }
+/* One title style on every page (Faye, v2.17), set by the About page she approved: the pink
+   label a little larger, the title a little smaller, both starting at the same height. */
+.page-hero .eyebrow { color: var(--on-black-accent); font-size: clamp(1rem, 2.8vw, 1.25rem); }
+.page-hero h1 { font-size: clamp(1.9rem, 7vw, 3.4rem); margin: 10px 0 16px; }
 .page-hero .lede { max-width: 46ch; }
 .page-hero .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
 .hero-media { justify-self: center; width: min(86vw, 440px); }
 .hero-media.tilt { transform: rotate(2.5deg); }
+/* Tall (portrait) banner photos: smaller on phones; on desktop they take their height from
+   the text beside them, so the photo ends level with the buttons (Faye, v2.17) */
+.hero-media.hero-tall { width: min(66vw, 300px); aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 30%; }
 .hero-media img { width: 100%; }
 .hero-logo { justify-self: center; width: min(44vw, 260px); }
 
@@ -145,12 +150,12 @@
 
 /* About: "About" over "Faye Edwards", her bio, and her photo as a cut-out standing straight
    with no frame, like the home page. On a phone the title and photo share the top row. */
-.about-title { margin: 0; }
-.about-word { display: block; font-size: clamp(1rem, 2.8vw, 1.25rem); }
-.about-name { display: block; margin-top: 10px; font-size: clamp(1.9rem, 7vw, 3.4rem); }
+.page-hero .about-title { margin: 0 0 16px; }
+.about-word { display: block; }
+.about-name { display: block; margin-top: 10px; font-size: inherit; }
 .about-bio .lede { max-width: 52ch; }
 .about-hero .wrap { grid-template-columns: 1fr 42%; column-gap: 16px; row-gap: 0; align-items: end; }
-.about-title { grid-column: 1; grid-row: 1; align-self: center; }
+.about-title { grid-column: 1; grid-row: 1; align-self: start; }
 .about-photo {
   grid-column: 2; grid-row: 1; width: 100%;
   -webkit-mask-image: linear-gradient(to bottom, #000 86%, transparent);
@@ -164,6 +169,8 @@
 .retreat-place { display: block; margin-top: 8px; font-size: clamp(1.15rem, 2.6vw, 1.45rem); }
 .retreat-date { color: var(--on-black-accent); font-weight: var(--w-heading); }
 .retreat .prose .btn { margin-top: 24px; }
+/* one gap between retreats, not two stacked (Faye, v2.17) */
+.retreat + .retreat { padding-top: 0; }
 
 /* The Story of F.I.T, with the Mind Fit Retreats group photo beside it (under it on a phone) */
 .story { display: grid; gap: 32px; }
@@ -178,9 +185,30 @@
   .card-grid.two { grid-template-columns: repeat(2, 1fr); }
   .trio { grid-template-columns: repeat(3, 1fr); gap: 32px; }
   .form .row { grid-template-columns: 1fr 1fr; }
-  /* on desktop, titles start close under the menu bar (Faye, v2.13) */
-  .page-hero { padding-top: 32px; }
-  .about-title { align-self: start; }
+  /* on desktop, titles start close under the menu bar (Faye, v2.13), and the banner ends
+     closer to the section after it (v2.17) */
+  .page-hero { padding-top: 32px; padding-bottom: 40px; }
+  .section.retreat { padding-bottom: 40px; }
+  /* each retreat's words get the wider column, so the first one fits the opening screen */
+  .retreat .split { grid-template-columns: 1.2fr .8fr; }
+  .retreat .split.flip { grid-template-columns: .8fr 1.2fr; }
+  .page-hero + .section { padding-top: 40px; }
+  /* the Services F.I.T and the Mind Fit Retreats logo fill the right of their banners
+     (Faye, v2.17); the Retreats introduction runs wider so the first retreat is on screen */
+  .hero-logo-lg { width: min(34vw, 480px); align-self: center; }
+  /* the Retreats title runs on one line above her introduction, the logo beside it */
+  .retreats-hero .wrap { row-gap: 0; }
+  .retreats-hero .wrap > div { display: contents; }
+  .retreats-hero .eyebrow, .retreats-hero h1 { grid-column: 1 / -1; }
+  .retreats-hero .lede, .retreats-hero .cta { grid-column: 1; }
+  .retreats-hero .lede { max-width: 64ch; }
+  .retreats-hero .hero-logo { grid-column: 2; grid-row: 3 / 5; }
+  .retreats-hero { padding-bottom: 28px; }
+  .retreats-hero + .section { padding-top: 32px; }
+  /* the Services cards' pictures and titles show on the opening screen */
+  .service-card img { aspect-ratio: 3 / 2; }
+  .page-hero .wrap:has(.hero-tall) { align-items: stretch; }
+  .hero-media.hero-tall { width: min(30vw, 400px); height: 0; min-height: 100%; aspect-ratio: auto; justify-self: end; }
   .about-hero .wrap { grid-template-columns: 1.15fr .85fr; grid-template-rows: auto 1fr; column-gap: 36px; }
   .about-bio { grid-column: 1; grid-row: 2; margin-top: 22px; }
   /* her photo starts level with the top of the title (Faye, v2.16), its crop line faded */
