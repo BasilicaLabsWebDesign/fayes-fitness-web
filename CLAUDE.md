@@ -109,10 +109,13 @@ prompt text/            the archive for the version in service (see below)
   under its buttons and the next section starts 40px later. Tall banner photos (`hero-tall`:
   Coaching, Speaking, Book) take their height from the words beside them and end level with
   the buttons, always the whole photo in its own proportions, scaled and never cropped
-  (Faye, v2.18). Faye checks pages on a computer at full screen: on Home, Services and Retreats
+  (Faye, v2.18). Coaching's photo has its centre in line with the centre of the photo in the
+  section below (`align-below`, v2.22). Work With Faye's banner photo has the same frame and
+  tilt, a little larger, centred against its words (`hero-feature`, v2.22). Faye checks pages on a computer at full screen: on Home, Services and Retreats
   the first content (cards or first retreat) must show on the opening screen (1440x900).
 - **The Services page follows Faye's brief** (v2.14): titled "Move. Grow. Work." (she cut
-  "With Faye", v2.17) beside a large F.I.T logo, one
+  "With Faye", v2.17), on one line on wide screens with the F.I.T logo sized to the space left
+  (v2.22), one
   "Ask a question" button to her email; the Coaching card's label is "Gyms, Studios and
   Brands", on one line; the App card's "Join the app" goes to the app's
   sign-up, and the Presenting, Coaching and Speaking cards' "Enquire here" open her email.
@@ -269,8 +272,11 @@ first message (her later screenshots arrived only inline and could not be saved)
 `prompt text/19/` shipped with v2.18: the Coaching photo in its own proportions, with her
 screenshot. `prompt text/20/` shipped with v2.19: the centred dot in the home heading, with
 her marked-up screenshot. `prompt text/21/` shipped with v2.20: the two retreat videos.
-`prompt text/22/` shipped with v2.21: the Retreats page titled Experiences over Retreats. The
-next release that ships new owner words starts `prompt text/23/`.
+`prompt text/22/` shipped with v2.21: the Retreats page titled Experiences over Retreats.
+`prompt text/23/` shipped with v2.22: the Coaching photo centred over the one below, the
+framed Work With Faye photo and Services on one line (her three screenshots arrived only
+inline and could not be saved). The next release that ships new owner words starts
+`prompt text/24/`.
 
 ## Go-live checklist (phase 6)
 
@@ -340,5 +346,6 @@ handed back with each push. v2.0 onwards is the rebuild.
 | v2.19 | One space • Three ways in | The heading over the three cards on the home page now reads One space • Three ways in, with a dot centred between the two phrases in place of the comma, and still sits on a single line on every phone. |
 | v2.20 | Two new ways to see the retreats | The Retreats page now ends with Faye's two newest videos: See a Mind Fit Retreat Here, a full-width film of a Mind Fit Retreat, and Hear About the F.I.T Trip, her short on the Bulgaria spa break. Video captions across the site now appear in the brand's own lettering. |
 | v2.21 | Experiences, with Retreats in white | The Retreats page now opens with Experiences in pink and Retreats as its big white title, matching the way every other page announces itself, with Faye's introduction and the Mind Fit Retreats logo just below. |
+| v2.22 | Photos lined up, framed and in proportion | On a computer the Coaching photo now sits centred over the photo below it, the Work With Faye photo gains the same black frame and tilt, a little larger and centred beside its words, and the Services title Move. Grow. Work. now runs on a single line with the F.I.T logo sized to suit. |
 
-Next release: **v2.22**.
+Next release: **v2.23**.
