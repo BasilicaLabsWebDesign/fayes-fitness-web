@@ -124,7 +124,7 @@ prompt text/            the archive for the version in service (see below)
 - **The home page is a short overview** (Faye's brief, archived with v2.1 as `prompt text/2/`): no logo in the
   banner (v2.12: the menu-bar F.I.T is the page's only logo; the purple logo used in v2.8–v2.11
   stays stored as `fit-logo-purple-hd.svg` for later), her two-paragraph introduction (her
-  wording, v2.7) with the opening line leading the banner, one mail-list button, then "One space, three ways in"
+  wording, v2.7) with the opening line leading the banner, one mail-list button, then "One space • Three ways in" (a centred bullet dot, Faye, v2.19)
   (three cards that swipe on a phone; each has its Move/Grow/Work with Faye label, her
   subheading as the heading and her paragraph, v2.7). On a phone her opening line and the photo share the
   top row so the photo is on the first screen (Faye's request, v2.3). The photo is a cut-out with the
@@ -265,7 +265,8 @@ title, with her marked-up screenshot. `prompt text/18/` shipped with v2.17: one 
 on every page and the opening screens on a computer, with the five screenshots saved from her
 first message (her later screenshots arrived only inline and could not be saved).
 `prompt text/19/` shipped with v2.18: the Coaching photo in its own proportions, with her
-screenshot. The next release that ships new owner words starts `prompt text/20/`.
+screenshot. `prompt text/20/` shipped with v2.19: the centred dot in the home heading, with
+her marked-up screenshot. The next release that ships new owner words starts `prompt text/21/`.
 
 ## Go-live checklist (phase 6)
 
@@ -330,5 +331,6 @@ handed back with each push. v2.0 onwards is the rebuild.
 | v2.16 | Faye's About photo stands tall beside her name | On the About page, Faye's portrait now starts level with the top of her name on a computer, instead of sitting low at the bottom of the banner, so her photo and her title meet the eye together. The bottom of the photo fades softly away, and phones look just as before. |
 | v2.17 | Every page title in step, every opening on screen | Every page now opens the same way, a pink label over a title of the same size at the same height, and on a computer the banners end close to what follows. The home page, Services and Retreats now show their cards and first retreat on the opening screen, with Faye's home photo sized to her words, bigger F.I.T and Mind Fit Retreats logos, Move. Grow. Work. on Services, and Retreats titled Your sign to say yes to you. |
 | v2.18 | Faye's whole photo, in its true shape | The banner photos on the Coaching, Speaking and Book pages now show the whole picture in its original shape, simply scaled down, instead of being cropped to fit. They still end level with the buttons on a computer, and phones show the whole photo too. |
+| v2.19 | One space • Three ways in | The heading over the three cards on the home page now reads One space • Three ways in, with a dot centred between the two phrases in place of the comma, and still sits on a single line on every phone. |
 
-Next release: **v2.19**.
+Next release: **v2.20**.

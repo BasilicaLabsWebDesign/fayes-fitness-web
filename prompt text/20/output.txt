@@ -1,0 +1,10 @@
+Done, and released to main as v2.19. The heading over the three cards on the home page now reads "One space • Three ways in": a round bullet dot sits halfway up the letters between the two phrases, where the comma was.
+
+I put the dot only between the two phrases, as you described. A dot after "In" at the end would look like a stray mark, so I left it off. If you'd like it there too, say so and I'll add it.
+
+It still fits on one line on every phone, down to the smallest.
+
+Verified before pushing:
+- The heading at five widths from a small phone to a desktop: one line every time, with no sideways scrolling.
+- Every page at phone, tablet and desktop sizes: no errors, every image loads, every link works.
+- Offline mode, fresh styling on the first visit, the old addresses and the API.
