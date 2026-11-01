@@ -1,0 +1,21 @@
+Done, and released to main as v2.14. Your Retreats brief and planner arrived while I was finishing this, so they'll be the next release; I'm on them now.
+
+The menu now reads Home, About, Services, Retreats, Coaching, Instructor Training and Work With Faye, with the Book button beside it. All seven still fit on one line on a laptop screen, and the footer lists them in the same order.
+
+On the Services page, your ten points:
+1. The title is now "Move. Grow. Work With Faye."
+2. There's one button at the top, "Ask a question", which opens an email to you.
+3. The F.I.T App card's button says "Join the app" and goes straight to the app's sign-up page, the same one as on the home page.
+4. Its points are now: Follow along workouts / £15 per month / Strength, Bands, Combat and more. I wrote "£15 per month" rather than "£15pm", so nobody reads it as a time of day.
+5. Fitness Presenting's small heading now reads "Events and Workshops".
+6. Its button says "Enquire here" and opens an email to you.
+7. The Coaching & Consulting card's small heading now reads "For gyms, studios and brands".
+8. Its button says "Enquire here", to your email.
+9. Speaking & Hosting's button says "Enquire here", to your email.
+10. The F.I.T Academy card now has the group-in-a-circle photo from the home page.
+
+Verified before pushing:
+- The menu at every desktop width and in the phone and tablet menu.
+- Every button on the Services page goes where it should.
+- Every page at phone, tablet and desktop widths with no errors.
+- Offline mode, fresh styling on the first visit, the old addresses and the API.
