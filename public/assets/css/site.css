@@ -23,6 +23,8 @@ a { color: inherit; }
   position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
   overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
 }
+/* keeps a short phrase together on one line, e.g. "1-1" (the font has no non-breaking hyphen) */
+.nowrap { white-space: nowrap; }
 
 /* Skip link for keyboard users */
 .skip {
