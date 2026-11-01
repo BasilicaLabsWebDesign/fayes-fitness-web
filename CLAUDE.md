@@ -103,11 +103,21 @@ prompt text/            the archive for the version in service (see below)
   from the footer and the pages themselves. On desktop, page titles sit close under the menu bar
   (her request, v2.13): banners start 32px below it, text aligned to the top; phones keep
   their original spacing.
-- **The Services page follows Faye's brief** (v2.14): "Move. Grow. Work With Faye.", one
-  "Ask a question" button to her email; the App card's "Join the app" goes to the app's
+- **One title style on every page** (Faye, v2.17): every banner has a pink label over its title,
+  at the sizes and heights the About page set (`.page-hero .eyebrow` / `h1` in `pages.css`);
+  never size a single page's title on its own. Desktop gaps are tight: a banner ends 40px
+  under its buttons and the next section starts 40px later. Tall banner photos (`hero-tall`:
+  Coaching, Speaking, Book) take their height from the words beside them and end level with
+  the buttons. Faye checks pages on a computer at full screen: on Home, Services and Retreats
+  the first content (cards or first retreat) must show on the opening screen (1440x900).
+- **The Services page follows Faye's brief** (v2.14): titled "Move. Grow. Work." (she cut
+  "With Faye", v2.17) beside a large F.I.T logo, one
+  "Ask a question" button to her email; the Coaching card's label is "Gyms, Studios and
+  Brands", on one line; the App card's "Join the app" goes to the app's
   sign-up, and the Presenting, Coaching and Speaking cards' "Enquire here" open her email.
-- **The Retreats page** (/experiences, Faye's Retreats brief, v2.15) is titled "Retreats" with
-  her introduction, then Mind Fit Retreats Zanzibar (1st–10th Feb 2027), the F.I.T Trip Spa
+- **The Retreats page** (/experiences, Faye's Retreats brief, v2.15) has the pink label
+  "Retreats" over the title "Your sign to say yes to you" (v2.17), the large Mind Fit Retreats
+  logo beside her introduction, then Mind Fit Retreats Zanzibar (1st–10th Feb 2027), the F.I.T Trip Spa
   Break Bulgaria (22nd–26th Apr 2027) and The Retreat Planner, each in her words with a
   "More Info Here" button: her two Flodesk pages, and `/assets/docs/the-retreat-planner.pdf`.
 - **The home page is a short overview** (Faye's brief, archived with v2.1 as `prompt text/2/`): no logo in the
@@ -118,7 +128,8 @@ prompt text/            the archive for the version in service (see below)
   subheading as the heading and her paragraph, v2.7). On a phone her opening line and the photo share the
   top row so the photo is on the first screen (Faye's request, v2.3). The photo is a cut-out with the
   background removed: no frame, no tilt (Faye's request, v2.4), cropped from her head to just
-  below her lower hand (v2.6). Keep it to two or three phone scrolls; longer content
+  below her lower hand (v2.6). On a computer the photo is scaled, in proportion, to the height
+  of her words, from the opening line to just under the button (v2.17). Keep it to two or three phone scrolls; longer content
   belongs on the inner pages.
 - **The About page has exactly two titles** (Faye's ABOUT brief, v2.11): "About" over
   "Faye Edwards" with her bio and her arms-folded portrait as a cut-out (no frame, no tilt;
@@ -249,8 +260,10 @@ answers: Coaching takes over Consulting, Book stays) and the tighter desktop tit
 her screenshot of the gap arrived only inline and could not be saved. `prompt text/15/` shipped with v2.14: Services in the menu and the Services page
 brief. `prompt text/16/` shipped with v2.15: the Retreats brief (Retreats.docx) and The
 Retreat Planner PDF. `prompt text/17/` shipped with v2.16: the About photo lined up with the
-title, with her marked-up screenshot. The next release that ships new owner words starts
-`prompt text/18/`.
+title, with her marked-up screenshot. `prompt text/18/` shipped with v2.17: one title style
+on every page and the opening screens on a computer, with the five screenshots saved from her
+first message (her later screenshots arrived only inline and could not be saved). The next
+release that ships new owner words starts `prompt text/19/`.
 
 ## Go-live checklist (phase 6)
 
@@ -313,5 +326,6 @@ handed back with each push. v2.0 onwards is the rebuild.
 | v2.14 | Services joins the menu, in Faye's words | Services is back in the menu between About and Retreats, and the Services page now opens with Move. Grow. Work With Faye. Its cards carry Faye's wording and send visitors straight where they need to go: Join the app takes them to the F.I.T App sign-up at £15 a month, and Enquire here on events and workshops, coaching and speaking opens an email to Faye. |
 | v2.15 | Three ways to retreat with Faye | The Retreats page now opens simply as Retreats, with Faye's own introduction, and presents her three offers in her words: Mind Fit Retreats in Zanzibar in February 2027, the F.I.T Trip spa break in Bulgaria in April 2027, and The Retreat Planner for fitness professionals dreaming of hosting their own. Each has its own photo and a More Info Here button, the last opening her Retreat Planner brochure. |
 | v2.16 | Faye's About photo stands tall beside her name | On the About page, Faye's portrait now starts level with the top of her name on a computer, instead of sitting low at the bottom of the banner, so her photo and her title meet the eye together. The bottom of the photo fades softly away, and phones look just as before. |
+| v2.17 | Every page title in step, every opening on screen | Every page now opens the same way, a pink label over a title of the same size at the same height, and on a computer the banners end close to what follows. The home page, Services and Retreats now show their cards and first retreat on the opening screen, with Faye's home photo sized to her words, bigger F.I.T and Mind Fit Retreats logos, Move. Grow. Work. on Services, and Retreats titled Your sign to say yes to you. |
 
-Next release: **v2.17**.
+Next release: **v2.18**.
