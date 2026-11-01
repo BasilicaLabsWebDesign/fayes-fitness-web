@@ -158,6 +158,13 @@
 }
 .about-bio { grid-column: 1 / -1; margin-top: 26px; }
 
+/* Retreats: each retreat's name, its place on a second line, the dates in rose, a button */
+.retreat-title { margin-bottom: 14px; }
+.retreat-title .title { display: block; font-size: clamp(1.5rem, 4.6vw, 2.4rem); }
+.retreat-place { display: block; margin-top: 8px; font-size: clamp(1.15rem, 2.6vw, 1.45rem); }
+.retreat-date { color: var(--on-black-accent); font-weight: var(--w-heading); }
+.retreat .prose .btn { margin-top: 24px; }
+
 /* The Story of F.I.T, with the Mind Fit Retreats group photo beside it (under it on a phone) */
 .story { display: grid; gap: 32px; }
 .story-photo img { width: 100%; border-radius: var(--radius); }
