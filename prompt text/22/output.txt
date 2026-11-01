@@ -1,0 +1,10 @@
+Done, and released to main as v2.21. The Retreats page now opens with EXPERIENCES in pink at the top and RETREATS as the big white title underneath.
+
+It's the same size and in the same place as the title on every other page, so it lines up with About, Services and the rest. "Your sign to say yes to you" is no longer at the top.
+
+Everything else stays as it was: your introduction, the Mind Fit Retreats logo, and the first retreat still showing on a laptop screen without scrolling.
+
+Verified before pushing:
+- The new title at desktop and phone sizes: same size and position as the About page's title.
+- Every page at phone, tablet and desktop sizes: no errors, every image loads, every link works.
+- Offline mode, fresh styling on the first visit, the old addresses and the API.

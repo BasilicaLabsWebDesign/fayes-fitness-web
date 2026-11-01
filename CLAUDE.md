@@ -117,7 +117,7 @@ prompt text/            the archive for the version in service (see below)
   Brands", on one line; the App card's "Join the app" goes to the app's
   sign-up, and the Presenting, Coaching and Speaking cards' "Enquire here" open her email.
 - **The Retreats page** (/experiences, Faye's Retreats brief, v2.15) has the pink label
-  "Retreats" over the title "Your sign to say yes to you" (v2.17), the large Mind Fit Retreats
+  "Experiences" over the white title "Retreats" (Faye, v2.21), the large Mind Fit Retreats
   logo beside her introduction, then Mind Fit Retreats Zanzibar (1st–10th Feb 2027), the F.I.T Trip Spa
   Break Bulgaria (22nd–26th Apr 2027) and The Retreat Planner, each in her words with a
   "More Info Here" button: her two Flodesk pages, and `/assets/docs/the-retreat-planner.pdf`.
@@ -268,8 +268,9 @@ on every page and the opening screens on a computer, with the five screenshots s
 first message (her later screenshots arrived only inline and could not be saved).
 `prompt text/19/` shipped with v2.18: the Coaching photo in its own proportions, with her
 screenshot. `prompt text/20/` shipped with v2.19: the centred dot in the home heading, with
-her marked-up screenshot. `prompt text/21/` shipped with v2.20: the two retreat videos. The
-next release that ships new owner words starts `prompt text/22/`.
+her marked-up screenshot. `prompt text/21/` shipped with v2.20: the two retreat videos.
+`prompt text/22/` shipped with v2.21: the Retreats page titled Experiences over Retreats. The
+next release that ships new owner words starts `prompt text/23/`.
 
 ## Go-live checklist (phase 6)
 
@@ -338,5 +339,6 @@ handed back with each push. v2.0 onwards is the rebuild.
 | v2.18 | Faye's whole photo, in its true shape | The banner photos on the Coaching, Speaking and Book pages now show the whole picture in its original shape, simply scaled down, instead of being cropped to fit. They still end level with the buttons on a computer, and phones show the whole photo too. |
 | v2.19 | One space • Three ways in | The heading over the three cards on the home page now reads One space • Three ways in, with a dot centred between the two phrases in place of the comma, and still sits on a single line on every phone. |
 | v2.20 | Two new ways to see the retreats | The Retreats page now ends with Faye's two newest videos: See a Mind Fit Retreat Here, a full-width film of a Mind Fit Retreat, and Hear About the F.I.T Trip, her short on the Bulgaria spa break. Video captions across the site now appear in the brand's own lettering. |
+| v2.21 | Experiences, with Retreats in white | The Retreats page now opens with Experiences in pink and Retreats as its big white title, matching the way every other page announces itself, with Faye's introduction and the Mind Fit Retreats logo just below. |
 
-Next release: **v2.21**.
+Next release: **v2.22**.
