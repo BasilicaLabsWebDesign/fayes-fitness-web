@@ -121,6 +121,8 @@ prompt text/            the archive for the version in service (see below)
   logo beside her introduction, then Mind Fit Retreats Zanzibar (1st–10th Feb 2027), the F.I.T Trip Spa
   Break Bulgaria (22nd–26th Apr 2027) and The Retreat Planner, each in her words with a
   "More Info Here" button: her two Flodesk pages, and `/assets/docs/the-retreat-planner.pdf`.
+  Below them, her two videos (v2.20): "See a Mind Fit Retreat Here" (YouTube 3r02khe8Rmk, a
+  wide 16:9 player) and "Hear About the F.I.T Trip" (Short LvKvW0APzv8, portrait).
 - **The home page is a short overview** (Faye's brief, archived with v2.1 as `prompt text/2/`): no logo in the
   banner (v2.12: the menu-bar F.I.T is the page's only logo; the purple logo used in v2.8–v2.11
   stays stored as `fit-logo-purple-hd.svg` for later), her two-paragraph introduction (her
@@ -266,7 +268,8 @@ on every page and the opening screens on a computer, with the five screenshots s
 first message (her later screenshots arrived only inline and could not be saved).
 `prompt text/19/` shipped with v2.18: the Coaching photo in its own proportions, with her
 screenshot. `prompt text/20/` shipped with v2.19: the centred dot in the home heading, with
-her marked-up screenshot. The next release that ships new owner words starts `prompt text/21/`.
+her marked-up screenshot. `prompt text/21/` shipped with v2.20: the two retreat videos. The
+next release that ships new owner words starts `prompt text/22/`.
 
 ## Go-live checklist (phase 6)
 
@@ -275,6 +278,8 @@ her marked-up screenshot. The next release that ships new owner words starts `pr
       being opened (this environment cannot reach those sites)
 - [ ] Absolute `og:image` / `og:url` / canonical tags, sitemap.xml and the robots Sitemap line
 - [ ] App Store and Google Play links on /app opened and confirmed
+- [ ] Both Retreats videos played on the live site (YouTube is unreachable from the build
+      environment; 3r02khe8Rmk is assumed landscape, LvKvW0APzv8 is a portrait Short)
 - [x] Retreat dates, venues and links on /experiences confirmed by Faye (her Retreats brief, v2.15)
 - [ ] Book page's interim Fibodo links (timetable, memberships, vouchers) replaced by
       the site's own booking (phase 4)
@@ -332,5 +337,6 @@ handed back with each push. v2.0 onwards is the rebuild.
 | v2.17 | Every page title in step, every opening on screen | Every page now opens the same way, a pink label over a title of the same size at the same height, and on a computer the banners end close to what follows. The home page, Services and Retreats now show their cards and first retreat on the opening screen, with Faye's home photo sized to her words, bigger F.I.T and Mind Fit Retreats logos, Move. Grow. Work. on Services, and Retreats titled Your sign to say yes to you. |
 | v2.18 | Faye's whole photo, in its true shape | The banner photos on the Coaching, Speaking and Book pages now show the whole picture in its original shape, simply scaled down, instead of being cropped to fit. They still end level with the buttons on a computer, and phones show the whole photo too. |
 | v2.19 | One space • Three ways in | The heading over the three cards on the home page now reads One space • Three ways in, with a dot centred between the two phrases in place of the comma, and still sits on a single line on every phone. |
+| v2.20 | Two new ways to see the retreats | The Retreats page now ends with Faye's two newest videos: See a Mind Fit Retreat Here, a full-width film of a Mind Fit Retreat, and Hear About the F.I.T Trip, her short on the Bulgaria spa break. Video captions across the site now appear in the brand's own lettering. |
 
-Next release: **v2.20**.
+Next release: **v2.21**.

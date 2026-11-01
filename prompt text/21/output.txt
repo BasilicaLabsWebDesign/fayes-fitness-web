@@ -1,0 +1,15 @@
+Done, and released to main as v2.20. At the bottom of the Retreats page, the old F.I.T Trip video under "Hear it from them" is gone, and your two new videos are in its place:
+
+- "See a Mind Fit Retreat Here": your Mind Fit Retreats video in a big, wide player, with the Mind Fit Retreats group photo in front of it until someone presses play.
+- "Hear About the F.I.T Trip": your F.I.T Trip Short, in a tall phone-shaped player, with the Grand Therme pools photo in front of it.
+
+Under them, a small line links to both videos on YouTube for anyone who'd rather watch there.
+
+While doing this I noticed the captions on the play buttons (on the Retreats, Presenting and Speaking pages) were showing in the browser's plain default font instead of Montserrat. They now match the rest of the site.
+
+One thing to check: YouTube can't be reached from where I build the site, so I couldn't play the videos myself. I've set up the first as a normal wide video and the second as a tall Short, which is what the links suggest. Please press play on both once the update shows on your site. If the Mind Fit Retreats video turns out to be a tall one, tell me and I'll make its player tall to match.
+
+Verified before pushing:
+- Both videos at desktop and phone sizes: they show the right player shapes, nothing loads from YouTube until play is pressed, and pressing play starts the right video.
+- Every page at phone, tablet and desktop sizes: no errors, every image loads, every link works.
+- Offline mode, fresh styling on the first visit, the old addresses and the API.

@@ -1,3 +1,0 @@
-use full stops
-
-actually, make it like the bullet point dot, middle of the text
