@@ -125,7 +125,8 @@ prompt text/            the archive for the version in service (see below)
 - **The Coaching page follows Faye's brief** (v2.24): "Business Growth" over "Coaching and
   Consulting", her introduction in her words and one "Enquire here" button to her email; then
   "Choose Your Path to Growth" on one line (sized to its column, `one-line-head`) over her four
-  paths, written "need → offer". No closing banner. Tall banner photos are capped in height so
+  paths, written "need → offer", with nothing under them (the older "13 years" paragraph was
+  removed at her request, v2.28). No closing banner. Tall banner photos are capped in height so
   a long introduction never pushes them into the words.
 - **The Retreats page** (/experiences, Faye's Retreats brief, v2.15) has the pink label
   "Experiences" over the white title "Retreats" (Faye, v2.21), the large Mind Fit Retreats
@@ -290,7 +291,8 @@ the Services and Coaching brief. `prompt text/26/` shipped with v2.25: the Servi
 introduction ending at "events", with her photo of the screen. `prompt text/27/` shipped
 with v2.26: "Great for beginners" on the App card, with her photo of the screen.
 `prompt text/28/` shipped with v2.27: the Retreats button to her email and no closing banner.
-The next release that ships new owner words starts `prompt text/29/`.
+`prompt text/29/` shipped with v2.28: the older Coaching paragraph removed, with her photo of
+the screen. The next release that ships new owner words starts `prompt text/30/`.
 
 ## Go-live checklist (phase 6)
 
@@ -366,5 +368,6 @@ handed back with each push. v2.0 onwards is the rebuild.
 | v2.25 | Services, said in fewer words | The Services introduction now ends simply on brands and events, without the closing all with Faye, so the banner reads shorter and the cards sit a little higher. |
 | v2.26 | The F.I.T App, great for beginners | The F.I.T App card on the Services page now tells newcomers it's great for beginners, alongside follow-along workouts, the £15 monthly price and the class styles on offer. |
 | v2.27 | Retreat enquiries go straight to Faye | The button at the top of the Retreats page now reads Enquire here and opens an email to Faye, and the page ends on her two retreat videos without the closing banner. |
+| v2.28 | Coaching, down to Faye's four paths | The Coaching page's Choose Your Path to Growth section now holds just Faye's four paths beside her photo, with the older paragraph about her years in the industry taken out now that her introduction tells that story. |
 
-Next release: **v2.28**.
+Next release: **v2.29**.

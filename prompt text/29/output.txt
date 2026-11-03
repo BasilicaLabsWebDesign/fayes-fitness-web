@@ -1,0 +1,8 @@
+Done, and released to main as v2.28. The paragraph starting "Faye has spent over 13 years in the industry…" is gone from the Coaching page.
+
+"Choose Your Path to Growth" now has just your four paths under it, sitting beside the photo, and the page goes straight on to the footer. Nothing else has changed.
+
+Verified before pushing:
+- The Coaching page on a computer and on a phone, without the paragraph.
+- Every page at phone, tablet and desktop sizes: no errors, every image loads, every link works.
+- Offline mode, fresh styling on the first visit, the old addresses and the API.
