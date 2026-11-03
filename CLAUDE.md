@@ -118,8 +118,8 @@ prompt text/            the archive for the version in service (see below)
   one-line title with a smaller logo was tried in v2.22 and undone at her request (v2.23); its
   introduction ends "...for brands and events." (she cut "all with Faye", v2.25); one
   "Ask a question" button to her email; the Coaching card's label is "Gyms, Studios and
-  Brands", on one line; the App card's "Join the app" goes to the app's
-  sign-up, and the Presenting, Coaching, Speaking and F.I.T Academy cards' "Enquire here"
+  Brands", on one line; the App card lists "Great for beginners" (v2.26) and its "Join the
+  app" goes to the app's sign-up, and the Presenting, Coaching, Speaking and F.I.T Academy cards' "Enquire here"
   open her email (Academy from v2.24); the Experiences card lists "Retreat consulting"; no
   closing banner (v2.24).
 - **The Coaching page follows Faye's brief** (v2.24): "Business Growth" over "Coaching and
@@ -286,8 +286,9 @@ framed Work With Faye photo and Services on one line (her three screenshots arri
 inline and could not be saved). `prompt text/24/` shipped with v2.23: the Services banner
 back to the other pages' layout, with her screenshot. `prompt text/25/` shipped with v2.24:
 the Services and Coaching brief. `prompt text/26/` shipped with v2.25: the Services
-introduction ending at "events", with her photo of the screen. The next release that ships
-new owner words starts `prompt text/27/`.
+introduction ending at "events", with her photo of the screen. `prompt text/27/` shipped
+with v2.26: "Great for beginners" on the App card, with her photo of the screen. The next
+release that ships new owner words starts `prompt text/28/`.
 
 ## Go-live checklist (phase 6)
 
@@ -361,5 +362,6 @@ handed back with each push. v2.0 onwards is the rebuild.
 | v2.23 | Services back in step with every page | The Services banner returns to the same proportions as every other page, with Faye's words at their usual width and the F.I.T logo back to its earlier, larger size, so Move. Grow. Work. sits over two lines again beside it. |
 | v2.24 | Coaching and Consulting, in Faye's words | The Coaching page now opens as Business Growth over Coaching and Consulting with Faye's own introduction and a single Enquire here button, then lets visitors choose their path to growth: business coaching, The Retreat Planner, consulting or instructor training. On Services, the Academy card now opens an email to Faye and the retreats card adds retreat consulting, and both pages end without the closing banner. |
 | v2.25 | Services, said in fewer words | The Services introduction now ends simply on brands and events, without the closing all with Faye, so the banner reads shorter and the cards sit a little higher. |
+| v2.26 | The F.I.T App, great for beginners | The F.I.T App card on the Services page now tells newcomers it's great for beginners, alongside follow-along workouts, the £15 monthly price and the class styles on offer. |
 
-Next release: **v2.26**.
+Next release: **v2.27**.
