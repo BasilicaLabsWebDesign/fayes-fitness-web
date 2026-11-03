@@ -1,0 +1,11 @@
+Done, and released to main as v2.27. Both changes are on the Retreats page:
+
+- The button at the top, beside your introduction, used to say "Ask about a retreat" and go to the contact page. It now says "Enquire here" and opens an email to you.
+- The purple "Not sure which retreat is for you?" banner at the bottom is gone, so the page now ends with your two videos.
+
+I took "that" to mean the "Ask about a retreat" button, since the banner you asked me to delete had the same button. If you meant the "Join the app" button on the F.I.T App card instead, say so and I'll change it. I left that one going to the app's sign-up page, as your Services brief asked.
+
+Verified before pushing:
+- The Retreats page on a computer and on a phone: the new button, no banner at the bottom, and the first retreat still on the opening screen on a laptop.
+- Every page at phone, tablet and desktop sizes: no errors, every image loads, every link works.
+- Offline mode, fresh styling on the first visit, the old addresses and the API.

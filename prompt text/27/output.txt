@@ -1,8 +1,0 @@
-Done, and released to main as v2.26. The F.I.T App card on the Services page now has a fourth pink point, "Great for beginners", under "Strength, Bands, Combat and more".
-
-The card now has four points, like the two beside it, so all three cards are still the same height and their buttons line up. Nothing else has changed.
-
-Verified before pushing:
-- The App card on a computer and on a phone, with the new point in place.
-- Every page at phone, tablet and desktop sizes: no errors, every image loads, every link works.
-- Offline mode, fresh styling on the first visit, the old addresses and the API.

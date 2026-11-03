@@ -129,11 +129,12 @@ prompt text/            the archive for the version in service (see below)
   a long introduction never pushes them into the words.
 - **The Retreats page** (/experiences, Faye's Retreats brief, v2.15) has the pink label
   "Experiences" over the white title "Retreats" (Faye, v2.21), the large Mind Fit Retreats
-  logo beside her introduction, then Mind Fit Retreats Zanzibar (1st–10th Feb 2027), the F.I.T Trip Spa
+  logo beside her introduction and one "Enquire here" button to her email (v2.27), then Mind Fit Retreats Zanzibar (1st–10th Feb 2027), the F.I.T Trip Spa
   Break Bulgaria (22nd–26th Apr 2027) and The Retreat Planner, each in her words with a
   "More Info Here" button: her two Flodesk pages, and `/assets/docs/the-retreat-planner.pdf`.
   Below them, her two videos (v2.20): "See a Mind Fit Retreat Here" (YouTube 3r02khe8Rmk, a
-  wide 16:9 player) and "Hear About the F.I.T Trip" (Short LvKvW0APzv8, portrait).
+  wide 16:9 player) and "Hear About the F.I.T Trip" (Short LvKvW0APzv8, portrait). No closing
+  banner (v2.27).
 - **The home page is a short overview** (Faye's brief, archived with v2.1 as `prompt text/2/`): no logo in the
   banner (v2.12: the menu-bar F.I.T is the page's only logo; the purple logo used in v2.8–v2.11
   stays stored as `fit-logo-purple-hd.svg` for later), her two-paragraph introduction (her
@@ -287,8 +288,9 @@ inline and could not be saved). `prompt text/24/` shipped with v2.23: the Servic
 back to the other pages' layout, with her screenshot. `prompt text/25/` shipped with v2.24:
 the Services and Coaching brief. `prompt text/26/` shipped with v2.25: the Services
 introduction ending at "events", with her photo of the screen. `prompt text/27/` shipped
-with v2.26: "Great for beginners" on the App card, with her photo of the screen. The next
-release that ships new owner words starts `prompt text/28/`.
+with v2.26: "Great for beginners" on the App card, with her photo of the screen.
+`prompt text/28/` shipped with v2.27: the Retreats button to her email and no closing banner.
+The next release that ships new owner words starts `prompt text/29/`.
 
 ## Go-live checklist (phase 6)
 
@@ -363,5 +365,6 @@ handed back with each push. v2.0 onwards is the rebuild.
 | v2.24 | Coaching and Consulting, in Faye's words | The Coaching page now opens as Business Growth over Coaching and Consulting with Faye's own introduction and a single Enquire here button, then lets visitors choose their path to growth: business coaching, The Retreat Planner, consulting or instructor training. On Services, the Academy card now opens an email to Faye and the retreats card adds retreat consulting, and both pages end without the closing banner. |
 | v2.25 | Services, said in fewer words | The Services introduction now ends simply on brands and events, without the closing all with Faye, so the banner reads shorter and the cards sit a little higher. |
 | v2.26 | The F.I.T App, great for beginners | The F.I.T App card on the Services page now tells newcomers it's great for beginners, alongside follow-along workouts, the £15 monthly price and the class styles on offer. |
+| v2.27 | Retreat enquiries go straight to Faye | The button at the top of the Retreats page now reads Enquire here and opens an email to Faye, and the page ends on her two retreat videos without the closing banner. |
 
-Next release: **v2.27**.
+Next release: **v2.28**.
