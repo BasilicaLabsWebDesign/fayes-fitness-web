@@ -115,7 +115,8 @@ prompt text/            the archive for the version in service (see below)
   the first content (cards or first retreat) must show on the opening screen (1440x900).
 - **The Services page follows Faye's brief** (v2.14): titled "Move. Grow. Work." (she cut
   "With Faye", v2.17) beside the large F.I.T logo, in the same layout as the other pages: a
-  one-line title with a smaller logo was tried in v2.22 and undone at her request (v2.23); one
+  one-line title with a smaller logo was tried in v2.22 and undone at her request (v2.23); its
+  introduction ends "...for brands and events." (she cut "all with Faye", v2.25); one
   "Ask a question" button to her email; the Coaching card's label is "Gyms, Studios and
   Brands", on one line; the App card's "Join the app" goes to the app's
   sign-up, and the Presenting, Coaching, Speaking and F.I.T Academy cards' "Enquire here"
@@ -284,8 +285,9 @@ her marked-up screenshot. `prompt text/21/` shipped with v2.20: the two retreat 
 framed Work With Faye photo and Services on one line (her three screenshots arrived only
 inline and could not be saved). `prompt text/24/` shipped with v2.23: the Services banner
 back to the other pages' layout, with her screenshot. `prompt text/25/` shipped with v2.24:
-the Services and Coaching brief. The next release that ships new owner words starts
-`prompt text/26/`.
+the Services and Coaching brief. `prompt text/26/` shipped with v2.25: the Services
+introduction ending at "events", with her photo of the screen. The next release that ships
+new owner words starts `prompt text/27/`.
 
 ## Go-live checklist (phase 6)
 
@@ -358,5 +360,6 @@ handed back with each push. v2.0 onwards is the rebuild.
 | v2.22 | Photos lined up, framed and in proportion | On a computer the Coaching photo now sits centred over the photo below it, the Work With Faye photo gains the same black frame and tilt, a little larger and centred beside its words, and the Services title Move. Grow. Work. now runs on a single line with the F.I.T logo sized to suit. |
 | v2.23 | Services back in step with every page | The Services banner returns to the same proportions as every other page, with Faye's words at their usual width and the F.I.T logo back to its earlier, larger size, so Move. Grow. Work. sits over two lines again beside it. |
 | v2.24 | Coaching and Consulting, in Faye's words | The Coaching page now opens as Business Growth over Coaching and Consulting with Faye's own introduction and a single Enquire here button, then lets visitors choose their path to growth: business coaching, The Retreat Planner, consulting or instructor training. On Services, the Academy card now opens an email to Faye and the retreats card adds retreat consulting, and both pages end without the closing banner. |
+| v2.25 | Services, said in fewer words | The Services introduction now ends simply on brands and events, without the closing all with Faye, so the banner reads shorter and the cards sit a little higher. |
 
-Next release: **v2.25**.
+Next release: **v2.26**.

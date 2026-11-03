@@ -1,0 +1,10 @@
+Done, and released to main as v2.25. The Services introduction now ends at "events":
+
+"Classes on the F.I.T App, coaching for instructors, retreats abroad, and high-energy experiences for brands and events."
+
+"— all with Faye" is gone. The banner is one line shorter, so the cards sit a little higher on the page. Nothing else has changed.
+
+Verified before pushing:
+- Services at desktop and phone sizes, with the cards' photos and titles still on the opening screen on a laptop.
+- Every page at phone, tablet and desktop sizes: no errors, every image loads, every link works.
+- Offline mode, fresh styling on the first visit, the old addresses and the API.
