@@ -1,8 +1,0 @@
-On get in touch form only have 
-
-YOUR FULL NAME 
-EMAIL 
-WHAT ITS ABOUT
-YOUR MESSAGE 
-
-Remove everything else

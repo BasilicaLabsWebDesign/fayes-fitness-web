@@ -98,7 +98,8 @@ prompt text/            the archive for the version in service (see below)
   is ever writable from a browser. Only the Worker writes those, with server credentials.
 - **The menu is Faye's** (v2.13, Services added v2.14): Home, About, Services, Retreats
   (/experiences), Coaching (/coaching, formerly Consulting), Instructor Training (/academy),
-  Work With Faye, plus the Book button. Pages outside the menu (F.I.T App, Presenting,
+  Work Gallery (/work-with-faye: renamed from Work With Faye in v2.30, its address kept so old
+  links still work; its pink label and buttons to it say Work Gallery), plus the Book button. Pages outside the menu (F.I.T App, Presenting,
   Speaking, Book, Contact) stay linked
   from the footer and the pages themselves. On desktop, page titles sit close under the menu bar
   (her request, v2.13): banners start 32px below it, text aligned to the top; phones keep
@@ -110,7 +111,7 @@ prompt text/            the archive for the version in service (see below)
   Coaching, Speaking, Book) take their height from the words beside them and end level with
   the buttons, always the whole photo in its own proportions, scaled and never cropped
   (Faye, v2.18). Coaching's photo has its centre in line with the centre of the photo in the
-  section below (`align-below`, v2.22). Work With Faye's banner photo has the same frame and
+  section below (`align-below`, v2.22). Work Gallery's banner photo has the same frame and
   tilt, a little larger, centred against its words (`hero-feature`, v2.22). Faye checks pages on a computer at full screen: on Home, Services and Retreats
   the first content (cards or first retreat) must show on the opening screen (1440x900).
 - **The Services page follows Faye's brief** (v2.14): titled "Move. Grow. Work." (she cut
@@ -148,7 +149,7 @@ prompt text/            the archive for the version in service (see below)
   of her words, from the opening line to just under the button (v2.17). Keep it to two or three phone scrolls; longer content
   belongs on the inner pages.
 - **The Contact page's form has only Faye's four fields** (v2.29): your full name, email,
-  what it's about and your message, stacked, then "Send to Faye". The Work With Faye
+  what it's about and your message, stacked, then "Send to Faye". The Work Gallery
   "Make an enquiry" form keeps its optional phone, organisation and date for event bookings;
   both share `enquiry.js`, which leaves out any field a form doesn't have.
 - **The About page has exactly two titles** (Faye's ABOUT brief, v2.11): "About" over
@@ -296,8 +297,9 @@ introduction ending at "events", with her photo of the screen. `prompt text/27/`
 with v2.26: "Great for beginners" on the App card, with her photo of the screen.
 `prompt text/28/` shipped with v2.27: the Retreats button to her email and no closing banner.
 `prompt text/29/` shipped with v2.28: the older Coaching paragraph removed, with her photo of
-the screen. `prompt text/30/` shipped with v2.29: the four-field contact form. The next
-release that ships new owner words starts `prompt text/31/`.
+the screen. `prompt text/30/` shipped with v2.29: the four-field contact form.
+`prompt text/31/` shipped with v2.30: Work With Faye renamed Work Gallery. The next release
+that ships new owner words starts `prompt text/32/`.
 
 ## Go-live checklist (phase 6)
 
@@ -375,5 +377,6 @@ handed back with each push. v2.0 onwards is the rebuild.
 | v2.27 | Retreat enquiries go straight to Faye | The button at the top of the Retreats page now reads Enquire here and opens an email to Faye, and the page ends on her two retreat videos without the closing banner. |
 | v2.28 | Coaching, down to Faye's four paths | The Coaching page's Choose Your Path to Growth section now holds just Faye's four paths beside her photo, with the older paragraph about her years in the industry taken out now that her introduction tells that story. |
 | v2.29 | A simpler way to get in touch | The contact form now asks for just four things, your full name, email, what it's about and your message, so getting in touch with Faye takes moments, and the email it writes to her carries exactly those answers. |
+| v2.30 | Work With Faye becomes the Work Gallery | The last page in the menu now goes by Faye's new name, Work Gallery, across the menu and footer of every page, on the page itself and on the buttons that lead there, while every old link to it still arrives. |
 
-Next release: **v2.30**.
+Next release: **v2.31**.
