@@ -70,29 +70,16 @@
         <p class="muted">Faye's Intentional Training Ltd<br>4 Chester Court, Chester Hall Lane, Basildon, Essex SS14&nbsp;3WR</p>
       </div>
         <form class="form" id="enquiry" novalidate>
-          <div class="row">
-            <div class="field">
-              <label for="f-name">Your name</label>
-              <input id="f-name" name="name" autocomplete="name" required>
-            </div>
-            <div class="field">
-              <label for="f-email">Email</label>
-              <input id="f-email" name="email" type="email" autocomplete="email" required>
-            </div>
+          <div class="field">
+            <label for="f-name">Your full name</label>
+            <input id="f-name" name="name" autocomplete="name" required>
           </div>
-          <div class="row">
-            <div class="field">
-              <label for="f-phone">Phone <span class="hint">(optional)</span></label>
-              <input id="f-phone" name="phone" type="tel" autocomplete="tel">
-            </div>
-            <div class="field">
-              <label for="f-org">Organisation <span class="hint">(optional)</span></label>
-              <input id="f-org" name="organisation" autocomplete="organization">
-            </div>
+          <div class="field">
+            <label for="f-email">Email</label>
+            <input id="f-email" name="email" type="email" autocomplete="email" required>
           </div>
-          <div class="row">
-            <div class="field">
-              <label for="f-topic">What's it about?</label>
+          <div class="field">
+            <label for="f-topic">What's it about?</label>
               <select id="f-topic" name="topic">
               <option value="classes" selected>Classes &amp; booking</option>
               <option value="app">The F.I.T App</option>
@@ -103,17 +90,11 @@
               <option value="consulting">Coaching &amp; consulting</option>
               <option value="other">Something else</option>
               </select>
-            </div>
-            <div class="field">
-              <label for="f-date">Date or timing <span class="hint">(optional)</span></label>
-              <input id="f-date" name="date" placeholder="e.g. a date, or &ldquo;this spring&rdquo;">
-            </div>
           </div>
           <div class="field">
             <label for="f-message">Your message</label>
             <textarea id="f-message" name="message" required></textarea>
           </div>
-          <p class="form-note">Pressing send opens your email app with everything filled in, ready to go to Faye.</p>
           <button class="btn btn-hot" type="submit">Send to Faye</button>
           <p class="form-status" role="status" aria-live="polite"></p>
         </form>
