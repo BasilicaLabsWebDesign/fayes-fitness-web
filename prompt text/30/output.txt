@@ -1,0 +1,16 @@
+Done, and released to main as v2.29. The "Get in touch" form on the Contact page now has only your four boxes, one under another:
+
+- Your full name
+- Email
+- What's it about?
+- Your message
+
+Then the "Send to Faye" button. The optional phone, organisation and date boxes are gone, and so is the small note above the button. Pressing Send still opens the visitor's email app with a message to faye@fayesintentionaltraining.com, and now it holds just those four answers.
+
+The enquiry form on the Work With Faye page ("Make an enquiry", for brands and event organisers) still asks for phone, organisation and date, because those help with bookings. I left it alone because you mentioned only the Get in touch form. If you'd like it trimmed to the same four boxes, just say.
+
+Verified before pushing:
+- The form on a computer and on a phone: four boxes, a reminder if any are left empty, and the email to you filled in correctly.
+- The Work With Faye form still sends its extra details.
+- Every page at phone, tablet and desktop sizes: no errors, every image loads, every link works.
+- Offline mode, fresh styling on the first visit, the old addresses and the API.

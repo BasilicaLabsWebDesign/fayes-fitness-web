@@ -147,6 +147,10 @@ prompt text/            the archive for the version in service (see below)
   below her lower hand (v2.6). On a computer the photo is scaled, in proportion, to the height
   of her words, from the opening line to just under the button (v2.17). Keep it to two or three phone scrolls; longer content
   belongs on the inner pages.
+- **The Contact page's form has only Faye's four fields** (v2.29): your full name, email,
+  what it's about and your message, stacked, then "Send to Faye". The Work With Faye
+  "Make an enquiry" form keeps its optional phone, organisation and date for event bookings;
+  both share `enquiry.js`, which leaves out any field a form doesn't have.
 - **The About page has exactly two titles** (Faye's ABOUT brief, v2.11): "About" over
   "Faye Edwards" with her bio and her arms-folded portrait as a cut-out (no frame, no tilt;
   on desktop its top is level with the title, v2.16),
@@ -292,7 +296,8 @@ introduction ending at "events", with her photo of the screen. `prompt text/27/`
 with v2.26: "Great for beginners" on the App card, with her photo of the screen.
 `prompt text/28/` shipped with v2.27: the Retreats button to her email and no closing banner.
 `prompt text/29/` shipped with v2.28: the older Coaching paragraph removed, with her photo of
-the screen. The next release that ships new owner words starts `prompt text/30/`.
+the screen. `prompt text/30/` shipped with v2.29: the four-field contact form. The next
+release that ships new owner words starts `prompt text/31/`.
 
 ## Go-live checklist (phase 6)
 
@@ -369,5 +374,6 @@ handed back with each push. v2.0 onwards is the rebuild.
 | v2.26 | The F.I.T App, great for beginners | The F.I.T App card on the Services page now tells newcomers it's great for beginners, alongside follow-along workouts, the £15 monthly price and the class styles on offer. |
 | v2.27 | Retreat enquiries go straight to Faye | The button at the top of the Retreats page now reads Enquire here and opens an email to Faye, and the page ends on her two retreat videos without the closing banner. |
 | v2.28 | Coaching, down to Faye's four paths | The Coaching page's Choose Your Path to Growth section now holds just Faye's four paths beside her photo, with the older paragraph about her years in the industry taken out now that her introduction tells that story. |
+| v2.29 | A simpler way to get in touch | The contact form now asks for just four things, your full name, email, what it's about and your message, so getting in touch with Faye takes moments, and the email it writes to her carries exactly those answers. |
 
-Next release: **v2.29**.
+Next release: **v2.30**.
