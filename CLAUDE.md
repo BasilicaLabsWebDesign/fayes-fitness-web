@@ -56,7 +56,8 @@ public/                 everything served (no build step — these files are the
   assets/js/app.js      menu + service-worker registration
   assets/js/video.js    YouTube facades: nothing loads from YouTube until play is pressed
   assets/js/enquiry.js  enquiry form → pre-filled email to Faye (→ /api/enquiry in phase 5)
-  assets/docs/          documents for visitors (the Retreat Planner PDF); served without CSP
+  assets/docs/          documents for visitors (the Retreat Planner and the F.I.T Academy
+                        coaching packages PDFs); served without CSP
   assets/fonts/         Montserrat, self-hosted (OFL.txt beside it)
   assets/img/           web-sized WebP from tools/optimise-images.py; logo/ = traced SVGs
 worker/index.js         the API (Cloudflare Worker)
@@ -129,8 +130,9 @@ prompt text/            the archive for the version in service (see below)
   Consulting", her introduction in her words and one "Enquire here" button to her email; then
   "Choose Your Path to Growth" on one line (sized to its column, `one-line-head`) over her four
   paths, written "need → offer", with nothing under them (the older "13 years" paragraph was
-  removed at her request, v2.28). No closing banner. Tall banner photos are capped in height so
-  a long introduction never pushes them into the words.
+  removed at her request, v2.28), then a "Coaching packages" button to her brochure
+  (`/assets/docs/fit-academy-coaching-packages.pdf`, v2.33). No closing banner. Tall banner
+  photos are capped in height so a long introduction never pushes them into the words.
 - **The Retreats page** (/experiences, Faye's Retreats brief, v2.15) has the pink label
   "Experiences" over the white title "Retreats" (Faye, v2.21), the large Mind Fit Retreats
   logo beside her introduction and one "Enquire here" button to her email (v2.27), then Mind Fit Retreats Zanzibar (1st–10th Feb 2027), the F.I.T Trip Spa
@@ -158,6 +160,15 @@ prompt text/            the archive for the version in service (see below)
   For; Learn from Faye beside her F.I.T Combat kick photo; FAQs as open-and-close questions;
   and a plain centred closing section (no purple banner) with the credit repeated. The copy is
   hers, so change it only from her wording.
+- **The Work Gallery** (/work-with-faye) follows Faye's Work Gallery brief (v2.33): "Work
+  Gallery" over "On Stage, On Screen and On Location" with her introduction; the clients and
+  partnerships list (names only until she gives permission for logos); a Video Gallery of her
+  23 videos in her groups (Retreats, Presenting and Hosting, Teaching, Coaching, Events,
+  Bodybuilding, Podcasts), every cover in one style (a darkened relevant photo, or the brand
+  particles when there is none; never a YouTube thumbnail, so nothing loads from YouTube before
+  play), three across on a computer and a swipeable row on a phone; a Picture Gallery of her
+  five photos as squares with captions; then "Love What You See?" over the enquiry form.
+  Add new videos to the group she names, with a title and the event.
 - **The Contact page's form has only Faye's four fields** (v2.29): your full name, email,
   what it's about and your message, stacked, then "Send to Faye". The Work Gallery
   "Make an enquiry" form keeps its optional phone, organisation and date for event bookings;
@@ -311,8 +322,10 @@ the screen. `prompt text/30/` shipped with v2.29: the four-field contact form.
 `prompt text/31/` shipped with v2.30: Work With Faye renamed Work Gallery. `prompt text/32/`
 shipped with v2.31: the Instructor Training brief (INSTRUCTOR_TRAINING_.docx; her message was
 the document alone, so input.txt is empty). `prompt text/33/` shipped with v2.32: the Book
-button and page removed and the Services button to the enquiry form. The next release that
-ships new owner words starts `prompt text/34/`.
+button and page removed and the Services button to the enquiry form. `prompt text/34/`
+shipped with v2.33: the Work Gallery brief, her coaching packages brochure and a second copy
+of the Instructor Training brief (identical to v2.31's; her message was the three files alone,
+so input.txt is empty). The next release that ships new owner words starts `prompt text/35/`.
 
 ## Go-live checklist (phase 6)
 
@@ -321,8 +334,8 @@ ships new owner words starts `prompt text/34/`.
       being opened (this environment cannot reach those sites)
 - [ ] Absolute `og:image` / `og:url` / canonical tags, sitemap.xml and the robots Sitemap line
 - [ ] App Store and Google Play links on /app opened and confirmed
-- [ ] Both Retreats videos played on the live site (YouTube is unreachable from the build
-      environment; 3r02khe8Rmk is assumed landscape, LvKvW0APzv8 is a portrait Short)
+- [ ] Both Retreats videos and the 23 Work Gallery videos played on the live site (YouTube is
+      unreachable from the build environment, so none could be opened while building)
 - [x] Retreat dates, venues and links on /experiences confirmed by Faye (her Retreats brief, v2.15)
 - [ ] The App page's interim Fibodo timetable link ("Find your class") replaced by the
       site's own booking (phase 4); the Book page with its Fibodo links was removed in v2.32
@@ -334,9 +347,6 @@ ships new owner words starts `prompt text/34/`.
 - [ ] `sw.js` VERSION and the `RELEASE` var in `wrangler.jsonc` match the release (every release)
 
 ## Owner inputs still needed
-
-- Faye's final content for the Instructor Training and Work Gallery pages, and a link to add
-  on the Coaching page: she emailed them (November 2026); they need sending into the session
 
 - Firebase project, Stripe account (in the Ltd's name), email provider + DNS access
 - Offerings, prices, timetable, membership plans, voucher amounts, cancellation/refund policy
@@ -396,5 +406,6 @@ handed back with each push. v2.0 onwards is the rebuild.
 | v2.30 | Work With Faye becomes the Work Gallery | The last page in the menu now goes by Faye's new name, Work Gallery, across the menu and footer of every page, on the page itself and on the buttons that lead there, while every old link to it still arrives. |
 | v2.31 | Become a F.I.T Trainer | The Instructor Training page now tells Faye's full story of becoming a F.I.T Trainer in her own words: certification in F.I.T Jam and F.I.T Combat with EMD UK and Platinum Performing Arts behind it, everything that's included, where it can lead, who it's for and what it's like to learn from Faye, with answers to common questions and an enquiry button at the top and the bottom. |
 | v2.32 | The Book button bows out | The Book button and its page are gone from every page, with any old link to it now arriving at Services and the App page's Find your class going straight to the class timetable, and the Ask a question button on Services now opens the enquiry form. |
+| v2.33 | Faye's work, on stage, on screen and on location | The Work Gallery now shows Faye's work the way she described it: her own introduction, the names she has worked with, a video gallery of her retreats, presenting and hosting, teaching, coaching, events, bodybuilding and podcasts, and a picture gallery, ending with an invitation to book her. The Coaching page gains a Coaching packages button that opens her full brochure of ways to work with her. |
 
-Next release: **v2.33**.
+Next release: **v2.34**.

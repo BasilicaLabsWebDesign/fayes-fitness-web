@@ -1,0 +1,27 @@
+Done, and released to main as v2.33. Here's what came of the three files.
+
+Work Gallery: rebuilt from Faye's brief
+- Top: pink "WORK GALLERY" over "ON STAGE, ON SCREEN AND ON LOCATION", her introduction word for word, and two buttons: "Make an enquiry" and "Explore the gallery".
+- Clients & partnerships: the names she's worked with, ending "…and more". Her notes suggest a strip of logos. I've kept names for now because we don't yet have permission to show the brands' logos. Send the logos once she's happy to use them and I'll swap them in.
+- Video Gallery: all her videos, in her groups (Retreats, Presenting and Hosting, Teaching, Coaching, Events, Bodybuilding, Podcasts), each labelled with what it is and the event. On a computer they sit three across; on a phone each group is a row you swipe sideways, so the page doesn't get endless. The Mind Fit Retreat Zanzibar showreel is the first video in the gallery.
+- Picture Gallery: her five photos (Retreats, Hosting, Teaching, Coaching, Events) as matching squares with the caption underneath, three across on a computer and two on a phone.
+- Bottom: "LOVE WHAT YOU SEE?" with her line "Book Faye for your next event, campaign or collaboration." above the enquiry form.
+- The old "Services & Collaborations" cards came off this page. Her brief doesn't include them, and they're all on the Services page.
+
+A few notes on the videos:
+- "Kelly Holmes Athena Effect Hosting" was listed twice under Presenting and Hosting, so it appears once.
+- "F.I.T Jam at Hackney Moves" is listed under both Teaching and Events, so it's in both, as she wrote it.
+- Every cover uses one style: a darkened photo of the moment where we have one, otherwise the purple particle background, with a play button and the title. YouTube's own thumbnails aren't used, so nothing from YouTube loads until someone presses play, the same as everywhere else on the site.
+- I can't open YouTube from where I build the site, so please play a few once it's live to check each opens the right video.
+
+Coaching: the packages link
+- At the bottom of "Choose Your Path to Growth" there's now a "Coaching packages" button. It opens her F.I.T Academy coaching packages brochure in a new tab: the five ways to work with her, from the 4-week accelerator to the one-year mastermind, with prices. The brochure is stored on the site, like the Retreat Planner.
+
+Instructor Training
+- The Instructor Training document is word for word the same as the one already on the site (same photo too), so that page needed no changes.
+
+Verified before pushing:
+- The Work Gallery on a computer and on a phone: all 23 videos in the right groups, a video plays when pressed, nothing loads from YouTube before that, and the photos are even squares.
+- The Coaching packages button opens the brochure.
+- Every page at phone, tablet and desktop sizes: no errors, every image loads, every link works.
+- Offline mode, fresh styling on the first visit, the old addresses and the API.
