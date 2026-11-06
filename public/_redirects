@@ -21,3 +21,6 @@
 # The Consulting page became Coaching (v2.13)
 /consulting               /coaching       301
 /consulting.html          /coaching       301
+# The Book page was removed at Faye's request (v2.32)
+/book                     /services       301
+/book.html                /services       301
