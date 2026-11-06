@@ -47,11 +47,11 @@ request is served straight from `public/` by Cloudflare's asset handler.
 public/                 everything served (no build step — these files are the site)
   index.html 404.html offline.html
   about services app presenting coaching speaking academy experiences
-  work-with-faye book contact .html   (served without .html: /about, /book …)
+  work-with-faye contact .html        (served without .html: /about, /coaching …)
   manifest.webmanifest  sw.js  favicon.svg  apple-touch-icon.png  icons/
   _headers              security headers (incl. CSP) + caching
-  _redirects            old addresses (v1's /why, /retreats/zanzibar …; /consulting) → their
-                        current pages; never remove a line
+  _redirects            old addresses (v1's /why, /retreats/zanzibar …; /consulting; /book,
+                        removed v2.32) → their current pages; never remove a line
   assets/css/           tokens.css (brand) → site.css (components) → home.css | pages.css
   assets/js/app.js      menu + service-worker registration
   assets/js/video.js    YouTube facades: nothing loads from YouTube until play is pressed
@@ -99,8 +99,10 @@ prompt text/            the archive for the version in service (see below)
 - **The menu is Faye's** (v2.13, Services added v2.14): Home, About, Services, Retreats
   (/experiences), Coaching (/coaching, formerly Consulting), Instructor Training (/academy),
   Work Gallery (/work-with-faye: renamed from Work With Faye in v2.30, its address kept so old
-  links still work; its pink label and buttons to it say Work Gallery), plus the Book button. Pages outside the menu (F.I.T App, Presenting,
-  Speaking, Book, Contact) stay linked
+  links still work; its pink label and buttons to it say Work Gallery). There is no Book
+  button or Book page (removed at her request, v2.32; /book leads to Services, and the App
+  page's "Find your class" opens the Fibodo class timetable). Pages outside the menu (F.I.T
+  App, Presenting, Speaking, Contact) stay linked
   from the footer and the pages themselves. On desktop, page titles sit close under the menu bar
   (her request, v2.13): banners start 32px below it, text aligned to the top; phones keep
   their original spacing.
@@ -108,7 +110,7 @@ prompt text/            the archive for the version in service (see below)
   at the sizes and heights the About page set (`.page-hero .eyebrow` / `h1` in `pages.css`);
   never size a single page's title on its own. Desktop gaps are tight: a banner ends 40px
   under its buttons and the next section starts 40px later. Tall banner photos (`hero-tall`:
-  Coaching, Speaking, Book) take their height from the words beside them and end level with
+  Coaching, Speaking) take their height from the words beside them and end level with
   the buttons, always the whole photo in its own proportions, scaled and never cropped
   (Faye, v2.18). Coaching's photo has its centre in line with the centre of the photo in the
   section below (`align-below`, v2.22). Work Gallery's banner photo has the same frame and
@@ -118,7 +120,7 @@ prompt text/            the archive for the version in service (see below)
   "With Faye", v2.17) beside the large F.I.T logo, in the same layout as the other pages: a
   one-line title with a smaller logo was tried in v2.22 and undone at her request (v2.23); its
   introduction ends "...for brands and events." (she cut "all with Faye", v2.25); one
-  "Ask a question" button to her email; the Coaching card's label is "Gyms, Studios and
+  "Ask a question" button to the Contact page's enquiry form (`/contact#enquiry`, v2.32); the Coaching card's label is "Gyms, Studios and
   Brands", on one line; the App card lists "Great for beginners" (v2.26) and its "Join the
   app" goes to the app's sign-up, and the Presenting, Coaching, Speaking and F.I.T Academy cards' "Enquire here"
   open her email (Academy from v2.24); the Experiences card lists "Retreat consulting"; no
@@ -308,8 +310,9 @@ with v2.26: "Great for beginners" on the App card, with her photo of the screen.
 the screen. `prompt text/30/` shipped with v2.29: the four-field contact form.
 `prompt text/31/` shipped with v2.30: Work With Faye renamed Work Gallery. `prompt text/32/`
 shipped with v2.31: the Instructor Training brief (INSTRUCTOR_TRAINING_.docx; her message was
-the document alone, so input.txt is empty). The next release that ships new owner words
-starts `prompt text/33/`.
+the document alone, so input.txt is empty). `prompt text/33/` shipped with v2.32: the Book
+button and page removed and the Services button to the enquiry form. The next release that
+ships new owner words starts `prompt text/34/`.
 
 ## Go-live checklist (phase 6)
 
@@ -321,8 +324,8 @@ starts `prompt text/33/`.
 - [ ] Both Retreats videos played on the live site (YouTube is unreachable from the build
       environment; 3r02khe8Rmk is assumed landscape, LvKvW0APzv8 is a portrait Short)
 - [x] Retreat dates, venues and links on /experiences confirmed by Faye (her Retreats brief, v2.15)
-- [ ] Book page's interim Fibodo links (timetable, memberships, vouchers) replaced by
-      the site's own booking (phase 4)
+- [ ] The App page's interim Fibodo timetable link ("Find your class") replaced by the
+      site's own booking (phase 4); the Book page with its Fibodo links was removed in v2.32
 - [ ] Company registration number in the footer (UK companies must show it on their website)
 - [ ] Privacy, terms, cookie and account-deletion pages from a data audit (app-legal-admin)
 - [ ] Firestore rules published; Firebase authorised domains include the live domain
@@ -331,6 +334,9 @@ starts `prompt text/33/`.
 - [ ] `sw.js` VERSION and the `RELEASE` var in `wrangler.jsonc` match the release (every release)
 
 ## Owner inputs still needed
+
+- Faye's final content for the Instructor Training and Work Gallery pages, and a link to add
+  on the Coaching page: she emailed them (November 2026); they need sending into the session
 
 - Firebase project, Stripe account (in the Ltd's name), email provider + DNS access
 - Offerings, prices, timetable, membership plans, voucher amounts, cancellation/refund policy
@@ -389,5 +395,6 @@ handed back with each push. v2.0 onwards is the rebuild.
 | v2.29 | A simpler way to get in touch | The contact form now asks for just four things, your full name, email, what it's about and your message, so getting in touch with Faye takes moments, and the email it writes to her carries exactly those answers. |
 | v2.30 | Work With Faye becomes the Work Gallery | The last page in the menu now goes by Faye's new name, Work Gallery, across the menu and footer of every page, on the page itself and on the buttons that lead there, while every old link to it still arrives. |
 | v2.31 | Become a F.I.T Trainer | The Instructor Training page now tells Faye's full story of becoming a F.I.T Trainer in her own words: certification in F.I.T Jam and F.I.T Combat with EMD UK and Platinum Performing Arts behind it, everything that's included, where it can lead, who it's for and what it's like to learn from Faye, with answers to common questions and an enquiry button at the top and the bottom. |
+| v2.32 | The Book button bows out | The Book button and its page are gone from every page, with any old link to it now arriving at Services and the App page's Find your class going straight to the class timetable, and the Ask a question button on Services now opens the enquiry form. |
 
-Next release: **v2.32**.
+Next release: **v2.33**.
