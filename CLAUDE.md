@@ -148,6 +148,14 @@ prompt text/            the archive for the version in service (see below)
   below her lower hand (v2.6). On a computer the photo is scaled, in proportion, to the height
   of her words, from the opening line to just under the button (v2.17). Keep it to two or three phone scrolls; longer content
   belongs on the inner pages.
+- **The Instructor Training page** (/academy) follows Faye's INSTRUCTOR TRAINING brief word for
+  word (v2.31): "Instructor Training" over "Become a F.I.T Trainer" with the EMD UK and
+  Platinum Performing Arts credit and "Enquire here" to her email; More Than a Certificate;
+  Choose Your Concept (F.I.T Jam and F.I.T Combat cards with their concept logos, on a light
+  section because the Combat logo is black); What's Included; Where It Can Take You; Who It's
+  For; Learn from Faye beside her F.I.T Combat kick photo; FAQs as open-and-close questions;
+  and a plain centred closing section (no purple banner) with the credit repeated. The copy is
+  hers, so change it only from her wording.
 - **The Contact page's form has only Faye's four fields** (v2.29): your full name, email,
   what it's about and your message, stacked, then "Send to Faye". The Work Gallery
   "Make an enquiry" form keeps its optional phone, organisation and date for event bookings;
@@ -298,8 +306,10 @@ with v2.26: "Great for beginners" on the App card, with her photo of the screen.
 `prompt text/28/` shipped with v2.27: the Retreats button to her email and no closing banner.
 `prompt text/29/` shipped with v2.28: the older Coaching paragraph removed, with her photo of
 the screen. `prompt text/30/` shipped with v2.29: the four-field contact form.
-`prompt text/31/` shipped with v2.30: Work With Faye renamed Work Gallery. The next release
-that ships new owner words starts `prompt text/32/`.
+`prompt text/31/` shipped with v2.30: Work With Faye renamed Work Gallery. `prompt text/32/`
+shipped with v2.31: the Instructor Training brief (INSTRUCTOR_TRAINING_.docx; her message was
+the document alone, so input.txt is empty). The next release that ships new owner words
+starts `prompt text/33/`.
 
 ## Go-live checklist (phase 6)
 
@@ -378,5 +388,6 @@ handed back with each push. v2.0 onwards is the rebuild.
 | v2.28 | Coaching, down to Faye's four paths | The Coaching page's Choose Your Path to Growth section now holds just Faye's four paths beside her photo, with the older paragraph about her years in the industry taken out now that her introduction tells that story. |
 | v2.29 | A simpler way to get in touch | The contact form now asks for just four things, your full name, email, what it's about and your message, so getting in touch with Faye takes moments, and the email it writes to her carries exactly those answers. |
 | v2.30 | Work With Faye becomes the Work Gallery | The last page in the menu now goes by Faye's new name, Work Gallery, across the menu and footer of every page, on the page itself and on the buttons that lead there, while every old link to it still arrives. |
+| v2.31 | Become a F.I.T Trainer | The Instructor Training page now tells Faye's full story of becoming a F.I.T Trainer in her own words: certification in F.I.T Jam and F.I.T Combat with EMD UK and Platinum Performing Arts behind it, everything that's included, where it can lead, who it's for and what it's like to learn from Faye, with answers to common questions and an enquiry button at the top and the bottom. |
 
-Next release: **v2.31**.
+Next release: **v2.32**.

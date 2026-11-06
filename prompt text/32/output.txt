@@ -1,0 +1,22 @@
+Done, and released to main as v2.31. The Instructor Training page has been rebuilt from your document, in your words, top to bottom:
+
+- The banner: pink "INSTRUCTOR TRAINING" over the big white title "BECOME A F.I.T TRAINER", then your opening line, the EMD UK and Platinum Performing Arts credit in italics, and an "Enquire here" button that opens an email to you. The winged F.I.T Academy logo stays beside it.
+- More Than a Certificate, with the photo of you coaching instructors around a table.
+- Choose Your Concept: F.I.T Jam and F.I.T Combat side by side, each with its own logo, then "Train in one, or train in both."
+- What's Included: your seven points, in two columns on a computer.
+- Where It Can Take You: your six points, beside the instructor circle photo.
+- Who It's For: your four points.
+- Learn from Faye, beside the photo from your document of you kicking in your F.I.T Combat top under the palm trees.
+- FAQs: each question opens to show its answer when tapped.
+- Your Next Chapter Starts Here, with a second "Enquire here" button and the partner credit underneath.
+
+A few choices I made:
+- The closing "Your Next Chapter Starts Here" is a plain section, not a purple banner, since you've asked for those to come off the other pages.
+- "Choose Your Concept" has a light background, because the F.I.T Combat logo is black and would disappear on black.
+- Both "Enquire here" buttons open an email to faye@fayesintentionaltraining.com, like the rest of the site.
+- The page's address stays /academy, so existing links still work.
+
+Verified before pushing:
+- The page on a computer and on a phone: every section, both logos and all the photos load, the questions open and close, and the title matches every other page's.
+- Every page at phone, tablet and desktop sizes: no errors, every image loads, every link works.
+- Offline mode, fresh styling on the first visit, the old addresses and the API.
