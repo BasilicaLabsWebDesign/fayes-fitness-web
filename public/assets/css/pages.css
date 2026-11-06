@@ -49,6 +49,7 @@
 /* Lists with the brand tick */
 .ticks { list-style: none; padding: 0; display: grid; gap: 12px; }
 .ticks + p, .contact-list + p { margin-top: 24px; }
+.prose p + .ticks { margin-top: 20px; }
 .ticks li { position: relative; padding-left: 32px; font-weight: var(--w-sub); }
 .ticks li::before {
   content: ""; position: absolute; left: 0; top: .32em; width: 18px; height: 18px; border-radius: 50%;
@@ -182,6 +183,29 @@
 /* one gap between retreats, not two stacked (Faye, v2.17) */
 .retreat + .retreat { padding-top: 0; }
 
+/* Instructor Training (Faye's brief, v2.31): the partner credit under the banner, the two
+   concept cards carrying the concept logos, lists in two columns on a computer, the FAQs as
+   open-and-close questions, and a plain centred closing section (no purple banner) */
+.page-hero .hero-note { margin-top: 14px; max-width: 52ch; color: var(--on-black-muted); }
+.concept-card img { aspect-ratio: auto; object-fit: contain; width: min(70%, 260px); margin: 28px auto 0; }
+.concept-both { margin: 28px auto 0; font-weight: var(--w-heading); }
+.ticks-cols { max-width: 60rem; margin: 0 auto; }
+.faqs { max-width: 52rem; margin: 0 auto; }
+.faqs details { border-bottom: var(--rule); }
+.faqs summary {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  min-height: 56px; padding: 12px 0; cursor: pointer; list-style: none;
+  font-weight: var(--w-heading); font-size: 1.1rem;
+}
+.faqs summary::-webkit-details-marker { display: none; }
+.faqs summary::after { content: "+"; flex: none; color: var(--on-black-accent); font-size: 1.6rem; line-height: 1; }
+.faqs details[open] summary::after { content: "\2212"; }
+.faqs details p { padding: 0 0 18px; color: var(--on-black-muted); max-width: 62ch; }
+.closing { text-align: center; }
+.closing p { max-width: 60ch; margin: 0 auto; }
+.closing .cta { display: flex; justify-content: center; margin-top: 26px; }
+.closing .closing-note { margin-top: 28px; color: var(--on-black-muted); }
+
 /* The Story of F.I.T, with the Mind Fit Retreats group photo beside it (under it on a phone) */
 .story { display: grid; gap: 32px; }
 .story-photo img { width: 100%; border-radius: var(--radius); }
@@ -193,6 +217,7 @@
   .split.flip > :first-child { order: 2; }
   .card-grid { grid-template-columns: repeat(3, 1fr); }
   .card-grid.two { grid-template-columns: repeat(2, 1fr); }
+  .ticks-cols { grid-template-columns: 1fr 1fr; column-gap: 48px; }
   .trio { grid-template-columns: repeat(3, 1fr); gap: 32px; }
   .form .row { grid-template-columns: 1fr 1fr; }
   /* on desktop, titles start close under the menu bar (Faye, v2.13), and the banner ends

@@ -41,6 +41,7 @@ IMAGES = [
     ("backgrounds/purple-smoke.png", "purple-smoke", (1600,), 70),
     # home page (Website Updates, October 2026)
     ("photos/faye-instructor-circle.jpg", "faye-instructor-circle", (720, 1200), 78),
+    ("photos/faye-fit-combat-palms.jpg", "faye-fit-combat-palms", (720, 1200), 80),  # Instructor Training brief, v2.31
     ("photos/faye-white-hand-on-hip-cutout.png", "faye-white-cutout-full", (480, 755), 82),
     # about page (Website Updates ABOUT, October 2026)
     ("photos/faye-mission-portrait-cutout.png", "faye-arms-folded-cutout", (480, 840), 82),
