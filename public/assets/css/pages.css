@@ -50,6 +50,7 @@
 .ticks { list-style: none; padding: 0; display: grid; gap: 12px; }
 .ticks + p, .contact-list + p { margin-top: 24px; }
 .prose p + .ticks { margin-top: 20px; }
+.ticks + .btn { margin-top: 28px; }
 .ticks li { position: relative; padding-left: 32px; font-weight: var(--w-sub); }
 .ticks li::before {
   content: ""; position: absolute; left: 0; top: .32em; width: 18px; height: 18px; border-radius: 50%;
