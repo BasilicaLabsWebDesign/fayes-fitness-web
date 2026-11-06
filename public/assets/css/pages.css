@@ -98,7 +98,7 @@
   display: grid; place-items: center;
 }
 .video .play svg { width: 26px; height: 26px; margin-left: 4px; }
-.video .caption { position: absolute; left: 16px; right: 16px; bottom: 16px; font-weight: var(--w-heading); line-height: 1.3; }
+.video .caption { position: absolute; left: 16px; right: 16px; bottom: 16px; font-weight: var(--w-heading); line-height: 1.3; text-shadow: 0 1px 3px rgba(0, 0, 0, .9), 0 0 14px rgba(0, 0, 0, .7); }
 .video .caption small { display: block; font-weight: var(--w-body); color: var(--on-black-muted); margin-top: 4px; }
 .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 /* a landscape video (Retreats, v2.20): one wide player instead of the portrait Shorts' column */
@@ -189,6 +189,38 @@
 .closing p { max-width: 60ch; margin: 0 auto; }
 .closing .cta { display: flex; justify-content: center; margin-top: 26px; }
 .closing .closing-note { margin-top: 28px; color: var(--on-black-muted); }
+
+/* Work Gallery (Faye's brief, v2.33): videos in her labelled groups, every cover in one style
+   (a darkened still or the brand particles, a play button and the title), three across on a
+   computer and a swipeable row on a phone; then her photos as an even grid of squares with a
+   caption under each, three across on a computer and two on a phone */
+.gallery-group { margin: 44px 0 16px; }
+.rule-title + .gallery-group { margin-top: 0; }
+.video-grid.gallery-row { grid-template-columns: none; justify-content: stretch; }
+.video.plain img { filter: brightness(.5) saturate(1.3); }
+.photo-gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 18px; }
+.gallery-photo { width: calc((100% - 18px) / 2); }
+.gallery-photo img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: var(--radius); }
+.gallery-photo figcaption { margin-top: 10px; font-weight: var(--w-heading); text-align: center; }
+.photo-retreats img { object-position: 22% 50%; }
+.photo-hosting img { object-position: 50% 45%; }
+.photo-teaching img { object-position: 62% 50%; }
+.photo-coaching img { object-position: 40% 45%; }
+.photo-events img { object-position: 60% 50%; }
+@media (max-width: 899px) {
+  .video-grid.gallery-row {
+    grid-auto-flow: column; grid-auto-columns: 82%;
+    overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory;
+    margin-inline: calc(var(--gutter) * -1); padding: 0 var(--gutter) 6px; scroll-padding-inline: var(--gutter);
+    scrollbar-width: none;
+  }
+  .video-grid.gallery-row::-webkit-scrollbar { display: none; }
+  .gallery-row .video { scroll-snap-align: start; }
+}
+@media (min-width: 900px) {
+  .video-grid.gallery-row { grid-template-columns: repeat(3, 1fr); }
+  .gallery-photo { width: calc((100% - 36px) / 3); }
+}
 
 /* The Story of F.I.T, with the Mind Fit Retreats group photo beside it (under it on a phone) */
 .story { display: grid; gap: 32px; }
