@@ -58,7 +58,6 @@
 
   /* Shape and space */
   --radius: 18px;
-  --radius-pill: 999px;
   --gutter: clamp(18px, 5vw, 40px);
   --max: 1180px;
   --tap: 48px;

@@ -52,9 +52,14 @@
 .prose p + .ticks { margin-top: 20px; }
 .ticks + .btn { margin-top: 28px; }
 .ticks li { position: relative; padding-left: 32px; font-weight: var(--w-sub); }
+/* white ticks (Faye, v2.34): a white circle with a black tick on dark sections, a black
+   circle with a white tick on light ones, where white would disappear */
 .ticks li::before {
   content: ""; position: absolute; left: 0; top: .32em; width: 18px; height: 18px; border-radius: 50%;
-  background: var(--persian-rose) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center / 12px no-repeat;
+  background: var(--off-white) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center / 12px no-repeat;
+}
+.light .ticks li::before {
+  background: var(--black) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fdfdfd' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center / 12px no-repeat;
 }
 
 /* Service cards */
@@ -80,7 +85,7 @@
 /* Client and partner names */
 .names { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
 .names li {
-  padding: 10px 16px; border-radius: var(--radius-pill);
+  padding: 10px 16px; border-radius: 0;
   border: 1.5px solid rgba(253, 253, 253, .3); font-weight: var(--w-sub); font-size: var(--text-sm);
 }
 .light .names li { border-color: var(--black); }
