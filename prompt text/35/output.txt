@@ -1,0 +1,15 @@
+Done, and released to main as v2.34. Both changes are on every page.
+
+Ticks
+- Every tick in every list across the site is now white (a white circle with a black tick) instead of pink, on Services, Coaching, Instructor Training, the App page and everywhere else.
+- One list sits on a light background: "Who It's For" on Instructor Training. A white tick would disappear there, so that list has black ticks with a white tick instead.
+
+Buttons
+- Every button on every page now has square corners: Join the app, Enquire here, Join the mail list, More Info Here, Send to Faye, Coaching packages and the rest.
+- For a matching look, I also squared off the name tags in the Clients & Partnerships list on the Work Gallery, which had the same rounded shape. If you'd rather keep those rounded, just say.
+- The round menu button in the top corner on phones stays round, since it's an icon rather than one of these buttons. I can square that off too if you'd like.
+
+Verified before pushing:
+- The ticks and buttons on a computer and on a phone, including the light sections.
+- Every page at phone, tablet and desktop sizes: no errors, every image loads, every link works.
+- Offline mode, fresh styling on the first visit, the old addresses and the API.

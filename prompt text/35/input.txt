@@ -1,0 +1,4 @@
+Those ticks. Make them white, not pink. Change all ticks on all page that exist I this colour
+
+Also, those buttons, get rid of the rounded edges. I just want them with corners. Change all
+Of them on all pages

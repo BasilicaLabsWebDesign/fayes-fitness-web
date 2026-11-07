@@ -199,7 +199,9 @@ prompt text/            the archive for the version in service (see below)
   without tagline is an approved additional mark (used in the header). Exception by Faye's
   choice: the home page hero showed the purple logo on black (v2.8), removed again in v2.12.
 - **Look:** black canvas, particle/smoke backgrounds, thin rule lines framing titles,
-  tilted black-framed photos.
+  tilted black-framed photos. Buttons have square corners, never rounded (Faye, v2.34). List
+  ticks are white circles with a black tick, black with a white tick on light sections
+  (Faye, v2.34; they were pink before).
 - **Voice:** uplifting, friendly, enthusiastic. About how people *feel*, never aesthetics or
   physical goals. Talk like a close friend. Tagline: "Focus on the feeling."
 - **Audiences:** Move with Faye (participants — Mandy, Grace), Grow with Faye (instructors —
@@ -325,7 +327,9 @@ the document alone, so input.txt is empty). `prompt text/33/` shipped with v2.32
 button and page removed and the Services button to the enquiry form. `prompt text/34/`
 shipped with v2.33: the Work Gallery brief, her coaching packages brochure and a second copy
 of the Instructor Training brief (identical to v2.31's; her message was the three files alone,
-so input.txt is empty). The next release that ships new owner words starts `prompt text/35/`.
+so input.txt is empty). `prompt text/35/` shipped with v2.34: white ticks and square-cornered
+buttons, with her photo of the screen. The next release that ships new owner words starts
+`prompt text/36/`.
 
 ## Go-live checklist (phase 6)
 
@@ -407,5 +411,6 @@ handed back with each push. v2.0 onwards is the rebuild.
 | v2.31 | Become a F.I.T Trainer | The Instructor Training page now tells Faye's full story of becoming a F.I.T Trainer in her own words: certification in F.I.T Jam and F.I.T Combat with EMD UK and Platinum Performing Arts behind it, everything that's included, where it can lead, who it's for and what it's like to learn from Faye, with answers to common questions and an enquiry button at the top and the bottom. |
 | v2.32 | The Book button bows out | The Book button and its page are gone from every page, with any old link to it now arriving at Services and the App page's Find your class going straight to the class timetable, and the Ask a question button on Services now opens the enquiry form. |
 | v2.33 | Faye's work, on stage, on screen and on location | The Work Gallery now shows Faye's work the way she described it: her own introduction, the names she has worked with, a video gallery of her retreats, presenting and hosting, teaching, coaching, events, bodybuilding and podcasts, and a picture gallery, ending with an invitation to book her. The Coaching page gains a Coaching packages button that opens her full brochure of ways to work with her. |
+| v2.34 | Crisp corners and white ticks | Every button across the site now has clean square corners instead of rounded ends, and the ticks in every list are white instead of pink, black on the light sections so they always stand out. |
 
-Next release: **v2.34**.
+Next release: **v2.35**.
