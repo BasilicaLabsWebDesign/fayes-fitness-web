@@ -164,6 +164,14 @@ a { color: inherit; }
   .menu-btn { display: none; }
 }
 
+/* On a phone every button sits in the middle of its section (Faye, v2.37); a row of
+   buttons is centred as a group */
+@media (max-width: 899px) {
+  .btn { display: flex; width: fit-content; margin-inline: auto; }
+  .cta { justify-content: center; }
+  .cta .btn { margin-inline: 0; }
+}
+
 @media (min-width: 900px) {
   .concept-grid { grid-template-columns: repeat(6, 1fr); gap: 24px; }
   .brand svg { width: 88px; }
