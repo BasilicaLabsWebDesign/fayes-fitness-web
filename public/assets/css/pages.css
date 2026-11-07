@@ -40,6 +40,8 @@
 .split { display: grid; gap: 32px; align-items: center; }
 .split img { width: 100%; border-radius: var(--radius); }
 .split.top { align-items: start; }
+/* a tall photo beside text, shown whole and a little narrower (Instructor Training, v2.35) */
+.split img.split-portrait { width: min(100%, 380px); justify-self: center; }
 .prose { max-width: 62ch; }
 .prose p + p { margin-top: 16px; }
 .prose .lead-in { font-size: 1.2rem; font-weight: var(--w-sub); }
