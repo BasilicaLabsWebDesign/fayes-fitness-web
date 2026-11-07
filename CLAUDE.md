@@ -154,7 +154,8 @@ prompt text/            the archive for the version in service (see below)
   belongs on the inner pages.
 - **The Instructor Training page** (/academy) follows Faye's INSTRUCTOR TRAINING brief word for
   word (v2.31): "Instructor Training" over "Become a F.I.T Trainer" with the EMD UK and
-  Platinum Performing Arts credit and "Enquire here" to her email; More Than a Certificate;
+  Platinum Performing Arts credit and "Enquire here" to her email; More Than a Certificate
+  beside her studio photo, shown whole and narrower (`split-portrait`, her choice, v2.35);
   Choose Your Concept (F.I.T Jam and F.I.T Combat cards with their concept logos, on a light
   section because the Combat logo is black); What's Included; Where It Can Take You; Who It's
   For; Learn from Faye beside her F.I.T Combat kick photo; FAQs as open-and-close questions;
@@ -328,8 +329,9 @@ button and page removed and the Services button to the enquiry form. `prompt tex
 shipped with v2.33: the Work Gallery brief, her coaching packages brochure and a second copy
 of the Instructor Training brief (identical to v2.31's; her message was the three files alone,
 so input.txt is empty). `prompt text/35/` shipped with v2.34: white ticks and square-cornered
-buttons, with her photo of the screen. The next release that ships new owner words starts
-`prompt text/36/`.
+buttons, with her photo of the screen. `prompt text/36/` shipped with v2.35: the studio photo
+for More Than a Certificate, with the photo she sent. The next release that ships new owner
+words starts `prompt text/37/`.
 
 ## Go-live checklist (phase 6)
 
@@ -412,5 +414,6 @@ handed back with each push. v2.0 onwards is the rebuild.
 | v2.32 | The Book button bows out | The Book button and its page are gone from every page, with any old link to it now arriving at Services and the App page's Find your class going straight to the class timetable, and the Ask a question button on Services now opens the enquiry form. |
 | v2.33 | Faye's work, on stage, on screen and on location | The Work Gallery now shows Faye's work the way she described it: her own introduction, the names she has worked with, a video gallery of her retreats, presenting and hosting, teaching, coaching, events, bodybuilding and podcasts, and a picture gallery, ending with an invitation to book her. The Coaching page gains a Coaching packages button that opens her full brochure of ways to work with her. |
 | v2.34 | Crisp corners and white ticks | Every button across the site now has clean square corners instead of rounded ends, and the ticks in every list are white instead of pink, black on the light sections so they always stand out. |
+| v2.35 | Faye in the studio, beside her training story | The More Than a Certificate section of the Instructor Training page now shows the photo Faye chose, her presenting to instructors in the studio, shown whole beside the story of what becoming a F.I.T Trainer means. |
 
-Next release: **v2.35**.
+Next release: **v2.36**.
