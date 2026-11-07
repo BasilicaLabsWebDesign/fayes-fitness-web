@@ -1,0 +1,14 @@
+Done, and released to main as v2.37. On a phone, every button on the site now sits in the middle of its section.
+
+What you'll see
+- Services: "Ask a question" under the title, and "Join the app", "Enquire here" and "See experiences" on every card, are now centred, including the two from your screenshots.
+- The same goes for every other page on a phone: the home page's "Join the mail list" and its card buttons, "Enquire here" on Retreats, Coaching and Instructor Training, "Coaching packages", the "More Info Here" buttons, and "Send to Faye" on both enquiry forms.
+- Where two buttons sit side by side, they're centred together as a pair.
+- On a computer nothing has moved: buttons there still line up with the words beside them.
+
+This is now one of the site's standing rules, so any button added in future will be centred on a phone automatically.
+
+Verified before pushing:
+- All 36 buttons across every page measured at phone width: each one sits in the exact centre of its card or section. At desktop width they're all where they were.
+- Every page at phone, tablet and desktop sizes: no errors, every image loads, every link works.
+- Offline mode, fresh styling on the first visit, every video's thumbnail, and the API.

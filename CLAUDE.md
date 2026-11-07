@@ -208,7 +208,9 @@ prompt text/            the archive for the version in service (see below)
   without tagline is an approved additional mark (used in the header). Exception by Faye's
   choice: the home page hero showed the purple logo on black (v2.8), removed again in v2.12.
 - **Look:** black canvas, particle/smoke backgrounds, thin rule lines framing titles,
-  tilted black-framed photos. Buttons have square corners, never rounded (Faye, v2.34). List
+  tilted black-framed photos. Buttons have square corners, never rounded (Faye, v2.34). On a
+  phone (under 900px) every button is centred in its card or section, a row of buttons
+  centred as a group (Faye, v2.37; `site.css`); desktop keeps them aligned with the words. List
   ticks are white circles with a black tick, black with a white tick on light sections
   (Faye, v2.34; they were pink before).
 - **Voice:** uplifting, friendly, enthusiastic. About how people *feel*, never aesthetics or
@@ -339,8 +341,9 @@ of the Instructor Training brief (identical to v2.31's; her message was the thre
 so input.txt is empty). `prompt text/35/` shipped with v2.34: white ticks and square-cornered
 buttons, with her photo of the screen. `prompt text/36/` shipped with v2.35: the studio photo
 for More Than a Certificate, with the photo she sent. `prompt text/37/` shipped with v2.36:
-a thumbnail for every video. The next release that ships new owner words starts
-`prompt text/38/`.
+a thumbnail for every video. `prompt text/38/` shipped with v2.37: buttons centred on a
+phone, with her two screenshots. The next release that ships new owner words starts
+`prompt text/39/`.
 
 ## Go-live checklist (phase 6)
 
@@ -425,5 +428,6 @@ handed back with each push. v2.0 onwards is the rebuild.
 | v2.34 | Crisp corners and white ticks | Every button across the site now has clean square corners instead of rounded ends, and the ticks in every list are white instead of pink, black on the light sections so they always stand out. |
 | v2.35 | Faye in the studio, beside her training story | The More Than a Certificate section of the Instructor Training page now shows the photo Faye chose, her presenting to instructors in the studio, shown whole beside the story of what becoming a F.I.T Trainer means. |
 | v2.36 | Every video shows its own picture | Every video on the site, from the Work Gallery to the Retreats, Presenting and Speaking pages, now shows its own thumbnail instead of a stand-in photo, so visitors can see what each one is before they press play, and every video added in future gets one too. |
+| v2.37 | Buttons centred on every phone | On a phone, every button across the site now sits in the middle of its card or section, from Join the app and Enquire here on the Services cards to Ask a question, Send to Faye and the mail list button on the home page, while the computer layout stays as it was. |
 
-Next release: **v2.37**.
+Next release: **v2.38**.
