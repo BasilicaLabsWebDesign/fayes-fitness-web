@@ -1,0 +1,2 @@
+Also, that videos page, bring in the thumbnails. Make sure they all have thumbnails
+Make sure all videos in future also have thumbnails

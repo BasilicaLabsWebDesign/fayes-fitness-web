@@ -1,8 +1,0 @@
-Done, and released to main as v2.35. On the Instructor Training page, the "More Than a Certificate" section now shows your photo of Faye presenting to instructors in the studio, in place of the group-around-a-table photo.
-
-It's the same picture as the Coaching photo in the Work Gallery, so I used the higher-quality copy already on the site. It's a tall photo, so it shows whole, in its own shape, a little narrower than the old wide one, sitting beside the text. On a phone it sits under the text, full width.
-
-Verified before pushing:
-- The section on a computer and on a phone: the photo loads in its true proportions beside, then under, the words.
-- Every page at phone, tablet and desktop sizes: no errors, every image loads, every link works.
-- Offline mode, fresh styling on the first visit, the old addresses and the API.

@@ -59,7 +59,8 @@ public/                 everything served (no build step — these files are the
   assets/docs/          documents for visitors (the Retreat Planner and the F.I.T Academy
                         coaching packages PDFs); served without CSP
   assets/fonts/         Montserrat, self-hosted (OFL.txt beside it)
-  assets/img/           web-sized WebP from tools/optimise-images.py; logo/ = traced SVGs
+  assets/img/           web-sized WebP from tools/optimise-images.py; logo/ = traced SVGs;
+                        thumbs/ = video thumbnails from tools/fetch-thumbnails.py
 worker/index.js         the API (Cloudflare Worker)
 firestore.rules         database rules (closed until phase 2) — firebase.json points at it
 brand/                  full-size originals: logos, photos, backgrounds — NOT deployed
@@ -69,6 +70,7 @@ tools/                  authoring tools; their output is committed
   sync-partials.py      stamps partials into every page
   optimise-images.py    brand/ originals → public/assets/img/*.webp
   build-logo.py         draws the F.I.T logo + mark as exact vectors (logo/*-hd.svg)
+  fetch-thumbnails.py   every video's own thumbnail: brand/thumbs/ → assets/img/thumbs/
 prompt text/            the archive for the version in service (see below)
 ```
 
@@ -95,6 +97,13 @@ prompt text/            the archive for the version in service (see below)
   when offline, matched ignoring `?v=`) so a page never meets an older release's styles;
   only images and fonts, which never change in place, are answered from cache.
 - **Fonts are self-hosted** so no visitor data goes to Google; keep it that way.
+- **Every video has its own thumbnail** (Faye, v2.36). A video is a click-to-play cover
+  (`<div class="video [wide]"><button data-youtube="ID" …><img …>`); after adding one, run
+  `tools/fetch-thumbnails.py` (needs Pillow and i.ytimg.com, which this environment allows):
+  it downloads the thumbnail once into `brand/thumbs/`, writes a wide or tall web copy to
+  `assets/img/thumbs/` and points the cover's `<img>` at it. Copies are served from the site,
+  so still nothing loads from YouTube before play; never hotlink i.ytimg.com. `--check` fails
+  if any video lacks its thumbnail, and runs before every push.
 - **Database:** nothing money-related (orders, bookings, memberships, vouchers, payments)
   is ever writable from a browser. Only the Worker writes those, with server credentials.
 - **The menu is Faye's** (v2.13, Services added v2.14): Home, About, Services, Retreats
@@ -165,9 +174,8 @@ prompt text/            the archive for the version in service (see below)
   Gallery" over "On Stage, On Screen and On Location" with her introduction; the clients and
   partnerships list (names only until she gives permission for logos); a Video Gallery of her
   23 videos in her groups (Retreats, Presenting and Hosting, Teaching, Coaching, Events,
-  Bodybuilding, Podcasts), every cover in one style (a darkened relevant photo, or the brand
-  particles when there is none; never a YouTube thumbnail, so nothing loads from YouTube before
-  play), three across on a computer and a swipeable row on a phone; a Picture Gallery of her
+  Bodybuilding, Podcasts), each cover its own thumbnail (v2.36), three across on a computer
+  and a swipeable row on a phone; a Picture Gallery of her
   five photos as squares with captions; then "Love What You See?" over the enquiry form.
   Add new videos to the group she names, with a title and the event.
 - **The Contact page's form has only Faye's four fields** (v2.29): your full name, email,
@@ -240,7 +248,7 @@ curl http://127.0.0.1:8787/api/health
 
 ## Verification — before every push
 
-1. `python3 tools/sync-partials.py --check`
+1. `python3 tools/sync-partials.py --check` and `python3 tools/fetch-thumbnails.py --check`
 2. `npx wrangler deploy --dry-run`
 3. Run `wrangler dev` and drive it with headless Chromium at phone (390px) and desktop
    (1440px) widths: no console errors, no CSP violations, fonts loaded, menu works,
@@ -330,8 +338,9 @@ shipped with v2.33: the Work Gallery brief, her coaching packages brochure and a
 of the Instructor Training brief (identical to v2.31's; her message was the three files alone,
 so input.txt is empty). `prompt text/35/` shipped with v2.34: white ticks and square-cornered
 buttons, with her photo of the screen. `prompt text/36/` shipped with v2.35: the studio photo
-for More Than a Certificate, with the photo she sent. The next release that ships new owner
-words starts `prompt text/37/`.
+for More Than a Certificate, with the photo she sent. `prompt text/37/` shipped with v2.36:
+a thumbnail for every video. The next release that ships new owner words starts
+`prompt text/38/`.
 
 ## Go-live checklist (phase 6)
 
@@ -415,5 +424,6 @@ handed back with each push. v2.0 onwards is the rebuild.
 | v2.33 | Faye's work, on stage, on screen and on location | The Work Gallery now shows Faye's work the way she described it: her own introduction, the names she has worked with, a video gallery of her retreats, presenting and hosting, teaching, coaching, events, bodybuilding and podcasts, and a picture gallery, ending with an invitation to book her. The Coaching page gains a Coaching packages button that opens her full brochure of ways to work with her. |
 | v2.34 | Crisp corners and white ticks | Every button across the site now has clean square corners instead of rounded ends, and the ticks in every list are white instead of pink, black on the light sections so they always stand out. |
 | v2.35 | Faye in the studio, beside her training story | The More Than a Certificate section of the Instructor Training page now shows the photo Faye chose, her presenting to instructors in the studio, shown whole beside the story of what becoming a F.I.T Trainer means. |
+| v2.36 | Every video shows its own picture | Every video on the site, from the Work Gallery to the Retreats, Presenting and Speaking pages, now shows its own thumbnail instead of a stand-in photo, so visitors can see what each one is before they press play, and every video added in future gets one too. |
 
-Next release: **v2.36**.
+Next release: **v2.37**.
