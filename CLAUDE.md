@@ -174,7 +174,7 @@ prompt text/            the archive for the version in service (see below)
   Gallery" over "On Stage, On Screen and On Location" with her introduction; the clients and
   partnerships list (names only until she gives permission for logos); a Video Gallery of her
   23 videos in her groups (Retreats, Presenting and Hosting, Teaching, Coaching, Events,
-  Bodybuilding, Podcasts), each cover its own thumbnail (v2.36), three across on a computer
+  Podcasts, Bodybuilding — Bodybuilding last at her request, v2.39), each cover its own thumbnail (v2.36), three across on a computer
   and a swipeable row on a phone; a Picture Gallery of her
   five photos as squares with captions; then "Love What You See?" over the enquiry form.
   Add new videos to the group she names, with a title and the event.
@@ -208,9 +208,9 @@ prompt text/            the archive for the version in service (see below)
   without tagline is an approved additional mark (used in the header). Exception by Faye's
   choice: the home page hero showed the purple logo on black (v2.8), removed again in v2.12.
 - **Look:** black canvas, particle/smoke backgrounds, thin rule lines framing titles,
-  tilted black-framed photos. Buttons have square corners, never rounded (Faye, v2.34). On a
-  phone (under 900px) every button is centred in its card or section, a row of buttons
-  centred as a group (Faye, v2.37; `site.css`); desktop keeps them aligned with the words. List
+  tilted black-framed photos. Buttons have square corners, never rounded (Faye, v2.34). Every
+  button is centred in its card or section, a row of buttons centred as a group: on a phone
+  (Faye, v2.37) and on a computer (v2.39; `site.css`). List
   ticks are white circles with a black tick, black with a white tick on light sections
   (Faye, v2.34; they were pink before).
 - **Voice:** uplifting, friendly, enthusiastic. About how people *feel*, never aesthetics or
@@ -345,8 +345,10 @@ buttons, with her photo of the screen. `prompt text/36/` shipped with v2.35: the
 for More Than a Certificate, with the photo she sent. `prompt text/37/` shipped with v2.36:
 a thumbnail for every video. `prompt text/38/` shipped with v2.37: buttons centred on a
 phone, with her two screenshots. `prompt text/39/` shipped with v2.38: her publicist's
-address for media enquiries. The next release that ships new owner words starts
-`prompt text/40/`.
+address for media enquiries. `prompt text/40/` shipped with v2.39: buttons centred on a
+computer too, with her screenshot, Bodybuilding moved under Podcasts (her screenshot of it
+arrived only inline and could not be saved) and her question about Flodesk. The next
+release that ships new owner words starts `prompt text/41/`.
 
 ## Go-live checklist (phase 6)
 
@@ -373,6 +375,9 @@ address for media enquiries. The next release that ships new owner words starts
 - Offerings, prices, timetable, membership plans, voucher amounts, cancellation/refund policy
 - Full-size originals of the pool and beach photos
 - Whether to show partner logos (permission) or names only
+- For enquiries to join her Flodesk mailing list (asked v2.39): a Flodesk API key (saved as a
+  Worker secret, never in the repo), the segment to add them to, and her yes to an unticked
+  "add me to Faye's mailing list" box on both forms (UK GDPR/PECR consent)
 
 ## Release ledger
 
@@ -433,5 +438,6 @@ handed back with each push. v2.0 onwards is the rebuild.
 | v2.36 | Every video shows its own picture | Every video on the site, from the Work Gallery to the Retreats, Presenting and Speaking pages, now shows its own thumbnail instead of a stand-in photo, so visitors can see what each one is before they press play, and every video added in future gets one too. |
 | v2.37 | Buttons centred on every phone | On a phone, every button across the site now sits in the middle of its card or section, from Join the app and Enquire here on the Services cards to Ask a question, Send to Faye and the mail list button on the home page, while the computer layout stays as it was. |
 | v2.38 | Media enquiries go to Faye's publicist | The bottom of every page now tells press and media where to go, with All media enquiries contact hello@becourageous.today beneath Faye's social links, and the Contact page lists her publicist's address alongside them too. |
+| v2.39 | Buttons centred everywhere, Bodybuilding last | Every button across the site now sits in the middle of its card or section on a computer too, matching the way phones show them, and in the Work Gallery the Bodybuilding videos now close the video gallery, just under Podcasts. |
 
-Next release: **v2.39**.
+Next release: **v2.40**.
