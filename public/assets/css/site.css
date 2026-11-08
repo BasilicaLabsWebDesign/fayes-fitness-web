@@ -167,11 +167,17 @@ a { color: inherit; }
   .menu-btn { display: none; }
 }
 
-/* Every button sits in the middle of its card or section, on a phone (Faye, v2.37) and on
-   a computer (v2.39); a row of buttons is centred as a group */
-.btn { display: flex; width: fit-content; margin-inline: auto; }
-.cta { justify-content: center; }
-.cta .btn { margin-inline: 0; }
+/* Buttons inside a card (a box) sit in its middle at every size (Faye, v2.39); elsewhere a
+   computer keeps them in line with the words they follow (v2.40) */
+.card .btn { display: flex; width: fit-content; margin-inline: auto; }
+
+/* On a phone every button sits in the middle of its section (Faye, v2.37); a row of
+   buttons is centred as a group */
+@media (max-width: 899px) {
+  .btn { display: flex; width: fit-content; margin-inline: auto; }
+  .cta { justify-content: center; }
+  .cta .btn { margin-inline: 0; }
+}
 
 @media (min-width: 900px) {
   .concept-grid { grid-template-columns: repeat(6, 1fr); gap: 24px; }
