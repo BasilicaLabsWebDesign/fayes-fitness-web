@@ -1,0 +1,5 @@
+ok, set the backend up for flodesk. i need it to segment by the type of enquiry
+
+i will give you the api key later
+
+advise on storage of it, where will i store it?

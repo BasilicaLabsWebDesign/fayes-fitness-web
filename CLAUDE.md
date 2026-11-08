@@ -24,6 +24,7 @@ Phone / browser (installable app: manifest + service worker)
   └── /api/* ──► Cloudflare Worker (worker/index.js)
                     ├──► Stripe: checkout, memberships, card portal   (phase 4)
                     ├──► Firestore: orders, bookings — only the Worker writes these
+                    ├──► Flodesk: enquiry sign-ups to Faye's mailing list (v2.41)
                     ├──► Email to customers and to Faye              (phase 5)
                     └──► Push notifications; cron for reminders and digests
 ```
@@ -61,7 +62,9 @@ public/                 everything served (no build step — these files are the
   assets/fonts/         Montserrat, self-hosted (OFL.txt beside it)
   assets/img/           web-sized WebP from tools/optimise-images.py; logo/ = traced SVGs;
                         thumbs/ = video thumbnails from tools/fetch-thumbnails.py
-worker/index.js         the API (Cloudflare Worker)
+worker/index.js         the API (Cloudflare Worker): routes
+  http.js               json() responses with the API's security headers
+  enquiry.js            POST /api/enquiry → Faye's Flodesk list, segmented by enquiry type
 firestore.rules         database rules (closed until phase 2) — firebase.json points at it
 brand/                  full-size originals: logos, photos, backgrounds — NOT deployed
   docs/                 the brand guide and Faye's deck (reference copies; never deployed)
@@ -96,6 +99,19 @@ prompt text/            the archive for the version in service (see below)
   files to `CORE`. The API is never cached. Pages, CSS and JS are network-first (cache only
   when offline, matched ignoring `?v=`) so a page never meets an older release's styles;
   only images and fonts, which never change in place, are answered from cache.
+- **Enquiries to Flodesk** (Faye, v2.41): both enquiry forms have an unticked "Add me to
+  Faye's mailing list" box (UK GDPR/PECR consent; never pre-tick it) and a hidden `website`
+  spam trap. Only a ticked form posts name, email and type to `POST /api/enquiry`; the
+  Worker adds them to Flodesk in "Website enquiries" and "Enquiry: <type>" (`SEGMENTS` in
+  `worker/enquiry.js`, found by name and created on first use, so rename one there and in
+  Flodesk together; a new form topic needs a line there). The key is the Worker secret
+  `FLODESK_API_KEY`, set in the Cloudflare dashboard (Workers & Pages → fayes-fitness-web →
+  Settings → Variables and Secrets, type Secret) or `npx wrangler secret put
+  FLODESK_API_KEY`; never commit it, paste it into a chat or log a visitor's details.
+  Without it the route answers 503 and the email to Faye still opens. `FLODESK_DOUBLE_OPTIN`
+  in `wrangler.jsonc` ("false") turns on Flodesk's confirm-by-email. The browser only talks
+  to the site's own Worker, so the CSP is unchanged. Local tests point the Worker at a
+  stand-in Flodesk with `--var FLODESK_API_BASE:…`; it is never set in production.
 - **Fonts are self-hosted** so no visitor data goes to Google; keep it that way.
 - **Every video has its own thumbnail** (Faye, v2.36). A video is a click-to-play cover
   (`<div class="video [wide]"><button data-youtube="ID" …><img …>`); after adding one, run
@@ -180,7 +196,8 @@ prompt text/            the archive for the version in service (see below)
   and Hosting reframed v2.40; the Teaching photo itself ends at the ledge she sits on); then "Love What You See?" over the enquiry form.
   Add new videos to the group she names, with a title and the event.
 - **The Contact page's form has only Faye's four fields** (v2.29): your full name, email,
-  what it's about and your message, stacked, then "Send to Faye". The Work Gallery
+  what it's about and your message, stacked, then the mailing-list box (v2.41) and "Send to
+  Faye". The Work Gallery
   "Make an enquiry" form keeps its optional phone, organisation and date for event bookings;
   both share `enquiry.js`, which leaves out any field a form doesn't have.
 - **The About page has exactly two titles** (Faye's ABOUT brief, v2.11): "About" over
@@ -352,7 +369,8 @@ computer too, with her screenshot, Bodybuilding moved under Podcasts (her screen
 arrived only inline and could not be saved) and her question about Flodesk. `prompt text/41/` shipped with
 v2.40: only boxed buttons centred on a computer, with her two screenshots, and the Teaching
 and Hosting photos reframed (those screenshots arrived only inline and could not be saved).
-The next release that ships new owner words starts `prompt text/42/`.
+`prompt text/42/` shipped with v2.41: the Flodesk backend, segmented by type of enquiry.
+The next release that ships new owner words starts `prompt text/43/`.
 
 ## Go-live checklist (phase 6)
 
@@ -371,6 +389,9 @@ The next release that ships new owner words starts `prompt text/42/`.
 - [ ] Firestore rules published; Firebase authorised domains include the live domain
 - [ ] Stripe in live mode; webhook endpoint registered for the live domain
 - [ ] Email sending domain verified (SPF/DKIM)
+- [ ] `FLODESK_API_KEY` secret set on the Worker, and one real ticked enquiry seen arriving in
+      Flodesk in its segments (the Flodesk API could not be reached while building, v2.41)
+- [ ] Privacy policy names Flodesk as where mailing-list sign-ups are kept
 - [ ] `sw.js` VERSION and the `RELEASE` var in `wrangler.jsonc` match the release (every release)
 
 ## Owner inputs still needed
@@ -379,9 +400,8 @@ The next release that ships new owner words starts `prompt text/42/`.
 - Offerings, prices, timetable, membership plans, voucher amounts, cancellation/refund policy
 - Full-size originals of the pool and beach photos
 - Whether to show partner logos (permission) or names only
-- For enquiries to join her Flodesk mailing list (asked v2.39): a Flodesk API key (saved as a
-  Worker secret, never in the repo), the segment to add them to, and her yes to an unticked
-  "add me to Faye's mailing list" box on both forms (UK GDPR/PECR consent)
+- Her Flodesk API key, set by her or the site's owner as the Worker secret (the sign-up route
+  is built, v2.41), and whether she wants Flodesk's double opt-in
 
 ## Release ledger
 
@@ -444,5 +464,6 @@ handed back with each push. v2.0 onwards is the rebuild.
 | v2.38 | Media enquiries go to Faye's publicist | The bottom of every page now tells press and media where to go, with All media enquiries contact hello@becourageous.today beneath Faye's social links, and the Contact page lists her publicist's address alongside them too. |
 | v2.39 | Buttons centred everywhere, Bodybuilding last | Every button across the site now sits in the middle of its card or section on a computer too, matching the way phones show them, and in the Work Gallery the Bodybuilding videos now close the video gallery, just under Podcasts. |
 | v2.40 | Card buttons centred, Faye whole in every photo | On a computer only the buttons inside the cards stay centred, while the rest return to sitting in line with the words beside them as before, and in the Work Gallery's picture gallery the Teaching and Hosting photos are reframed so Faye is fully in each, from her outstretched foot to her shoes. |
+| v2.41 | Enquiries can join Faye's mailing list | Both enquiry forms now offer a box to join Faye's mailing list, and everyone who ticks it is added to her Flodesk list in a group for the kind of enquiry they made, from classes and the app to retreats, speaking and coaching. It switches on as soon as her Flodesk key is added, and until then the forms work exactly as before. |
 
-Next release: **v2.41**.
+Next release: **v2.42**.

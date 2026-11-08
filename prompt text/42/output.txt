@@ -1,0 +1,34 @@
+Done, and released to main as v2.41. The Flodesk connection is built and waiting for your key.
+
+What visitors see
+- Both enquiry forms (Contact and the Work Gallery) now have an unticked box: "Add me to Faye's mailing list for news, classes and events. You can unsubscribe at any time."
+- If they tick it, they're added to your Flodesk list as they press Send to Faye, and the email to you opens just as before. If they leave it unticked, nothing about them is saved anywhere.
+
+How they're grouped in Flodesk
+Everyone who ticks the box joins "Website enquiries", plus one group for the type of enquiry they chose:
+- Enquiry: Classes & booking
+- Enquiry: The F.I.T App
+- Enquiry: F.I.T Academy
+- Enquiry: Retreats & experiences
+- Enquiry: Fitness presenting
+- Enquiry: Speaking & hosting
+- Enquiry: Coaching & consulting
+- Enquiry: Something else
+The site creates these segments in Flodesk by itself the first time each one is needed. Please keep those names as they are in Flodesk, because the site finds them by name. If you'd like any renamed, tell me and I'll change both sides together.
+
+Where to store the API key
+Please don't send me the key in a chat, an email or a document. It goes straight into Cloudflare, where the site runs, as an encrypted secret. Once saved there, nobody can read it back, me included, and it's never in the site's files.
+1. In Flodesk: your account settings, then Integrations, then API keys. Create a key and name it "F.I.T website".
+2. In Cloudflare (whoever logs in to the site's Cloudflare account does this): Workers & Pages, then fayes-fitness-web, then Settings, then Variables and Secrets. Choose Add, set the type to Secret, the name to FLODESK_API_KEY, paste the key as the value, and Deploy.
+3. That's it. There's no new release to wait for. Send yourself a test enquiry with the box ticked and check it appears in Flodesk under "Website enquiries".
+Keep a copy of the key in a password manager if you'd like one. If it's ever exposed, delete it in Flodesk, make a new one and replace it in Cloudflare.
+
+Until the key is in, the box is there but nobody is added, and the forms work exactly as they do today.
+
+One choice for you: Flodesk can send each new sign-up a "please confirm" email before they join (double opt-in). It's off for now. Say if you'd like it on.
+
+Verified before pushing:
+- The sign-up was tested against a stand-in for Flodesk: ticked enquiries from both forms were added in the right segments, unticked ones sent nothing, and spam, other websites and broken requests were turned away.
+- Without a key the forms still open the email to you, with no errors.
+- The real Flodesk can't be reached from where I build, so the first real test will be your test enquiry once the key is in.
+- Every page at phone, tablet and desktop sizes: no errors, every image loads, every link works. Offline mode, fresh styling on the first visit, every video's thumbnail, and the API.
