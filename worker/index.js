@@ -1,21 +1,15 @@
 // F.I.T API — runs only for /api/* (see run_worker_first in wrangler.jsonc).
 // Every other request is served straight from public/ by Cloudflare's asset handler.
 // Later phases add routes here: checkout, Stripe webhooks, bookings, notifications.
+// Secrets (never in this repository): FLODESK_API_KEY, set on the Worker in Cloudflare.
 
-const SECURITY_HEADERS = {
-  "Content-Type": "application/json; charset=utf-8",
-  "Cache-Control": "no-store",
-  "X-Content-Type-Options": "nosniff",
-  "Referrer-Policy": "strict-origin-when-cross-origin",
-};
-
-export function json(body, status = 200, extra = {}) {
-  return new Response(JSON.stringify(body), { status, headers: { ...SECURITY_HEADERS, ...extra } });
-}
+import { json } from "./http.js";
+import { enquiry } from "./enquiry.js";
 
 const routes = {
   "GET /api/health": (_req, env) =>
     json({ ok: true, service: "fit-api", release: env.RELEASE ?? "dev", time: new Date().toISOString() }),
+  "POST /api/enquiry": enquiry,
 };
 
 export default {

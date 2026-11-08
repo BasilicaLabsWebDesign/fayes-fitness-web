@@ -9,12 +9,12 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/manifest.webmanifest">
-<link rel="stylesheet" href="/assets/css/tokens.css?v=2.40">
-<link rel="stylesheet" href="/assets/css/site.css?v=2.40">
-<link rel="stylesheet" href="/assets/css/pages.css?v=2.40">
-<script src="/assets/js/app.js?v=2.40" defer></script>
-<script src="/assets/js/video.js?v=2.40" defer></script>
-<script src="/assets/js/enquiry.js?v=2.40" defer></script>
+<link rel="stylesheet" href="/assets/css/tokens.css?v=2.41">
+<link rel="stylesheet" href="/assets/css/site.css?v=2.41">
+<link rel="stylesheet" href="/assets/css/pages.css?v=2.41">
+<script src="/assets/js/app.js?v=2.41" defer></script>
+<script src="/assets/js/video.js?v=2.41" defer></script>
+<script src="/assets/js/enquiry.js?v=2.41" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -333,6 +333,14 @@
           <div class="field">
             <label for="f-message">Your message</label>
             <textarea id="f-message" name="message" required></textarea>
+          </div>
+          <label class="check" for="f-optin">
+            <input id="f-optin" name="optin" type="checkbox">
+            <span>Add me to Faye's mailing list for news, classes and events. You can unsubscribe at any time.</span>
+          </label>
+          <div class="visually-hidden" aria-hidden="true">
+            <label for="f-website">Leave this empty</label>
+            <input id="f-website" name="website" tabindex="-1" autocomplete="off">
           </div>
           <p class="form-note">Pressing send opens your email app with everything filled in, ready to go to Faye.</p>
           <button class="btn btn-hot" type="submit">Send to Faye</button>

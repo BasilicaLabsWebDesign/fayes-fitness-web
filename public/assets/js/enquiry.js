@@ -1,5 +1,7 @@
-// Enquiry form. For now it opens the visitor's email app with a message to Faye already
-// written; when the site sends its own email (phase 5) it will post to /api/enquiry instead.
+// Enquiry form. It opens the visitor's email app with a message to Faye already written
+// (until the site sends its own email, phase 5). If they tick "Add me to Faye's mailing
+// list", their name, email and type of enquiry also go to /api/enquiry, which adds them to
+// Faye's Flodesk list (v2.41); nothing is sent to the site when the box is left unticked.
 
 const TO = "faye@fayesintentionaltraining.com";
 const form = document.getElementById("enquiry");
@@ -41,8 +43,22 @@ if (form) {
     const subject = `Enquiry: ${about} — ${d.get("name")}`;
     const link = document.createElement("a");
     link.href = `mailto:${TO}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join("\n"))}`;
+    const done = "Your email app should now open with everything filled in — just press send.";
+    if (form.optin?.checked) {
+      fetch("/api/enquiry", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        keepalive: true,
+        body: JSON.stringify({
+          name: d.get("name"), email: d.get("email"), topic: d.get("topic"),
+          optin: true, website: d.get("website") || "",
+        }),
+      })
+        .then((r) => { if (r.ok) status.textContent = `${done} You're on Faye's mailing list too.`; })
+        .catch(() => {});
+    }
     link.click();
-    status.textContent = "Your email app should now open with everything filled in — just press send.";
+    status.textContent = done;
   });
 
   form.addEventListener("input", (e) => {

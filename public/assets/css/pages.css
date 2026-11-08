@@ -153,6 +153,9 @@
 .field [aria-invalid="true"] { border-color: var(--persian-rose); }
 .form-note { font-size: var(--text-sm); color: var(--on-black-muted); }
 .form-status { font-weight: var(--w-heading); color: var(--on-black-accent); min-height: 1.6em; }
+/* "Add me to Faye's mailing list": unticked by default; the whole line is the tap target */
+.check { display: flex; gap: 12px; align-items: flex-start; min-height: var(--tap); cursor: pointer; font-size: var(--text-sm); }
+.check input { flex: none; width: 24px; height: 24px; margin: 1px 0 0; accent-color: var(--hot-purple); cursor: pointer; }
 
 /* About: "About" over "Faye Edwards", her bio, and her photo as a cut-out standing straight
    with no frame, like the home page. On a phone the title and photo share the top row. */
