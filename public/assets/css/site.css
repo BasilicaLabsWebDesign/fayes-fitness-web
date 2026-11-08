@@ -143,6 +143,9 @@ a { color: inherit; }
 .footer-cols a { text-decoration: none; }
 .footer-cols a:hover { text-decoration: underline; }
 .footer-cols .handle { color: var(--on-black-muted); font-size: var(--text-sm); }
+/* Faye's publicist, under her socials (v2.38) */
+.footer-cols .media { margin-top: 16px; font-size: var(--text-sm); color: var(--on-black-muted); }
+.footer-cols .media a { color: var(--off-white); text-decoration: underline; }
 .legal { grid-column: 1 / -1; font-size: var(--text-xs); color: var(--on-black-muted); border-top: 1px solid rgba(253, 253, 253, .14); padding-top: 20px; }
 
 /* Short full-height message pages: 404, offline */
