@@ -238,7 +238,9 @@ prompt text/            the archive for the version in service (see below)
 wins over older sources (the Fibodo export, the v1 site, Flodesk emails). From it:
 email `faye@fayesintentionaltraining.com`, phone 07539 734633, Instagram @fayes_fitness,
 TikTok @fayesfitness, Facebook @fayesfitness, LinkedIn @fayeedwards, YouTube @fayeedwards;
-her bio, mission, the F.I.T ecosystem, services and clients.
+her bio, mission, the F.I.T ecosystem, services and clients. Media enquiries go to her
+publicist (Faye, v2.38): "All media enquiries contact hello@becourageous.today", under the
+Follow links in the footer and after her socials on the Contact page.
 
 ## Local development
 
@@ -342,8 +344,9 @@ so input.txt is empty). `prompt text/35/` shipped with v2.34: white ticks and sq
 buttons, with her photo of the screen. `prompt text/36/` shipped with v2.35: the studio photo
 for More Than a Certificate, with the photo she sent. `prompt text/37/` shipped with v2.36:
 a thumbnail for every video. `prompt text/38/` shipped with v2.37: buttons centred on a
-phone, with her two screenshots. The next release that ships new owner words starts
-`prompt text/39/`.
+phone, with her two screenshots. `prompt text/39/` shipped with v2.38: her publicist's
+address for media enquiries. The next release that ships new owner words starts
+`prompt text/40/`.
 
 ## Go-live checklist (phase 6)
 
@@ -429,5 +432,6 @@ handed back with each push. v2.0 onwards is the rebuild.
 | v2.35 | Faye in the studio, beside her training story | The More Than a Certificate section of the Instructor Training page now shows the photo Faye chose, her presenting to instructors in the studio, shown whole beside the story of what becoming a F.I.T Trainer means. |
 | v2.36 | Every video shows its own picture | Every video on the site, from the Work Gallery to the Retreats, Presenting and Speaking pages, now shows its own thumbnail instead of a stand-in photo, so visitors can see what each one is before they press play, and every video added in future gets one too. |
 | v2.37 | Buttons centred on every phone | On a phone, every button across the site now sits in the middle of its card or section, from Join the app and Enquire here on the Services cards to Ask a question, Send to Faye and the mail list button on the home page, while the computer layout stays as it was. |
+| v2.38 | Media enquiries go to Faye's publicist | The bottom of every page now tells press and media where to go, with All media enquiries contact hello@becourageous.today beneath Faye's social links, and the Contact page lists her publicist's address alongside them too. |
 
-Next release: **v2.38**.
+Next release: **v2.39**.
