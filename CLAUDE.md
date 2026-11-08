@@ -176,7 +176,8 @@ prompt text/            the archive for the version in service (see below)
   23 videos in her groups (Retreats, Presenting and Hosting, Teaching, Coaching, Events,
   Podcasts, Bodybuilding — Bodybuilding last at her request, v2.39), each cover its own thumbnail (v2.36), three across on a computer
   and a swipeable row on a phone; a Picture Gallery of her
-  five photos as squares with captions; then "Love What You See?" over the enquiry form.
+  five photos as squares with captions, each square framed so she is whole in it (Teaching
+  and Hosting reframed v2.40; the Teaching photo itself ends at the ledge she sits on); then "Love What You See?" over the enquiry form.
   Add new videos to the group she names, with a title and the event.
 - **The Contact page's form has only Faye's four fields** (v2.29): your full name, email,
   what it's about and your message, stacked, then "Send to Faye". The Work Gallery
@@ -208,9 +209,10 @@ prompt text/            the archive for the version in service (see below)
   without tagline is an approved additional mark (used in the header). Exception by Faye's
   choice: the home page hero showed the purple logo on black (v2.8), removed again in v2.12.
 - **Look:** black canvas, particle/smoke backgrounds, thin rule lines framing titles,
-  tilted black-framed photos. Buttons have square corners, never rounded (Faye, v2.34). Every
-  button is centred in its card or section, a row of buttons centred as a group: on a phone
-  (Faye, v2.37) and on a computer (v2.39; `site.css`). List
+  tilted black-framed photos. Buttons have square corners, never rounded (Faye, v2.34). On a
+  phone every button is centred in its section, a row of buttons centred as a group (Faye,
+  v2.37); on a computer only buttons inside a box (a `.card`) are centred, and the rest stay
+  in line with the words they follow (Faye, v2.40, undoing v2.39's centre-everything). List
   ticks are white circles with a black tick, black with a white tick on light sections
   (Faye, v2.34; they were pink before).
 - **Voice:** uplifting, friendly, enthusiastic. About how people *feel*, never aesthetics or
@@ -347,8 +349,10 @@ a thumbnail for every video. `prompt text/38/` shipped with v2.37: buttons centr
 phone, with her two screenshots. `prompt text/39/` shipped with v2.38: her publicist's
 address for media enquiries. `prompt text/40/` shipped with v2.39: buttons centred on a
 computer too, with her screenshot, Bodybuilding moved under Podcasts (her screenshot of it
-arrived only inline and could not be saved) and her question about Flodesk. The next
-release that ships new owner words starts `prompt text/41/`.
+arrived only inline and could not be saved) and her question about Flodesk. `prompt text/41/` shipped with
+v2.40: only boxed buttons centred on a computer, with her two screenshots, and the Teaching
+and Hosting photos reframed (those screenshots arrived only inline and could not be saved).
+The next release that ships new owner words starts `prompt text/42/`.
 
 ## Go-live checklist (phase 6)
 
@@ -439,5 +443,6 @@ handed back with each push. v2.0 onwards is the rebuild.
 | v2.37 | Buttons centred on every phone | On a phone, every button across the site now sits in the middle of its card or section, from Join the app and Enquire here on the Services cards to Ask a question, Send to Faye and the mail list button on the home page, while the computer layout stays as it was. |
 | v2.38 | Media enquiries go to Faye's publicist | The bottom of every page now tells press and media where to go, with All media enquiries contact hello@becourageous.today beneath Faye's social links, and the Contact page lists her publicist's address alongside them too. |
 | v2.39 | Buttons centred everywhere, Bodybuilding last | Every button across the site now sits in the middle of its card or section on a computer too, matching the way phones show them, and in the Work Gallery the Bodybuilding videos now close the video gallery, just under Podcasts. |
+| v2.40 | Card buttons centred, Faye whole in every photo | On a computer only the buttons inside the cards stay centred, while the rest return to sitting in line with the words beside them as before, and in the Work Gallery's picture gallery the Teaching and Hosting photos are reframed so Faye is fully in each, from her outstretched foot to her shoes. |
 
-Next release: **v2.40**.
+Next release: **v2.41**.
