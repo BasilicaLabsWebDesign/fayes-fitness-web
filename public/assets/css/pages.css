@@ -213,8 +213,8 @@
 .gallery-photo img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: var(--radius); }
 .gallery-photo figcaption { margin-top: 10px; font-weight: var(--w-heading); text-align: center; }
 .photo-retreats img { object-position: 22% 50%; }
-.photo-hosting img { object-position: 50% 45%; }
-.photo-teaching img { object-position: 62% 50%; }
+.photo-hosting img { object-position: 50% 57%; }
+.photo-teaching img { object-position: 44% 50%; }
 .photo-coaching img { object-position: 40% 45%; }
 .photo-events img { object-position: 60% 50%; }
 @media (max-width: 899px) {
