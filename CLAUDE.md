@@ -74,6 +74,8 @@ tools/                  authoring tools; their output is committed
   optimise-images.py    brand/ originals → public/assets/img/*.webp
   build-logo.py         draws the F.I.T logo + mark as exact vectors (logo/*-hd.svg)
   fetch-thumbnails.py   every video's own thumbnail: brand/thumbs/ → assets/img/thumbs/
+  social/               card.html + build.cjs → assets/img/social-card-1200x630.jpg, the
+                        picture shown when a link to the site is shared
 prompt text/            the archive for the version in service (see below)
 ```
 
@@ -112,6 +114,13 @@ prompt text/            the archive for the version in service (see below)
   in `wrangler.jsonc` ("false") turns on Flodesk's confirm-by-email. The browser only talks
   to the site's own Worker, so the CSP is unchanged. Local tests point the Worker at a
   stand-in Flodesk with `--var FLODESK_API_BASE:…`; it is never set in production.
+- **Share picture** (Faye, v2.43): every page but the 404 and offline pages carries Open
+  Graph and `twitter:card` tags with its own `<title>` and description and
+  `og:image` = the social card, as an absolute URL on `https://faye.basilicalabs.ai` (the
+  preview address) until Faye's domain is attached; then swap that address in every page.
+  Change the card in `tools/social/card.html`, run `node tools/social/build.cjs`, and give
+  the new picture a new file name (images are cached as immutable). A new page copies the
+  tags from an existing one.
 - **Fonts are self-hosted** so no visitor data goes to Google; keep it that way.
 - **Every video has its own thumbnail** (Faye, v2.36). A video is a click-to-play cover
   (`<div class="video [wide]"><button data-youtube="ID" …><img …>`); after adding one, run
@@ -231,7 +240,9 @@ prompt text/            the archive for the version in service (see below)
   without tagline is an approved additional mark (used in the header). Exception by Faye's
   choice: the home page hero showed the purple logo on black (v2.8), removed again in v2.12.
 - **Look:** black canvas, particle/smoke backgrounds, thin rule lines framing titles,
-  tilted black-framed photos. Buttons have square corners, never rounded (Faye, v2.34). On a
+  tilted black-framed photos. Buttons are rounded like the white name bar under the F.I.T
+  logo, corners 0.394 of the height: 19px on a 48px button, 16px on `.btn-sm` (Faye, v2.43;
+  they were square v2.34–v2.42 and pills before that). On a
   phone every button is centred in its section, a row of buttons centred as a group (Faye,
   v2.37); on a computer only buttons inside a box (a `.card`) are centred, and the rest stay
   in line with the words they follow (Faye, v2.40, undoing v2.39's centre-everything). List
@@ -378,14 +389,17 @@ and Hosting photos reframed (those screenshots arrived only inline and could not
 `prompt text/43/` shipped with v2.42: ten new Work Gallery videos and Campaigns, the
 publicist line, the shorter Work Gallery form and the accountant's address removed. (Her
 v2.41-to-v2.42 question about domain names shipped nothing, so it is not archived.)
-The next release that ships new owner words starts `prompt text/44/`.
+`prompt text/44/` shipped with v2.43: the share picture and buttons rounded like the
+logo's name bar, with her marked-up screenshot. The next release that ships new owner words
+starts `prompt text/45/`.
 
 ## Go-live checklist (phase 6)
 
 - [ ] Domain fayesintentionaltraining.com (the deck's) attached in Cloudflare
 - [ ] Every social link clicked through: the deck's handles were built into URLs without
       being opened (this environment cannot reach those sites)
-- [ ] Absolute `og:image` / `og:url` / canonical tags, sitemap.xml and the robots Sitemap line
+- [ ] `og:image` on every page moved from faye.basilicalabs.ai to the live domain; `og:url` /
+      canonical tags, sitemap.xml and the robots Sitemap line added for it
 - [ ] App Store and Google Play links on /app opened and confirmed
 - [ ] Both Retreats videos and the 33 Work Gallery videos played on the live site (YouTube is
       unreachable from the build environment, so none could be opened while building)
@@ -477,5 +491,6 @@ handed back with each push. v2.0 onwards is the rebuild.
 | v2.40 | Card buttons centred, Faye whole in every photo | On a computer only the buttons inside the cards stay centred, while the rest return to sitting in line with the words beside them as before, and in the Work Gallery's picture gallery the Teaching and Hosting photos are reframed so Faye is fully in each, from her outstretched foot to her shoes. |
 | v2.41 | Enquiries can join Faye's mailing list | Both enquiry forms now offer a box to join Faye's mailing list, and everyone who ticks it is added to her Flodesk list in a group for the kind of enquiry they made, from classes and the app to retreats, speaking and coaching. It switches on as soon as her Flodesk key is added, and until then the forms work exactly as before. |
 | v2.42 | Ten new videos and a Campaigns showcase | The Work Gallery now holds 33 videos, with new teaching, coaching, event, podcast and bodybuilding clips and a Campaigns group for Decathlon, the Radiance app and the Horizon Treadmill review, while its enquiry form is shorter and points media to Faye's publicist. The accountant's address no longer appears at the foot of every page or on the Contact page. |
+| v2.43 | Rounded buttons and a picture for every share | Every button across the site now has softly rounded corners that match the name bar under the F.I.T logo, and a link to any page shared on social media or in a message now shows a branded picture of Faye with Move. Grow. Work. and Focus on the feeling. |
 
-Next release: **v2.43**.
+Next release: **v2.44**.

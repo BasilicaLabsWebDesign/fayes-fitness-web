@@ -1,0 +1,15 @@
+Done, and released to main as v2.43.
+
+Rounded buttons
+- Every button is rounded again, to the same shape as the white "Faye's Intentional Training" bar under the F.I.T logo that you circled. Its corners are about 40% of its height, so the buttons have exactly that proportion. That's the purple buttons, the white outlined ones (like "Get it on Google Play") and the smaller card buttons, so they all match.
+
+Social thumbnail
+- When a link to any page is shared on WhatsApp, Instagram, Facebook, LinkedIn, X or in a text message, it now shows a branded picture: the white F.I.T logo, "Move. Grow. Work.", "Focus on the feeling." in pink and "by Faye Edwards", with your white-outfit photo on the particle background.
+- Each page shares with its own title and description, for example "Retreats — Mind Fit Retreats, the F.I.T Trip and The Retreat Planner with Faye Edwards".
+- For now the picture is linked from the preview address (faye.basilicalabs.ai). When your own domain is attached, it gets switched over; that's on the go-live list.
+- Some apps remember an old preview of a link for a while, so a link you've already shared may take a day or so to pick up the picture.
+
+Verified before pushing:
+- The button corners measured against the logo's bar, and the buttons checked on every page on a phone and a computer.
+- The picture loads and every page carries its sharing details.
+- Every page at phone, tablet and desktop sizes: no errors, every image loads, every link works. Offline mode, fresh styling on the first visit, every video's thumbnail, and the API.
