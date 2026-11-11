@@ -33,12 +33,10 @@ if (form) {
       `Name: ${d.get("name")}`,
       `Email: ${d.get("email")}`,
       d.get("phone") ? `Phone: ${d.get("phone")}` : "",
-      d.get("organisation") ? `Organisation: ${d.get("organisation")}` : "",
-      d.get("date") ? `Date: ${d.get("date")}` : "",
       `About: ${about}`,
       "",
       d.get("message"),
-    ].filter((line, i) => line !== "" || i === 6);
+    ].filter((line, i) => line !== "" || i === 4);
 
     const subject = `Enquiry: ${about} — ${d.get("name")}`;
     const link = document.createElement("a");
