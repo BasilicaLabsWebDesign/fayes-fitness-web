@@ -115,7 +115,8 @@ prompt text/            the archive for the version in service (see below)
 - **Fonts are self-hosted** so no visitor data goes to Google; keep it that way.
 - **Every video has its own thumbnail** (Faye, v2.36). A video is a click-to-play cover
   (`<div class="video [wide]"><button data-youtube="ID" …><img …>`); after adding one, run
-  `tools/fetch-thumbnails.py` (needs Pillow and i.ytimg.com, which this environment allows):
+  `tools/fetch-thumbnails.py` (needs Pillow and i.ytimg.com, which this environment allows;
+  if the system Pillow fails to import, run it with a venv's Python that has `pip install pillow`):
   it downloads the thumbnail once into `brand/thumbs/`, writes a wide or tall web copy to
   `assets/img/thumbs/` and points the cover's `<img>` at it. Copies are served from the site,
   so still nothing loads from YouTube before play; never hotlink i.ytimg.com. `--check` fails
@@ -189,16 +190,20 @@ prompt text/            the archive for the version in service (see below)
 - **The Work Gallery** (/work-with-faye) follows Faye's Work Gallery brief (v2.33): "Work
   Gallery" over "On Stage, On Screen and On Location" with her introduction; the clients and
   partnerships list (names only until she gives permission for logos); a Video Gallery of her
-  23 videos in her groups (Retreats, Presenting and Hosting, Teaching, Coaching, Events,
-  Podcasts, Bodybuilding — Bodybuilding last at her request, v2.39), each cover its own thumbnail (v2.36), three across on a computer
+  33 videos (v2.42) in her groups (Retreats, Presenting and Hosting, Teaching, Coaching, Events,
+  Podcasts, Campaigns (added v2.42), Bodybuilding — Bodybuilding last at her request, v2.39);
+  captions are "Title" over the event in small type, written the way she sends them
+  ("Kettlebell Workout: Johnson Digital Studios"), each cover its own thumbnail (v2.36), three across on a computer
   and a swipeable row on a phone; a Picture Gallery of her
   five photos as squares with captions, each square framed so she is whole in it (Teaching
-  and Hosting reframed v2.40; the Teaching photo itself ends at the ledge she sits on); then "Love What You See?" over the enquiry form.
+  and Hosting reframed v2.40; the Teaching photo itself ends at the ledge she sits on); then "Love What You See?" with her publicist's line for media enquiries (v2.42) beside the
+  enquiry form.
   Add new videos to the group she names, with a title and the event.
 - **The Contact page's form has only Faye's four fields** (v2.29): your full name, email,
   what it's about and your message, stacked, then the mailing-list box (v2.41) and "Send to
   Faye". The Work Gallery
-  "Make an enquiry" form keeps its optional phone, organisation and date for event bookings;
+  "Make an enquiry" form keeps an optional phone (organisation and date removed at her
+  request, v2.42);
   both share `enquiry.js`, which leaves out any field a form doesn't have.
 - **The About page has exactly two titles** (Faye's ABOUT brief, v2.11): "About" over
   "Faye Edwards" with her bio and her arms-folded portrait as a cut-out (no frame, no tilt;
@@ -370,7 +375,10 @@ arrived only inline and could not be saved) and her question about Flodesk. `pro
 v2.40: only boxed buttons centred on a computer, with her two screenshots, and the Teaching
 and Hosting photos reframed (those screenshots arrived only inline and could not be saved).
 `prompt text/42/` shipped with v2.41: the Flodesk backend, segmented by type of enquiry.
-The next release that ships new owner words starts `prompt text/43/`.
+`prompt text/43/` shipped with v2.42: ten new Work Gallery videos and Campaigns, the
+publicist line, the shorter Work Gallery form and the accountant's address removed. (Her
+v2.41-to-v2.42 question about domain names shipped nothing, so it is not archived.)
+The next release that ships new owner words starts `prompt text/44/`.
 
 ## Go-live checklist (phase 6)
 
@@ -379,12 +387,15 @@ The next release that ships new owner words starts `prompt text/43/`.
       being opened (this environment cannot reach those sites)
 - [ ] Absolute `og:image` / `og:url` / canonical tags, sitemap.xml and the robots Sitemap line
 - [ ] App Store and Google Play links on /app opened and confirmed
-- [ ] Both Retreats videos and the 23 Work Gallery videos played on the live site (YouTube is
+- [ ] Both Retreats videos and the 33 Work Gallery videos played on the live site (YouTube is
       unreachable from the build environment, so none could be opened while building)
 - [x] Retreat dates, venues and links on /experiences confirmed by Faye (her Retreats brief, v2.15)
 - [ ] The App page's interim Fibodo timetable link ("Find your class") replaced by the
       site's own booking (phase 4); the Book page with its Fibodo links was removed in v2.32
-- [ ] Company registration number in the footer (UK companies must show it on their website)
+- [ ] Company details on the site (UK companies must show them on their website): registered
+      name, company number, registered office address (it may be the accountant's) and place
+      of registration. Faye had the accountant's address taken off the footer and Contact
+      page (v2.42), so put these on a legal page (e.g. with the privacy policy)
 - [ ] Privacy, terms, cookie and account-deletion pages from a data audit (app-legal-admin)
 - [ ] Firestore rules published; Firebase authorised domains include the live domain
 - [ ] Stripe in live mode; webhook endpoint registered for the live domain
@@ -465,5 +476,6 @@ handed back with each push. v2.0 onwards is the rebuild.
 | v2.39 | Buttons centred everywhere, Bodybuilding last | Every button across the site now sits in the middle of its card or section on a computer too, matching the way phones show them, and in the Work Gallery the Bodybuilding videos now close the video gallery, just under Podcasts. |
 | v2.40 | Card buttons centred, Faye whole in every photo | On a computer only the buttons inside the cards stay centred, while the rest return to sitting in line with the words beside them as before, and in the Work Gallery's picture gallery the Teaching and Hosting photos are reframed so Faye is fully in each, from her outstretched foot to her shoes. |
 | v2.41 | Enquiries can join Faye's mailing list | Both enquiry forms now offer a box to join Faye's mailing list, and everyone who ticks it is added to her Flodesk list in a group for the kind of enquiry they made, from classes and the app to retreats, speaking and coaching. It switches on as soon as her Flodesk key is added, and until then the forms work exactly as before. |
+| v2.42 | Ten new videos and a Campaigns showcase | The Work Gallery now holds 33 videos, with new teaching, coaching, event, podcast and bodybuilding clips and a Campaigns group for Decathlon, the Radiance app and the Horizon Treadmill review, while its enquiry form is shorter and points media to Faye's publicist. The accountant's address no longer appears at the foot of every page or on the Contact page. |
 
-Next release: **v2.42**.
+Next release: **v2.43**.
