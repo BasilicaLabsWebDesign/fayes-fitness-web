@@ -24,3 +24,5 @@
 # The Book page was removed at Faye's request (v2.32)
 /book                     /services       301
 /book.html                /services       301
+# The Retreat Planner brochure was replaced by her info deck (v2.46); old links still arrive
+/assets/docs/the-retreat-planner.pdf /assets/docs/the-retreat-planner-info-deck.pdf 301
