@@ -116,8 +116,9 @@ prompt text/            the archive for the version in service (see below)
   stand-in Flodesk with `--var FLODESK_API_BASE:…`; it is never set in production.
 - **Share picture** (Faye, v2.43): every page but the 404 and offline pages carries Open
   Graph and `twitter:card` tags with its own `<title>` and description and
-  `og:image` = the social card, as an absolute URL on `https://faye.basilicalabs.ai` (the
-  preview address) until Faye's domain is attached; then swap that address in every page.
+  `og:image` = the social card, as an absolute URL on `https://fayeedwardsfit.com`, the
+  site's domain (v2.45; it was the preview address before); if the domain changes, swap it
+  in every page.
   Change the card in `tools/social/card.html`, run `node tools/social/build.cjs`, and give
   the new picture a new file name (images are cached as immutable). A new page copies the
   tags from an existing one.
@@ -391,16 +392,22 @@ publicist line, the shorter Work Gallery form and the accountant's address remov
 v2.41-to-v2.42 question about domain names shipped nothing, so it is not archived.)
 `prompt text/44/` shipped with v2.43: the share picture and buttons rounded like the
 logo's name bar, with her marked-up screenshot. `prompt text/45/` shipped with v2.44: the
-Workspa podcast video swapped for Focus On The Feeling. The next release that ships new owner
-words starts `prompt text/46/`.
+Workspa podcast video swapped for Focus On The Feeling. `prompt text/46/` shipped with v2.45:
+the new domain loading only sometimes, with her three phone screenshots (the share picture
+moved to the domain; the rest was DNS and network advice). The next release that ships new
+owner words starts `prompt text/47/`.
 
 ## Go-live checklist (phase 6)
 
-- [ ] Domain fayesintentionaltraining.com (the deck's) attached in Cloudflare
+- [x] Domain attached in Cloudflare: **fayeedwardsfit.com** (November 2026, Cloudflare
+      nameservers, proxied; fayeedwards.com was taken). Faye's email stays on
+      fayesintentionaltraining.com
+- [ ] `www.fayeedwardsfit.com` added (as a second custom domain, or a redirect to the bare
+      domain): it had no DNS record at all when checked in v2.45, so www links fail
 - [ ] Every social link clicked through: the deck's handles were built into URLs without
       being opened (this environment cannot reach those sites)
-- [ ] `og:image` on every page moved from faye.basilicalabs.ai to the live domain; `og:url` /
-      canonical tags, sitemap.xml and the robots Sitemap line added for it
+- [x] `og:image` on every page moved to fayeedwardsfit.com (v2.45)
+- [ ] `og:url` / canonical tags, sitemap.xml and the robots Sitemap line for fayeedwardsfit.com
 - [ ] App Store and Google Play links on /app opened and confirmed
 - [ ] Both Retreats videos and the 33 Work Gallery videos played on the live site (YouTube is
       unreachable from the build environment, so none could be opened while building)
@@ -494,5 +501,6 @@ handed back with each push. v2.0 onwards is the rebuild.
 | v2.42 | Ten new videos and a Campaigns showcase | The Work Gallery now holds 33 videos, with new teaching, coaching, event, podcast and bodybuilding clips and a Campaigns group for Decathlon, the Radiance app and the Horizon Treadmill review, while its enquiry form is shorter and points media to Faye's publicist. The accountant's address no longer appears at the foot of every page or on the Contact page. |
 | v2.43 | Rounded buttons and a picture for every share | Every button across the site now has softly rounded corners that match the name bar under the F.I.T logo, and a link to any page shared on social media or in a message now shows a branded picture of Faye with Move. Grow. Work. and Focus on the feeling. |
 | v2.44 | Workspa Podcast: Focus On The Feeling | The Work Gallery's podcasts now feature Faye's Workspa conversation Focus On The Feeling, with its own picture, in place of the earlier Workspa clip. |
+| v2.45 | The share picture moves to fayeedwardsfit.com | Links to the site shared in WhatsApp, on social media or by text now fetch their picture from Faye's own address, fayeedwardsfit.com, so the preview appears reliably wherever the new link is shared. |
 
-Next release: **v2.45**.
+Next release: **v2.46**.
