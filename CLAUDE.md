@@ -175,7 +175,7 @@ prompt text/            the archive for the version in service (see below)
 - **The Retreats page** (/experiences, Faye's Retreats brief, v2.15) has the pink label
   "Experiences" over the white title "Retreats" (Faye, v2.21), the large Mind Fit Retreats
   logo beside her introduction and one "Enquire here" button to her email (v2.27), then Mind Fit Retreats Zanzibar (1st–10th Feb 2027), the F.I.T Trip Spa
-  Break Bulgaria (22nd–26th Apr 2027) and The Retreat Planner, each in her words with a
+  Break Bulgaria (22nd–25th Apr 2027, shortened from the 26th at her request, v2.47) and The Retreat Planner, each in her words with a
   "More Info Here" button: her two Flodesk pages, and her Retreat Planner Info Deck
   (`/assets/docs/the-retreat-planner-info-deck.pdf`, v2.46; the older brochure's address
   redirects to it). A replaced document gets a new file name, as browsers keep docs an hour.
@@ -400,8 +400,9 @@ logo's name bar, with her marked-up screenshot. `prompt text/45/` shipped with v
 Workspa podcast video swapped for Focus On The Feeling. `prompt text/46/` shipped with v2.45:
 the new domain loading only sometimes, with her three phone screenshots (the share picture
 moved to the domain; the rest was DNS and network advice). `prompt text/47/` shipped with v2.46: The Retreat Planner
-Info Deck replacing the older brochure, with the deck she sent. The next release that ships
-new owner words starts `prompt text/48/`.
+Info Deck replacing the older brochure, with the deck she sent. `prompt text/48/` shipped
+with v2.47: the F.I.T Trip ending on the 25th, with her screenshot. The next release that
+ships new owner words starts `prompt text/49/`.
 
 ## Go-live checklist (phase 6)
 
@@ -509,5 +510,6 @@ handed back with each push. v2.0 onwards is the rebuild.
 | v2.44 | Workspa Podcast: Focus On The Feeling | The Work Gallery's podcasts now feature Faye's Workspa conversation Focus On The Feeling, with its own picture, in place of the earlier Workspa clip. |
 | v2.45 | The share picture moves to fayeedwardsfit.com | Links to the site shared in WhatsApp, on social media or by text now fetch their picture from Faye's own address, fayeedwardsfit.com, so the preview appears reliably wherever the new link is shared. |
 | v2.46 | The Retreat Planner's new info deck | The More Info Here button under The Retreat Planner on the Retreats page now opens Faye's new seven-page info deck, from the Masterclass and Blueprint day to building, launching and filling a retreat, and older links to the previous brochure now arrive at the new deck. |
+| v2.47 | The F.I.T Trip now runs 22nd–25th April | The F.I.T Trip spa break to Bulgaria on the Retreats page now runs from the 22nd to the 25th of April 2027, three nights at the Grand Therme Hotel, matching the trip as Faye now offers it. |
 
-Next release: **v2.47**.
+Next release: **v2.48**.

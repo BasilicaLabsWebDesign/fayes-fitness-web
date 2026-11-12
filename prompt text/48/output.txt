@@ -1,0 +1,9 @@
+Done, and released to main as v2.47.
+
+- On the Retreats page, the F.I.T Trip (Spa Break Bulgaria) now reads 22nd–25th April 2027.
+- That also lines up with the description underneath, "Three nights at the five-star Grand Therme Hotel": the 22nd to the 25th is three nights, where the 26th made it four.
+- The date only appeared in that one place on the site, so nothing else needed changing.
+
+Verified before pushing:
+- The new date shows on the Retreats page.
+- Every page at phone, tablet and desktop sizes: no errors, every image loads, every link works. Offline mode, fresh styling on the first visit, every video's thumbnail, and the API.

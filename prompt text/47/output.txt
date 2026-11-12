@@ -1,9 +1,0 @@
-Done, and released to main as v2.46.
-
-- On the Retreats page, the "More Info Here" button under The Retreat Planner now opens your new Retreat Planner Info Deck, all seven pages, from "From 'one day I'd love to' to your own retreat" through to "Ready to say yes to your retreat?".
-- The new deck has its own file name, so nobody's browser keeps showing the old brochure. Anyone who uses an old link to the previous brochure, from an email or a message, now lands on the new deck instead.
-
-Verified before pushing:
-- The button opens the new deck, and the file the site serves is exactly the one you sent.
-- The old brochure's address sends people to the new deck.
-- Every page at phone, tablet and desktop sizes: no errors, every image loads, every link works. Offline mode, fresh styling on the first visit, every video's thumbnail, and the API.
