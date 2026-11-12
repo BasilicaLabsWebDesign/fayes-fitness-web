@@ -17,7 +17,7 @@
   // Variables and Secrets) and never written here. "true" below makes Flodesk email each new
   // sign-up a link to confirm before they join (double opt-in).
   "vars": {
-    "RELEASE": "v2.43",
+    "RELEASE": "v2.44",
     "FLODESK_DOUBLE_OPTIN": "false"
   },
   "observability": {

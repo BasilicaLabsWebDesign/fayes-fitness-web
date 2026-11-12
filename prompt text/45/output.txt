@@ -1,0 +1,8 @@
+Done, and released to main as v2.44.
+
+- In the Work Gallery's Podcasts group, "In Conversation with Workspa" is replaced by "Workspa Podcast" over "Focus On The Feeling", in the same third spot after The Gym Forum and the Wellbeing Podcast.
+- It has its own thumbnail, and pressing play starts the new video. The old video's thumbnail has been removed from the site.
+
+Verified before pushing:
+- The Podcasts row shows all three videos with their thumbnails, nothing loads from YouTube before play, and the new one plays the right video.
+- Every page at phone, tablet and desktop sizes: no errors, every image loads, every link works. Offline mode, fresh styling on the first visit, every video's thumbnail, and the API.

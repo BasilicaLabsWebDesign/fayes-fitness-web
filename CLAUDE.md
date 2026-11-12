@@ -390,8 +390,9 @@ and Hosting photos reframed (those screenshots arrived only inline and could not
 publicist line, the shorter Work Gallery form and the accountant's address removed. (Her
 v2.41-to-v2.42 question about domain names shipped nothing, so it is not archived.)
 `prompt text/44/` shipped with v2.43: the share picture and buttons rounded like the
-logo's name bar, with her marked-up screenshot. The next release that ships new owner words
-starts `prompt text/45/`.
+logo's name bar, with her marked-up screenshot. `prompt text/45/` shipped with v2.44: the
+Workspa podcast video swapped for Focus On The Feeling. The next release that ships new owner
+words starts `prompt text/46/`.
 
 ## Go-live checklist (phase 6)
 
@@ -492,5 +493,6 @@ handed back with each push. v2.0 onwards is the rebuild.
 | v2.41 | Enquiries can join Faye's mailing list | Both enquiry forms now offer a box to join Faye's mailing list, and everyone who ticks it is added to her Flodesk list in a group for the kind of enquiry they made, from classes and the app to retreats, speaking and coaching. It switches on as soon as her Flodesk key is added, and until then the forms work exactly as before. |
 | v2.42 | Ten new videos and a Campaigns showcase | The Work Gallery now holds 33 videos, with new teaching, coaching, event, podcast and bodybuilding clips and a Campaigns group for Decathlon, the Radiance app and the Horizon Treadmill review, while its enquiry form is shorter and points media to Faye's publicist. The accountant's address no longer appears at the foot of every page or on the Contact page. |
 | v2.43 | Rounded buttons and a picture for every share | Every button across the site now has softly rounded corners that match the name bar under the F.I.T logo, and a link to any page shared on social media or in a message now shows a branded picture of Faye with Move. Grow. Work. and Focus on the feeling. |
+| v2.44 | Workspa Podcast: Focus On The Feeling | The Work Gallery's podcasts now feature Faye's Workspa conversation Focus On The Feeling, with its own picture, in place of the earlier Workspa clip. |
 
-Next release: **v2.44**.
+Next release: **v2.45**.
