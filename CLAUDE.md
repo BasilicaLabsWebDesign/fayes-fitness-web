@@ -402,8 +402,8 @@ owner words starts `prompt text/47/`.
 - [x] Domain attached in Cloudflare: **fayeedwardsfit.com** (November 2026, Cloudflare
       nameservers, proxied; fayeedwards.com was taken). Faye's email stays on
       fayesintentionaltraining.com
-- [ ] `www.fayeedwardsfit.com` added (as a second custom domain, or a redirect to the bare
-      domain): it had no DNS record at all when checked in v2.45, so www links fail
+- [x] `www.fayeedwardsfit.com` added as a second custom domain (after v2.45; checked: its own
+      address records and certificate, and it serves the same site)
 - [ ] Every social link clicked through: the deck's handles were built into URLs without
       being opened (this environment cannot reach those sites)
 - [x] `og:image` on every page moved to fayeedwardsfit.com (v2.45)
