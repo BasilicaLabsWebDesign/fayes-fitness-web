@@ -11,8 +11,11 @@ customers and to Faye.
 
 It is version 2 — a ground-up rebuild of version 1 (a one-page site, v1.0–v1.12). v2.0 put the
 rebuilt public site on `main`; the remaining phases ship as v2.x releases. **Work happens on
-the working branch `claude/repo-to-website-0442wi`** (Cloudflare builds it to a private
-preview URL), and every verified batch is released by fast-forwarding `main` onto it.
+the working branch `claude/repo-to-website-0442wi`** (Cloudflare builds it to a preview URL,
+`*-fayes-fitness-web.cloudflare-passport599.workers.dev`, public to anyone with the link unless
+Cloudflare Access is turned on), and every verified batch is released by fast-forwarding
+`main` onto it. Production is served on fayeedwardsfit.com and www.fayeedwardsfit.com (custom
+domains on the Worker, November 2026) and on its workers.dev address while that is switched on.
 
 ## Architecture
 
